@@ -21,6 +21,6 @@ print("\nApplication analysis:")
 for page in analysis["pages"]:
     print("\nURL:", page["url"])
     print("Title:", page["title"])
-    print("Headings:", page["headings"])
+    print("Purpose:", page["purpose"])
     print("Inputs:", page["inputs"])
     print("Forms:", page["forms"])
