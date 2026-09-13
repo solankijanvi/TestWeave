@@ -1,0 +1,1 @@
+from .application_analyzer import analyze_application

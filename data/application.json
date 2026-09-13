@@ -1,0 +1,282 @@
+{
+    "start_url": "https://bovineguard.onrender.com/",
+    "total_pages": 5,
+    "pages": [
+        {
+            "url": "https://bovineguard.onrender.com/",
+            "title": "Cattle Disease Prediction",
+            "headings": [
+                "Welcome To BovineGuard!"
+            ],
+            "text": "BovineGuard\nHome\nAbout\nPredict\nReviews\nContact\nWelcome To BovineGuard!\n\nCattle Disease Prediction Using Machine Learning\n\n Contact Us",
+            "links": [
+                {
+                    "text": "BovineGuard",
+                    "href": "#"
+                },
+                {
+                    "text": "Home",
+                    "href": "/"
+                },
+                {
+                    "text": "About",
+                    "href": "/about"
+                },
+                {
+                    "text": "Predict",
+                    "href": "/predict"
+                },
+                {
+                    "text": "Reviews",
+                    "href": "/reviews"
+                },
+                {
+                    "text": "Contact",
+                    "href": "/contact"
+                },
+                {
+                    "text": "Contact Us",
+                    "href": "/contact"
+                }
+            ],
+            "buttons": [],
+            "inputs": [],
+            "forms": [],
+            "images": [
+                {
+                    "alt": "Home Image",
+                    "src": "/static/images/home.jpg"
+                }
+            ]
+        },
+        {
+            "url": "https://bovineguard.onrender.com/about",
+            "title": "BovineGuard - Cattle Disease Prediction",
+            "headings": [
+                "About Us"
+            ],
+            "text": "BovineGuard\nHome\nAbout\nPredict\nReviews\nContact\nAbout Us\n\nAt BovineGuard, Our Mission Is To Enhance The Health And Well-Being Of Cattle Through Innovative Technology.\nCattle Health Is A Critical Aspect Of Livestock Management. Early Disease Detection Can Significantly Reduce Treatment Costs, Prevent Widespread Outbreaks, And Improve Overall Herd Productivity.\n\n Predict Disease",
+            "links": [
+                {
+                    "text": "BovineGuard",
+                    "href": "#"
+                },
+                {
+                    "text": "Home",
+                    "href": "/"
+                },
+                {
+                    "text": "About",
+                    "href": "/about"
+                },
+                {
+                    "text": "Predict",
+                    "href": "/predict"
+                },
+                {
+                    "text": "Reviews",
+                    "href": "/reviews"
+                },
+                {
+                    "text": "Contact",
+                    "href": "/contact"
+                },
+                {
+                    "text": "Predict Disease",
+                    "href": "/predict"
+                }
+            ],
+            "buttons": [],
+            "inputs": [],
+            "forms": [],
+            "images": [
+                {
+                    "alt": "About Image",
+                    "src": "/static/images/about.jpg"
+                }
+            ]
+        },
+        {
+            "url": "https://bovineguard.onrender.com/predict",
+            "title": "Cattle Disease Prediction",
+            "headings": [
+                "Predict Cattle Disease",
+                "About The Prediction Tool"
+            ],
+            "text": "BovineGuard\nHome\nAbout\nPredict\nReviews\nContact\nPredict Cattle Disease\nAge:\nBreed:\nSymptom 1 (Mandatory):\nSelect a symptom\nitching\nskin rash\nnodal skin eruptions\ncontinuous sneezing\nshivering\nchills\njoint pain\nstomach pain\nacidity\nulcers on tongue\nmuscle wasting\nvomiting\nburning micturition\nspotting urination\nfatigue\nweight gain\nanxiety\ncold hands and feets\nmood swings\nweight loss\nrestlessness\nlethargy\npatches in throat\nirregular sugar level\ncough\nhigh fever\nsunken eyes\nbreathlessness\nsweating\ndehydration\nindigestion\nheadache\nyellowish skin\ndark urine\nnausea\nloss of appetite\npain behind the eyes\nback pain\nconstipation\nabdominal pain\ndiarrhoea\nmild fever\nyellow urine\nyellowing of eyes\nacute liver failure\nfluid overload\nswelling of stomach\nswelled lymph nodes\nmalaise\nblurred and distorted vision\nphlegm\nthroat irritation\nredness of eyes\nsinus pressure\nrunny nose\ncongestion\nchest pain\nweakness in limbs\nfast heart rate\npain during bowel movements\npain in anal region\nbloody stool\nirritation in anus\nneck pain\ndizziness\ncramps\nbruising\nobesity\nswollen legs\nswollen blood vessels\npuffy face and eyes\nenlarged thyroid\nbrittle nails\nswollen extremeties\nexcessive hunger\nextra marital contacts\ndrying and tingling lips\nslurred speech\nknee pain\nhip joint pain\nmuscle weakness\nstiff neck\nswelling joints\nmovement stiffness\nspinning movements\nloss of balance\nunsteadiness\nweakness of one body side\nloss of smell\nbladder discomfort\nfoul smell of urine\ncontinuous feel of urine\npassage of gases\ninternal itching\ntoxic look (typhos)\ndepression\nirritability\nmuscle pain\naltered sensorium\nred spots over body\nbelly pain\nabnormal menstruation\ndischromic patches\nwatering from eyes\nincreased appetite\npolyuria\nfamily history\nmucoid sputum\nrusty sputum\nlack of concentration\nvisual disturbances\nreceiving blood transfusion\nreceiving unsterile injections\ncoma\nstomach bleeding\ndistention of abdomen\nhistory of alcohol consumption\nblood in sputum\nprominent veins on calf\npalpitations\npainful walking\npus filled pimples\nblackheads\nscurring\nskin peeling\nsilver like dusting\nsmall dents in nails\ninflammatory nails\nblister\nred sore around nose\nyellow crust ooze\nSymptom 2 :\nSelect a symptom\nitching\nskin rash\nnodal skin eruptions\ncontinuous sneezing\nshivering\nchills\njoint pain\nstomach pain\nacidity\nulcers on tongue\nmuscle wasting\nvomiting\nburning micturition\nspotting urination\nfatigue\nweight gain\nanxiety\ncold hands and feets\nmood swings\nweight loss\nrestlessness\nlethargy\npatches in throat\nirregular sugar level\ncough\nhigh fever\nsunken eyes\nbreathlessness\nsweating\ndehydration\nindigestion\nheadache\nyellowish skin\ndark urine\nnausea\nloss of appetite\npain behind the eyes\nback pain\nconstipation\nabdominal pain\ndiarrhoea\nmild fever\nyellow urine\nyellowing of eyes\nacute liver failure\nfluid overload\nswelling of stomach\nswelled lymph nodes\nmalaise\nblurred and distorted vision\nphlegm\nthroat irritation\nredness of eyes\nsinus pressure\nrunny nose\ncongestion\nchest pain\nweakness in limbs\nfast heart rate\npain during bowel movements\npain in anal region\nbloody stool\nirritation in anus\nneck pain\ndizziness\ncramps\nbruising\nobesity\nswollen legs\nswollen blood vessels\npuffy face and eyes\nenlarged thyroid\nbrittle nails\nswollen extremeties\nexcessive hunger\nextra marital contacts\ndrying and tingling lips\nslurred speech\nknee pain\nhip joint pain\nmuscle weakness\nstiff neck\nswelling joints\nmovement stiffness\nspinning movements\nloss of balance\nunsteadiness\nweakness of one body side\nloss of smell\nbladder discomfort\nfoul smell of urine\ncontinuous feel of urine\npassage of gases\ninternal itching\ntoxic look (typhos)\ndepression\nirritability\nmuscle pain\naltered sensorium\nred spots over body\nbelly pain\nabnormal menstruation\ndischromic patches\nwatering from eyes\nincreased appetite\npolyuria\nfamily history\nmucoid sputum\nrusty sputum\nlack of concentration\nvisual disturbances\nreceiving blood transfusion\nreceiving unsterile injections\ncoma\nstomach bleeding\ndistention of abdomen\nhistory of alcohol consumption\nblood in sputum\nprominent veins on calf\npalpitations\npainful walking\npus filled pimples\nblackheads\nscurring\nskin peeling\nsilver like dusting\nsmall dents in nails\ninflammatory nails\nblister\nred sore around nose\nyellow crust ooze\nSymptom 3 :\nSelect a symptom\nitching\nskin rash\nnodal skin eruptions\ncontinuous sneezing\nshivering\nchills\njoint pain\nstomach pain\nacidity\nulcers on tongue\nmuscle wasting\nvomiting\nburning micturition\nspotting urination\nfatigue\nweight gain\nanxiety\ncold hands and feets\nmood swings\nweight loss\nrestlessness\nlethargy\npatches in throat\nirregular sugar level\ncough\nhigh fever\nsunken eyes\nbreathlessness\nsweating\ndehydration\nindigestion\nheadache\nyellowish skin\ndark urine\nnausea\nloss of appetite\npain behind the eyes\nback pain\nconstipation\nabdominal pain\ndiarrhoea\nmild fever\nyellow urine\nyellowing of eyes\nacute liver failure\nfluid overload\nswelling of stomach\nswelled lymph nodes\nmalaise\nblurred and distorted vision\nphlegm\nthroat irritation\nredness of eyes\nsinus pressure\nrunny nose\ncongestion\nchest pain\nweakness in limbs\nfast heart rate\npain during bowel movements\npain in anal region\nbloody stool\nirritation in anus\nneck pain\ndizziness\ncramps\nbruising\nobesity\nswollen legs\nswollen blood vessels\npuffy face and eyes\nenlarged thyroid\nbrittle nails\nswollen extremeties\nexcessive hunger\nextra marital contacts\ndrying and tingling lips\nslurred speech\nknee pain\nhip joint pain\nmuscle weakness\nstiff neck\nswelling joints\nmovement stiffness\nspinning movements\nloss of balance\nunsteadiness\nweakness of one body side\nloss of smell\nbladder discomfort\nfoul smell of urine\ncontinuous feel of urine\npassage of gases\ninternal itching\ntoxic look (typhos)\ndepression\nirritability\nmuscle pain\naltered sensorium\nred spots over body\nbelly pain\nabnormal menstruation\ndischromic patches\nwatering from eyes\nincreased appetite\npolyuria\nfamily history\nmucoid sputum\nrusty sputum\nlack of concentration\nvisual disturbances\nreceiving blood transfusion\nreceiving unsterile injections\ncoma\nstomach bleeding\ndistention of abdomen\nhistory of alcohol consumption\nblood in sputum\nprominent veins on calf\npalpitations\npainful walking\npus filled pimples\nblackheads\nscurring\nskin peeling\nsilver like dusting\nsmall dents in nails\ninflammatory nails\nblister\nred sore around nose\nyellow crust ooze\nSymptom 4 :\nSelect a symptom\nitching\nskin rash\nnodal skin eruptions\ncontinuous sneezing\nshivering\nchills\njoint pain\nstomach pain\nacidity\nulcers on tongue\nmuscle wasting\nvomiting\nburning micturition\nspotting urination\nfatigue\nweight gain\nanxiety\ncold hands and feets\nmood swings\nweight loss\nrestlessness\nlethargy\npatches in throat\nirregular sugar level\ncough\nhigh fever\nsunken eyes\nbreathlessness\nsweating\ndehydration\nindigestion\nheadache\nyellowish skin\ndark urine\nnausea\nloss of appetite\npain behind the eyes\nback pain\nconstipation\nabdominal pain\ndiarrhoea\nmild fever\nyellow urine\nyellowing of eyes\nacute liver failure\nfluid overload\nswelling of stomach\nswelled lymph nodes\nmalaise\nblurred and distorted vision\nphlegm\nthroat irritation\nredness of eyes\nsinus pressure\nrunny nose\ncongestion\nchest pain\nweakness in limbs\nfast heart rate\npain during bowel movements\npain in anal region\nbloody stool\nirritation in anus\nneck pain\ndizziness\ncramps\nbruising\nobesity\nswollen legs\nswollen blood vessels\npuffy face and eyes\nenlarged thyroid\nbrittle nails\nswollen extremeties\nexcessive hunger\nextra marital contacts\ndrying and tingling lips\nslurred speech\nknee pain\nhip joint pain\nmuscle weakness\nstiff neck\nswelling joints\nmovement stiffness\nspinning movements\nloss of balance\nunsteadiness\nweakness of one body side\nloss of smell\nbladder discomfort\nfoul smell of urine\ncontinuous feel of urine\npassage of gases\ninternal itching\ntoxic look (typhos)\ndepression\nirritability\nmuscle pain\naltered sensorium\nred spots over body\nbelly pain\nabnormal menstruation\ndischromic patches\nwatering from eyes\nincreased appetite\npolyuria\nfamily history\nmucoid sputum\nrusty sputum\nlack of concentration\nvisual disturbances\nreceiving blood transfusion\nreceiving unsterile injections\ncoma\nstomach bleeding\ndistention of abdomen\nhistory of alcohol consumption\nblood in sputum\nprominent veins on calf\npalpitations\npainful walking\npus filled pimples\nblackheads\nscurring\nskin peeling\nsilver like dusting\nsmall dents in nails\ninflammatory nails\nblister\nred sore around nose\nyellow crust ooze\nSymptom 5 :\nSelect a symptom\nitching\nskin rash\nnodal skin eruptions\ncontinuous sneezing\nshivering\nchills\njoint pain\nstomach pain\nacidity\nulcers on tongue\nmuscle wasting\nvomiting\nburning micturition\nspotting urination\nfatigue\nweight gain\nanxiety\ncold hands and feets\nmood swings\nweight loss\nrestlessness\nlethargy\npatches in throat\nirregular sugar level\ncough\nhigh fever\nsunken eyes\nbreathlessness\nsweating\ndehydration\nindigestion\nheadache\nyellowish skin\ndark urine\nnausea\nloss of appetite\npain behind the eyes\nback pain\nconstipation\nabdominal pain\ndiarrhoea\nmild fever\nyellow urine\nyellowing of eyes\nacute liver failure\nfluid overload\nswelling of stomach\nswelled lymph nodes\nmalaise\nblurred and distorted vision\nphlegm\nthroat irritation\nredness of eyes\nsinus pressure\nrunny nose\ncongestion\nchest pain\nweakness in limbs\nfast heart rate\npain during bowel movements\npain in anal region\nbloody stool\nirritation in anus\nneck pain\ndizziness\ncramps\nbruising\nobesity\nswollen legs\nswollen blood vessels\npuffy face and eyes\nenlarged thyroid\nbrittle nails\nswollen extremeties\nexcessive hunger\nextra marital contacts\ndrying and tingling lips\nslurred speech\nknee pain\nhip joint pain\nmuscle weakness\nstiff neck\nswelling joints\nmovement stiffness\nspinning movements\nloss of balance\nunsteadiness\nweakness of one body side\nloss of smell\nbladder discomfort\nfoul smell of urine\ncontinuous feel of urine\npassage of gases\ninternal itching\ntoxic look (typhos)\ndepression\nirritability\nmuscle pain\naltered sensorium\nred spots over body\nbelly pain\nabnormal menstruation\ndischromic patches\nwatering from eyes\nincreased appetite\npolyuria\nfamily history\nmucoid sputum\nrusty sputum\nlack of concentration\nvisual disturbances\nreceiving blood transfusion\nreceiving unsterile injections\ncoma\nstomach bleeding\ndistention of abdomen\nhistory of alcohol consumption\nblood in sputum\nprominent veins on calf\npalpitations\npainful walking\npus filled pimples\nblackheads\nscurring\nskin peeling\nsilver like dusting\nsmall dents in nails\ninflammatory nails\nblister\nred sore around nose\nyellow crust ooze\nAbout The Prediction Tool\n\nThis Tool Helps Farmers And Veterinarians Predict Potential Diseases In Cattle Based On Symptoms, Age, Breed, And Weight. Early Detection Of Diseases In Cattle Is Crucial For Ensuring The Health And Productivity Of Livestock.\n\nSimply Enter The Relevant Information About Your Cattle And Select The Symptoms Observed. The System Will Analyze The Data And Provide A Prediction Based On The Trained Machine Learning Model.",
+            "links": [
+                {
+                    "text": "BovineGuard",
+                    "href": "#"
+                },
+                {
+                    "text": "Home",
+                    "href": "/"
+                },
+                {
+                    "text": "About",
+                    "href": "/about"
+                },
+                {
+                    "text": "Predict",
+                    "href": "/predict"
+                },
+                {
+                    "text": "Reviews",
+                    "href": "/reviews"
+                },
+                {
+                    "text": "Contact",
+                    "href": "/contact"
+                }
+            ],
+            "buttons": [],
+            "inputs": [
+                {
+                    "type": "text",
+                    "name": "age",
+                    "placeholder": null
+                },
+                {
+                    "type": "text",
+                    "name": "breed",
+                    "placeholder": null
+                },
+                {
+                    "type": "submit",
+                    "name": null,
+                    "placeholder": null
+                }
+            ],
+            "forms": [
+                {
+                    "action": "/predict",
+                    "method": "POST"
+                }
+            ],
+            "images": []
+        },
+        {
+            "url": "https://bovineguard.onrender.com/reviews",
+            "title": "Cattle Disease Prediction",
+            "headings": [
+                "User's Review",
+                "Add Your Review"
+            ],
+            "text": "BovineGuard\nHome\nAbout\nPredict\nReviews\nContact\nUser's Review\nAdd Your Review\nName:\nReview:\nSubmit",
+            "links": [
+                {
+                    "text": "BovineGuard",
+                    "href": "#"
+                },
+                {
+                    "text": "Home",
+                    "href": "/"
+                },
+                {
+                    "text": "About",
+                    "href": "/about"
+                },
+                {
+                    "text": "Predict",
+                    "href": "/predict"
+                },
+                {
+                    "text": "Reviews",
+                    "href": "/reviews"
+                },
+                {
+                    "text": "Contact",
+                    "href": "/contact"
+                }
+            ],
+            "buttons": [
+                {
+                    "text": "Submit"
+                }
+            ],
+            "inputs": [
+                {
+                    "type": "text",
+                    "name": "name",
+                    "placeholder": "Your Name"
+                }
+            ],
+            "forms": [
+                {
+                    "action": null,
+                    "method": null
+                }
+            ],
+            "images": []
+        },
+        {
+            "url": "https://bovineguard.onrender.com/contact",
+            "title": "Cattle Disease Prediction",
+            "headings": [
+                "Get In Touch"
+            ],
+            "text": "BovineGuard\nHome\nAbout\nPredict\nReviews\nContact\nGet In Touch\nFirst Name:\nLast Name:\nEmail:\nMobile:\nMessage:\nSend\n\nEmail: Contact@Bovineguard.Com\n\nPhone: +1-800-123-4567",
+            "links": [
+                {
+                    "text": "BovineGuard",
+                    "href": "#"
+                },
+                {
+                    "text": "Home",
+                    "href": "/"
+                },
+                {
+                    "text": "About",
+                    "href": "/about"
+                },
+                {
+                    "text": "Predict",
+                    "href": "/predict"
+                },
+                {
+                    "text": "Reviews",
+                    "href": "/reviews"
+                },
+                {
+                    "text": "Contact",
+                    "href": "/contact"
+                }
+            ],
+            "buttons": [
+                {
+                    "text": "Send"
+                }
+            ],
+            "inputs": [
+                {
+                    "type": "text",
+                    "name": "firstName",
+                    "placeholder": "First Name"
+                },
+                {
+                    "type": "text",
+                    "name": "lastName",
+                    "placeholder": "Last Name"
+                },
+                {
+                    "type": "email",
+                    "name": "email",
+                    "placeholder": "Email"
+                },
+                {
+                    "type": "tel",
+                    "name": "mobile",
+                    "placeholder": "Mobile"
+                }
+            ],
+            "forms": [
+                {
+                    "action": "/contact",
+                    "method": "POST"
+                }
+            ],
+            "images": []
+        }
+    ]
+}
