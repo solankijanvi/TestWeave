@@ -41,6 +41,8 @@
             ],
             "buttons": [],
             "inputs": [],
+            "selects": [],
+            "textareas": [],
             "forms": [],
             "images": [
                 {
@@ -88,6 +90,8 @@
             ],
             "buttons": [],
             "inputs": [],
+            "selects": [],
+            "textareas": [],
             "forms": [],
             "images": [
                 {
@@ -135,19 +139,2698 @@
                 {
                     "type": "text",
                     "name": "age",
-                    "placeholder": null
+                    "placeholder": null,
+                    "id": "age",
+                    "aria_label": null
                 },
                 {
                     "type": "text",
                     "name": "breed",
-                    "placeholder": null
+                    "placeholder": null,
+                    "id": "breed",
+                    "aria_label": null
                 },
                 {
                     "type": "submit",
                     "name": null,
-                    "placeholder": null
+                    "placeholder": null,
+                    "id": null,
+                    "aria_label": null
                 }
             ],
+            "selects": [
+                {
+                    "name": "symptom1",
+                    "id": "symptom1",
+                    "options": [
+                        {
+                            "text": "Select a symptom",
+                            "value": ""
+                        },
+                        {
+                            "text": "itching",
+                            "value": "itching"
+                        },
+                        {
+                            "text": "skin rash",
+                            "value": "skin_rash"
+                        },
+                        {
+                            "text": "nodal skin eruptions",
+                            "value": "nodal_skin_eruptions"
+                        },
+                        {
+                            "text": "continuous sneezing",
+                            "value": "continuous_sneezing"
+                        },
+                        {
+                            "text": "shivering",
+                            "value": "shivering"
+                        },
+                        {
+                            "text": "chills",
+                            "value": "chills"
+                        },
+                        {
+                            "text": "joint pain",
+                            "value": "joint_pain"
+                        },
+                        {
+                            "text": "stomach pain",
+                            "value": "stomach_pain"
+                        },
+                        {
+                            "text": "acidity",
+                            "value": "acidity"
+                        },
+                        {
+                            "text": "ulcers on tongue",
+                            "value": "ulcers_on_tongue"
+                        },
+                        {
+                            "text": "muscle wasting",
+                            "value": "muscle_wasting"
+                        },
+                        {
+                            "text": "vomiting",
+                            "value": "vomiting"
+                        },
+                        {
+                            "text": "burning micturition",
+                            "value": "burning_micturition"
+                        },
+                        {
+                            "text": "spotting urination",
+                            "value": "spotting_urination"
+                        },
+                        {
+                            "text": "fatigue",
+                            "value": "fatigue"
+                        },
+                        {
+                            "text": "weight gain",
+                            "value": "weight_gain"
+                        },
+                        {
+                            "text": "anxiety",
+                            "value": "anxiety"
+                        },
+                        {
+                            "text": "cold hands and feets",
+                            "value": "cold_hands_and_feets"
+                        },
+                        {
+                            "text": "mood swings",
+                            "value": "mood_swings"
+                        },
+                        {
+                            "text": "weight loss",
+                            "value": "weight_loss"
+                        },
+                        {
+                            "text": "restlessness",
+                            "value": "restlessness"
+                        },
+                        {
+                            "text": "lethargy",
+                            "value": "lethargy"
+                        },
+                        {
+                            "text": "patches in throat",
+                            "value": "patches_in_throat"
+                        },
+                        {
+                            "text": "irregular sugar level",
+                            "value": "irregular_sugar_level"
+                        },
+                        {
+                            "text": "cough",
+                            "value": "cough"
+                        },
+                        {
+                            "text": "high fever",
+                            "value": "high_fever"
+                        },
+                        {
+                            "text": "sunken eyes",
+                            "value": "sunken_eyes"
+                        },
+                        {
+                            "text": "breathlessness",
+                            "value": "breathlessness"
+                        },
+                        {
+                            "text": "sweating",
+                            "value": "sweating"
+                        },
+                        {
+                            "text": "dehydration",
+                            "value": "dehydration"
+                        },
+                        {
+                            "text": "indigestion",
+                            "value": "indigestion"
+                        },
+                        {
+                            "text": "headache",
+                            "value": "headache"
+                        },
+                        {
+                            "text": "yellowish skin",
+                            "value": "yellowish_skin"
+                        },
+                        {
+                            "text": "dark urine",
+                            "value": "dark_urine"
+                        },
+                        {
+                            "text": "nausea",
+                            "value": "nausea"
+                        },
+                        {
+                            "text": "loss of appetite",
+                            "value": "loss_of_appetite"
+                        },
+                        {
+                            "text": "pain behind the eyes",
+                            "value": "pain_behind_the_eyes"
+                        },
+                        {
+                            "text": "back pain",
+                            "value": "back_pain"
+                        },
+                        {
+                            "text": "constipation",
+                            "value": "constipation"
+                        },
+                        {
+                            "text": "abdominal pain",
+                            "value": "abdominal_pain"
+                        },
+                        {
+                            "text": "diarrhoea",
+                            "value": "diarrhoea"
+                        },
+                        {
+                            "text": "mild fever",
+                            "value": "mild_fever"
+                        },
+                        {
+                            "text": "yellow urine",
+                            "value": "yellow_urine"
+                        },
+                        {
+                            "text": "yellowing of eyes",
+                            "value": "yellowing_of_eyes"
+                        },
+                        {
+                            "text": "acute liver failure",
+                            "value": "acute_liver_failure"
+                        },
+                        {
+                            "text": "fluid overload",
+                            "value": "fluid_overload"
+                        },
+                        {
+                            "text": "swelling of stomach",
+                            "value": "swelling_of_stomach"
+                        },
+                        {
+                            "text": "swelled lymph nodes",
+                            "value": "swelled_lymph_nodes"
+                        },
+                        {
+                            "text": "malaise",
+                            "value": "malaise"
+                        },
+                        {
+                            "text": "blurred and distorted vision",
+                            "value": "blurred_and_distorted_vision"
+                        },
+                        {
+                            "text": "phlegm",
+                            "value": "phlegm"
+                        },
+                        {
+                            "text": "throat irritation",
+                            "value": "throat_irritation"
+                        },
+                        {
+                            "text": "redness of eyes",
+                            "value": "redness_of_eyes"
+                        },
+                        {
+                            "text": "sinus pressure",
+                            "value": "sinus_pressure"
+                        },
+                        {
+                            "text": "runny nose",
+                            "value": "runny_nose"
+                        },
+                        {
+                            "text": "congestion",
+                            "value": "congestion"
+                        },
+                        {
+                            "text": "chest pain",
+                            "value": "chest_pain"
+                        },
+                        {
+                            "text": "weakness in limbs",
+                            "value": "weakness_in_limbs"
+                        },
+                        {
+                            "text": "fast heart rate",
+                            "value": "fast_heart_rate"
+                        },
+                        {
+                            "text": "pain during bowel movements",
+                            "value": "pain_during_bowel_movements"
+                        },
+                        {
+                            "text": "pain in anal region",
+                            "value": "pain_in_anal_region"
+                        },
+                        {
+                            "text": "bloody stool",
+                            "value": "bloody_stool"
+                        },
+                        {
+                            "text": "irritation in anus",
+                            "value": "irritation_in_anus"
+                        },
+                        {
+                            "text": "neck pain",
+                            "value": "neck_pain"
+                        },
+                        {
+                            "text": "dizziness",
+                            "value": "dizziness"
+                        },
+                        {
+                            "text": "cramps",
+                            "value": "cramps"
+                        },
+                        {
+                            "text": "bruising",
+                            "value": "bruising"
+                        },
+                        {
+                            "text": "obesity",
+                            "value": "obesity"
+                        },
+                        {
+                            "text": "swollen legs",
+                            "value": "swollen_legs"
+                        },
+                        {
+                            "text": "swollen blood vessels",
+                            "value": "swollen_blood_vessels"
+                        },
+                        {
+                            "text": "puffy face and eyes",
+                            "value": "puffy_face_and_eyes"
+                        },
+                        {
+                            "text": "enlarged thyroid",
+                            "value": "enlarged_thyroid"
+                        },
+                        {
+                            "text": "brittle nails",
+                            "value": "brittle_nails"
+                        },
+                        {
+                            "text": "swollen extremeties",
+                            "value": "swollen_extremeties"
+                        },
+                        {
+                            "text": "excessive hunger",
+                            "value": "excessive_hunger"
+                        },
+                        {
+                            "text": "extra marital contacts",
+                            "value": "extra_marital_contacts"
+                        },
+                        {
+                            "text": "drying and tingling lips",
+                            "value": "drying_and_tingling_lips"
+                        },
+                        {
+                            "text": "slurred speech",
+                            "value": "slurred_speech"
+                        },
+                        {
+                            "text": "knee pain",
+                            "value": "knee_pain"
+                        },
+                        {
+                            "text": "hip joint pain",
+                            "value": "hip_joint_pain"
+                        },
+                        {
+                            "text": "muscle weakness",
+                            "value": "muscle_weakness"
+                        },
+                        {
+                            "text": "stiff neck",
+                            "value": "stiff_neck"
+                        },
+                        {
+                            "text": "swelling joints",
+                            "value": "swelling_joints"
+                        },
+                        {
+                            "text": "movement stiffness",
+                            "value": "movement_stiffness"
+                        },
+                        {
+                            "text": "spinning movements",
+                            "value": "spinning_movements"
+                        },
+                        {
+                            "text": "loss of balance",
+                            "value": "loss_of_balance"
+                        },
+                        {
+                            "text": "unsteadiness",
+                            "value": "unsteadiness"
+                        },
+                        {
+                            "text": "weakness of one body side",
+                            "value": "weakness_of_one_body_side"
+                        },
+                        {
+                            "text": "loss of smell",
+                            "value": "loss_of_smell"
+                        },
+                        {
+                            "text": "bladder discomfort",
+                            "value": "bladder_discomfort"
+                        },
+                        {
+                            "text": "foul smell of urine",
+                            "value": "foul_smell_of_urine"
+                        },
+                        {
+                            "text": "continuous feel of urine",
+                            "value": "continuous_feel_of_urine"
+                        },
+                        {
+                            "text": "passage of gases",
+                            "value": "passage_of_gases"
+                        },
+                        {
+                            "text": "internal itching",
+                            "value": "internal_itching"
+                        },
+                        {
+                            "text": "toxic look (typhos)",
+                            "value": "toxic_look_(typhos)"
+                        },
+                        {
+                            "text": "depression",
+                            "value": "depression"
+                        },
+                        {
+                            "text": "irritability",
+                            "value": "irritability"
+                        },
+                        {
+                            "text": "muscle pain",
+                            "value": "muscle_pain"
+                        },
+                        {
+                            "text": "altered sensorium",
+                            "value": "altered_sensorium"
+                        },
+                        {
+                            "text": "red spots over body",
+                            "value": "red_spots_over_body"
+                        },
+                        {
+                            "text": "belly pain",
+                            "value": "belly_pain"
+                        },
+                        {
+                            "text": "abnormal menstruation",
+                            "value": "abnormal_menstruation"
+                        },
+                        {
+                            "text": "dischromic patches",
+                            "value": "dischromic_patches"
+                        },
+                        {
+                            "text": "watering from eyes",
+                            "value": "watering_from_eyes"
+                        },
+                        {
+                            "text": "increased appetite",
+                            "value": "increased_appetite"
+                        },
+                        {
+                            "text": "polyuria",
+                            "value": "polyuria"
+                        },
+                        {
+                            "text": "family history",
+                            "value": "family_history"
+                        },
+                        {
+                            "text": "mucoid sputum",
+                            "value": "mucoid_sputum"
+                        },
+                        {
+                            "text": "rusty sputum",
+                            "value": "rusty_sputum"
+                        },
+                        {
+                            "text": "lack of concentration",
+                            "value": "lack_of_concentration"
+                        },
+                        {
+                            "text": "visual disturbances",
+                            "value": "visual_disturbances"
+                        },
+                        {
+                            "text": "receiving blood transfusion",
+                            "value": "receiving_blood_transfusion"
+                        },
+                        {
+                            "text": "receiving unsterile injections",
+                            "value": "receiving_unsterile_injections"
+                        },
+                        {
+                            "text": "coma",
+                            "value": "coma"
+                        },
+                        {
+                            "text": "stomach bleeding",
+                            "value": "stomach_bleeding"
+                        },
+                        {
+                            "text": "distention of abdomen",
+                            "value": "distention_of_abdomen"
+                        },
+                        {
+                            "text": "history of alcohol consumption",
+                            "value": "history_of_alcohol_consumption"
+                        },
+                        {
+                            "text": "blood in sputum",
+                            "value": "blood_in_sputum"
+                        },
+                        {
+                            "text": "prominent veins on calf",
+                            "value": "prominent_veins_on_calf"
+                        },
+                        {
+                            "text": "palpitations",
+                            "value": "palpitations"
+                        },
+                        {
+                            "text": "painful walking",
+                            "value": "painful_walking"
+                        },
+                        {
+                            "text": "pus filled pimples",
+                            "value": "pus_filled_pimples"
+                        },
+                        {
+                            "text": "blackheads",
+                            "value": "blackheads"
+                        },
+                        {
+                            "text": "scurring",
+                            "value": "scurring"
+                        },
+                        {
+                            "text": "skin peeling",
+                            "value": "skin_peeling"
+                        },
+                        {
+                            "text": "silver like dusting",
+                            "value": "silver_like_dusting"
+                        },
+                        {
+                            "text": "small dents in nails",
+                            "value": "small_dents_in_nails"
+                        },
+                        {
+                            "text": "inflammatory nails",
+                            "value": "inflammatory_nails"
+                        },
+                        {
+                            "text": "blister",
+                            "value": "blister"
+                        },
+                        {
+                            "text": "red sore around nose",
+                            "value": "red_sore_around_nose"
+                        },
+                        {
+                            "text": "yellow crust ooze",
+                            "value": "yellow_crust_ooze"
+                        }
+                    ]
+                },
+                {
+                    "name": "symptom2",
+                    "id": "symptom2",
+                    "options": [
+                        {
+                            "text": "Select a symptom",
+                            "value": ""
+                        },
+                        {
+                            "text": "itching",
+                            "value": "itching"
+                        },
+                        {
+                            "text": "skin rash",
+                            "value": "skin_rash"
+                        },
+                        {
+                            "text": "nodal skin eruptions",
+                            "value": "nodal_skin_eruptions"
+                        },
+                        {
+                            "text": "continuous sneezing",
+                            "value": "continuous_sneezing"
+                        },
+                        {
+                            "text": "shivering",
+                            "value": "shivering"
+                        },
+                        {
+                            "text": "chills",
+                            "value": "chills"
+                        },
+                        {
+                            "text": "joint pain",
+                            "value": "joint_pain"
+                        },
+                        {
+                            "text": "stomach pain",
+                            "value": "stomach_pain"
+                        },
+                        {
+                            "text": "acidity",
+                            "value": "acidity"
+                        },
+                        {
+                            "text": "ulcers on tongue",
+                            "value": "ulcers_on_tongue"
+                        },
+                        {
+                            "text": "muscle wasting",
+                            "value": "muscle_wasting"
+                        },
+                        {
+                            "text": "vomiting",
+                            "value": "vomiting"
+                        },
+                        {
+                            "text": "burning micturition",
+                            "value": "burning_micturition"
+                        },
+                        {
+                            "text": "spotting urination",
+                            "value": "spotting_urination"
+                        },
+                        {
+                            "text": "fatigue",
+                            "value": "fatigue"
+                        },
+                        {
+                            "text": "weight gain",
+                            "value": "weight_gain"
+                        },
+                        {
+                            "text": "anxiety",
+                            "value": "anxiety"
+                        },
+                        {
+                            "text": "cold hands and feets",
+                            "value": "cold_hands_and_feets"
+                        },
+                        {
+                            "text": "mood swings",
+                            "value": "mood_swings"
+                        },
+                        {
+                            "text": "weight loss",
+                            "value": "weight_loss"
+                        },
+                        {
+                            "text": "restlessness",
+                            "value": "restlessness"
+                        },
+                        {
+                            "text": "lethargy",
+                            "value": "lethargy"
+                        },
+                        {
+                            "text": "patches in throat",
+                            "value": "patches_in_throat"
+                        },
+                        {
+                            "text": "irregular sugar level",
+                            "value": "irregular_sugar_level"
+                        },
+                        {
+                            "text": "cough",
+                            "value": "cough"
+                        },
+                        {
+                            "text": "high fever",
+                            "value": "high_fever"
+                        },
+                        {
+                            "text": "sunken eyes",
+                            "value": "sunken_eyes"
+                        },
+                        {
+                            "text": "breathlessness",
+                            "value": "breathlessness"
+                        },
+                        {
+                            "text": "sweating",
+                            "value": "sweating"
+                        },
+                        {
+                            "text": "dehydration",
+                            "value": "dehydration"
+                        },
+                        {
+                            "text": "indigestion",
+                            "value": "indigestion"
+                        },
+                        {
+                            "text": "headache",
+                            "value": "headache"
+                        },
+                        {
+                            "text": "yellowish skin",
+                            "value": "yellowish_skin"
+                        },
+                        {
+                            "text": "dark urine",
+                            "value": "dark_urine"
+                        },
+                        {
+                            "text": "nausea",
+                            "value": "nausea"
+                        },
+                        {
+                            "text": "loss of appetite",
+                            "value": "loss_of_appetite"
+                        },
+                        {
+                            "text": "pain behind the eyes",
+                            "value": "pain_behind_the_eyes"
+                        },
+                        {
+                            "text": "back pain",
+                            "value": "back_pain"
+                        },
+                        {
+                            "text": "constipation",
+                            "value": "constipation"
+                        },
+                        {
+                            "text": "abdominal pain",
+                            "value": "abdominal_pain"
+                        },
+                        {
+                            "text": "diarrhoea",
+                            "value": "diarrhoea"
+                        },
+                        {
+                            "text": "mild fever",
+                            "value": "mild_fever"
+                        },
+                        {
+                            "text": "yellow urine",
+                            "value": "yellow_urine"
+                        },
+                        {
+                            "text": "yellowing of eyes",
+                            "value": "yellowing_of_eyes"
+                        },
+                        {
+                            "text": "acute liver failure",
+                            "value": "acute_liver_failure"
+                        },
+                        {
+                            "text": "fluid overload",
+                            "value": "fluid_overload"
+                        },
+                        {
+                            "text": "swelling of stomach",
+                            "value": "swelling_of_stomach"
+                        },
+                        {
+                            "text": "swelled lymph nodes",
+                            "value": "swelled_lymph_nodes"
+                        },
+                        {
+                            "text": "malaise",
+                            "value": "malaise"
+                        },
+                        {
+                            "text": "blurred and distorted vision",
+                            "value": "blurred_and_distorted_vision"
+                        },
+                        {
+                            "text": "phlegm",
+                            "value": "phlegm"
+                        },
+                        {
+                            "text": "throat irritation",
+                            "value": "throat_irritation"
+                        },
+                        {
+                            "text": "redness of eyes",
+                            "value": "redness_of_eyes"
+                        },
+                        {
+                            "text": "sinus pressure",
+                            "value": "sinus_pressure"
+                        },
+                        {
+                            "text": "runny nose",
+                            "value": "runny_nose"
+                        },
+                        {
+                            "text": "congestion",
+                            "value": "congestion"
+                        },
+                        {
+                            "text": "chest pain",
+                            "value": "chest_pain"
+                        },
+                        {
+                            "text": "weakness in limbs",
+                            "value": "weakness_in_limbs"
+                        },
+                        {
+                            "text": "fast heart rate",
+                            "value": "fast_heart_rate"
+                        },
+                        {
+                            "text": "pain during bowel movements",
+                            "value": "pain_during_bowel_movements"
+                        },
+                        {
+                            "text": "pain in anal region",
+                            "value": "pain_in_anal_region"
+                        },
+                        {
+                            "text": "bloody stool",
+                            "value": "bloody_stool"
+                        },
+                        {
+                            "text": "irritation in anus",
+                            "value": "irritation_in_anus"
+                        },
+                        {
+                            "text": "neck pain",
+                            "value": "neck_pain"
+                        },
+                        {
+                            "text": "dizziness",
+                            "value": "dizziness"
+                        },
+                        {
+                            "text": "cramps",
+                            "value": "cramps"
+                        },
+                        {
+                            "text": "bruising",
+                            "value": "bruising"
+                        },
+                        {
+                            "text": "obesity",
+                            "value": "obesity"
+                        },
+                        {
+                            "text": "swollen legs",
+                            "value": "swollen_legs"
+                        },
+                        {
+                            "text": "swollen blood vessels",
+                            "value": "swollen_blood_vessels"
+                        },
+                        {
+                            "text": "puffy face and eyes",
+                            "value": "puffy_face_and_eyes"
+                        },
+                        {
+                            "text": "enlarged thyroid",
+                            "value": "enlarged_thyroid"
+                        },
+                        {
+                            "text": "brittle nails",
+                            "value": "brittle_nails"
+                        },
+                        {
+                            "text": "swollen extremeties",
+                            "value": "swollen_extremeties"
+                        },
+                        {
+                            "text": "excessive hunger",
+                            "value": "excessive_hunger"
+                        },
+                        {
+                            "text": "extra marital contacts",
+                            "value": "extra_marital_contacts"
+                        },
+                        {
+                            "text": "drying and tingling lips",
+                            "value": "drying_and_tingling_lips"
+                        },
+                        {
+                            "text": "slurred speech",
+                            "value": "slurred_speech"
+                        },
+                        {
+                            "text": "knee pain",
+                            "value": "knee_pain"
+                        },
+                        {
+                            "text": "hip joint pain",
+                            "value": "hip_joint_pain"
+                        },
+                        {
+                            "text": "muscle weakness",
+                            "value": "muscle_weakness"
+                        },
+                        {
+                            "text": "stiff neck",
+                            "value": "stiff_neck"
+                        },
+                        {
+                            "text": "swelling joints",
+                            "value": "swelling_joints"
+                        },
+                        {
+                            "text": "movement stiffness",
+                            "value": "movement_stiffness"
+                        },
+                        {
+                            "text": "spinning movements",
+                            "value": "spinning_movements"
+                        },
+                        {
+                            "text": "loss of balance",
+                            "value": "loss_of_balance"
+                        },
+                        {
+                            "text": "unsteadiness",
+                            "value": "unsteadiness"
+                        },
+                        {
+                            "text": "weakness of one body side",
+                            "value": "weakness_of_one_body_side"
+                        },
+                        {
+                            "text": "loss of smell",
+                            "value": "loss_of_smell"
+                        },
+                        {
+                            "text": "bladder discomfort",
+                            "value": "bladder_discomfort"
+                        },
+                        {
+                            "text": "foul smell of urine",
+                            "value": "foul_smell_of_urine"
+                        },
+                        {
+                            "text": "continuous feel of urine",
+                            "value": "continuous_feel_of_urine"
+                        },
+                        {
+                            "text": "passage of gases",
+                            "value": "passage_of_gases"
+                        },
+                        {
+                            "text": "internal itching",
+                            "value": "internal_itching"
+                        },
+                        {
+                            "text": "toxic look (typhos)",
+                            "value": "toxic_look_(typhos)"
+                        },
+                        {
+                            "text": "depression",
+                            "value": "depression"
+                        },
+                        {
+                            "text": "irritability",
+                            "value": "irritability"
+                        },
+                        {
+                            "text": "muscle pain",
+                            "value": "muscle_pain"
+                        },
+                        {
+                            "text": "altered sensorium",
+                            "value": "altered_sensorium"
+                        },
+                        {
+                            "text": "red spots over body",
+                            "value": "red_spots_over_body"
+                        },
+                        {
+                            "text": "belly pain",
+                            "value": "belly_pain"
+                        },
+                        {
+                            "text": "abnormal menstruation",
+                            "value": "abnormal_menstruation"
+                        },
+                        {
+                            "text": "dischromic patches",
+                            "value": "dischromic_patches"
+                        },
+                        {
+                            "text": "watering from eyes",
+                            "value": "watering_from_eyes"
+                        },
+                        {
+                            "text": "increased appetite",
+                            "value": "increased_appetite"
+                        },
+                        {
+                            "text": "polyuria",
+                            "value": "polyuria"
+                        },
+                        {
+                            "text": "family history",
+                            "value": "family_history"
+                        },
+                        {
+                            "text": "mucoid sputum",
+                            "value": "mucoid_sputum"
+                        },
+                        {
+                            "text": "rusty sputum",
+                            "value": "rusty_sputum"
+                        },
+                        {
+                            "text": "lack of concentration",
+                            "value": "lack_of_concentration"
+                        },
+                        {
+                            "text": "visual disturbances",
+                            "value": "visual_disturbances"
+                        },
+                        {
+                            "text": "receiving blood transfusion",
+                            "value": "receiving_blood_transfusion"
+                        },
+                        {
+                            "text": "receiving unsterile injections",
+                            "value": "receiving_unsterile_injections"
+                        },
+                        {
+                            "text": "coma",
+                            "value": "coma"
+                        },
+                        {
+                            "text": "stomach bleeding",
+                            "value": "stomach_bleeding"
+                        },
+                        {
+                            "text": "distention of abdomen",
+                            "value": "distention_of_abdomen"
+                        },
+                        {
+                            "text": "history of alcohol consumption",
+                            "value": "history_of_alcohol_consumption"
+                        },
+                        {
+                            "text": "blood in sputum",
+                            "value": "blood_in_sputum"
+                        },
+                        {
+                            "text": "prominent veins on calf",
+                            "value": "prominent_veins_on_calf"
+                        },
+                        {
+                            "text": "palpitations",
+                            "value": "palpitations"
+                        },
+                        {
+                            "text": "painful walking",
+                            "value": "painful_walking"
+                        },
+                        {
+                            "text": "pus filled pimples",
+                            "value": "pus_filled_pimples"
+                        },
+                        {
+                            "text": "blackheads",
+                            "value": "blackheads"
+                        },
+                        {
+                            "text": "scurring",
+                            "value": "scurring"
+                        },
+                        {
+                            "text": "skin peeling",
+                            "value": "skin_peeling"
+                        },
+                        {
+                            "text": "silver like dusting",
+                            "value": "silver_like_dusting"
+                        },
+                        {
+                            "text": "small dents in nails",
+                            "value": "small_dents_in_nails"
+                        },
+                        {
+                            "text": "inflammatory nails",
+                            "value": "inflammatory_nails"
+                        },
+                        {
+                            "text": "blister",
+                            "value": "blister"
+                        },
+                        {
+                            "text": "red sore around nose",
+                            "value": "red_sore_around_nose"
+                        },
+                        {
+                            "text": "yellow crust ooze",
+                            "value": "yellow_crust_ooze"
+                        }
+                    ]
+                },
+                {
+                    "name": "symptom3",
+                    "id": "symptom3",
+                    "options": [
+                        {
+                            "text": "Select a symptom",
+                            "value": ""
+                        },
+                        {
+                            "text": "itching",
+                            "value": "itching"
+                        },
+                        {
+                            "text": "skin rash",
+                            "value": "skin_rash"
+                        },
+                        {
+                            "text": "nodal skin eruptions",
+                            "value": "nodal_skin_eruptions"
+                        },
+                        {
+                            "text": "continuous sneezing",
+                            "value": "continuous_sneezing"
+                        },
+                        {
+                            "text": "shivering",
+                            "value": "shivering"
+                        },
+                        {
+                            "text": "chills",
+                            "value": "chills"
+                        },
+                        {
+                            "text": "joint pain",
+                            "value": "joint_pain"
+                        },
+                        {
+                            "text": "stomach pain",
+                            "value": "stomach_pain"
+                        },
+                        {
+                            "text": "acidity",
+                            "value": "acidity"
+                        },
+                        {
+                            "text": "ulcers on tongue",
+                            "value": "ulcers_on_tongue"
+                        },
+                        {
+                            "text": "muscle wasting",
+                            "value": "muscle_wasting"
+                        },
+                        {
+                            "text": "vomiting",
+                            "value": "vomiting"
+                        },
+                        {
+                            "text": "burning micturition",
+                            "value": "burning_micturition"
+                        },
+                        {
+                            "text": "spotting urination",
+                            "value": "spotting_urination"
+                        },
+                        {
+                            "text": "fatigue",
+                            "value": "fatigue"
+                        },
+                        {
+                            "text": "weight gain",
+                            "value": "weight_gain"
+                        },
+                        {
+                            "text": "anxiety",
+                            "value": "anxiety"
+                        },
+                        {
+                            "text": "cold hands and feets",
+                            "value": "cold_hands_and_feets"
+                        },
+                        {
+                            "text": "mood swings",
+                            "value": "mood_swings"
+                        },
+                        {
+                            "text": "weight loss",
+                            "value": "weight_loss"
+                        },
+                        {
+                            "text": "restlessness",
+                            "value": "restlessness"
+                        },
+                        {
+                            "text": "lethargy",
+                            "value": "lethargy"
+                        },
+                        {
+                            "text": "patches in throat",
+                            "value": "patches_in_throat"
+                        },
+                        {
+                            "text": "irregular sugar level",
+                            "value": "irregular_sugar_level"
+                        },
+                        {
+                            "text": "cough",
+                            "value": "cough"
+                        },
+                        {
+                            "text": "high fever",
+                            "value": "high_fever"
+                        },
+                        {
+                            "text": "sunken eyes",
+                            "value": "sunken_eyes"
+                        },
+                        {
+                            "text": "breathlessness",
+                            "value": "breathlessness"
+                        },
+                        {
+                            "text": "sweating",
+                            "value": "sweating"
+                        },
+                        {
+                            "text": "dehydration",
+                            "value": "dehydration"
+                        },
+                        {
+                            "text": "indigestion",
+                            "value": "indigestion"
+                        },
+                        {
+                            "text": "headache",
+                            "value": "headache"
+                        },
+                        {
+                            "text": "yellowish skin",
+                            "value": "yellowish_skin"
+                        },
+                        {
+                            "text": "dark urine",
+                            "value": "dark_urine"
+                        },
+                        {
+                            "text": "nausea",
+                            "value": "nausea"
+                        },
+                        {
+                            "text": "loss of appetite",
+                            "value": "loss_of_appetite"
+                        },
+                        {
+                            "text": "pain behind the eyes",
+                            "value": "pain_behind_the_eyes"
+                        },
+                        {
+                            "text": "back pain",
+                            "value": "back_pain"
+                        },
+                        {
+                            "text": "constipation",
+                            "value": "constipation"
+                        },
+                        {
+                            "text": "abdominal pain",
+                            "value": "abdominal_pain"
+                        },
+                        {
+                            "text": "diarrhoea",
+                            "value": "diarrhoea"
+                        },
+                        {
+                            "text": "mild fever",
+                            "value": "mild_fever"
+                        },
+                        {
+                            "text": "yellow urine",
+                            "value": "yellow_urine"
+                        },
+                        {
+                            "text": "yellowing of eyes",
+                            "value": "yellowing_of_eyes"
+                        },
+                        {
+                            "text": "acute liver failure",
+                            "value": "acute_liver_failure"
+                        },
+                        {
+                            "text": "fluid overload",
+                            "value": "fluid_overload"
+                        },
+                        {
+                            "text": "swelling of stomach",
+                            "value": "swelling_of_stomach"
+                        },
+                        {
+                            "text": "swelled lymph nodes",
+                            "value": "swelled_lymph_nodes"
+                        },
+                        {
+                            "text": "malaise",
+                            "value": "malaise"
+                        },
+                        {
+                            "text": "blurred and distorted vision",
+                            "value": "blurred_and_distorted_vision"
+                        },
+                        {
+                            "text": "phlegm",
+                            "value": "phlegm"
+                        },
+                        {
+                            "text": "throat irritation",
+                            "value": "throat_irritation"
+                        },
+                        {
+                            "text": "redness of eyes",
+                            "value": "redness_of_eyes"
+                        },
+                        {
+                            "text": "sinus pressure",
+                            "value": "sinus_pressure"
+                        },
+                        {
+                            "text": "runny nose",
+                            "value": "runny_nose"
+                        },
+                        {
+                            "text": "congestion",
+                            "value": "congestion"
+                        },
+                        {
+                            "text": "chest pain",
+                            "value": "chest_pain"
+                        },
+                        {
+                            "text": "weakness in limbs",
+                            "value": "weakness_in_limbs"
+                        },
+                        {
+                            "text": "fast heart rate",
+                            "value": "fast_heart_rate"
+                        },
+                        {
+                            "text": "pain during bowel movements",
+                            "value": "pain_during_bowel_movements"
+                        },
+                        {
+                            "text": "pain in anal region",
+                            "value": "pain_in_anal_region"
+                        },
+                        {
+                            "text": "bloody stool",
+                            "value": "bloody_stool"
+                        },
+                        {
+                            "text": "irritation in anus",
+                            "value": "irritation_in_anus"
+                        },
+                        {
+                            "text": "neck pain",
+                            "value": "neck_pain"
+                        },
+                        {
+                            "text": "dizziness",
+                            "value": "dizziness"
+                        },
+                        {
+                            "text": "cramps",
+                            "value": "cramps"
+                        },
+                        {
+                            "text": "bruising",
+                            "value": "bruising"
+                        },
+                        {
+                            "text": "obesity",
+                            "value": "obesity"
+                        },
+                        {
+                            "text": "swollen legs",
+                            "value": "swollen_legs"
+                        },
+                        {
+                            "text": "swollen blood vessels",
+                            "value": "swollen_blood_vessels"
+                        },
+                        {
+                            "text": "puffy face and eyes",
+                            "value": "puffy_face_and_eyes"
+                        },
+                        {
+                            "text": "enlarged thyroid",
+                            "value": "enlarged_thyroid"
+                        },
+                        {
+                            "text": "brittle nails",
+                            "value": "brittle_nails"
+                        },
+                        {
+                            "text": "swollen extremeties",
+                            "value": "swollen_extremeties"
+                        },
+                        {
+                            "text": "excessive hunger",
+                            "value": "excessive_hunger"
+                        },
+                        {
+                            "text": "extra marital contacts",
+                            "value": "extra_marital_contacts"
+                        },
+                        {
+                            "text": "drying and tingling lips",
+                            "value": "drying_and_tingling_lips"
+                        },
+                        {
+                            "text": "slurred speech",
+                            "value": "slurred_speech"
+                        },
+                        {
+                            "text": "knee pain",
+                            "value": "knee_pain"
+                        },
+                        {
+                            "text": "hip joint pain",
+                            "value": "hip_joint_pain"
+                        },
+                        {
+                            "text": "muscle weakness",
+                            "value": "muscle_weakness"
+                        },
+                        {
+                            "text": "stiff neck",
+                            "value": "stiff_neck"
+                        },
+                        {
+                            "text": "swelling joints",
+                            "value": "swelling_joints"
+                        },
+                        {
+                            "text": "movement stiffness",
+                            "value": "movement_stiffness"
+                        },
+                        {
+                            "text": "spinning movements",
+                            "value": "spinning_movements"
+                        },
+                        {
+                            "text": "loss of balance",
+                            "value": "loss_of_balance"
+                        },
+                        {
+                            "text": "unsteadiness",
+                            "value": "unsteadiness"
+                        },
+                        {
+                            "text": "weakness of one body side",
+                            "value": "weakness_of_one_body_side"
+                        },
+                        {
+                            "text": "loss of smell",
+                            "value": "loss_of_smell"
+                        },
+                        {
+                            "text": "bladder discomfort",
+                            "value": "bladder_discomfort"
+                        },
+                        {
+                            "text": "foul smell of urine",
+                            "value": "foul_smell_of_urine"
+                        },
+                        {
+                            "text": "continuous feel of urine",
+                            "value": "continuous_feel_of_urine"
+                        },
+                        {
+                            "text": "passage of gases",
+                            "value": "passage_of_gases"
+                        },
+                        {
+                            "text": "internal itching",
+                            "value": "internal_itching"
+                        },
+                        {
+                            "text": "toxic look (typhos)",
+                            "value": "toxic_look_(typhos)"
+                        },
+                        {
+                            "text": "depression",
+                            "value": "depression"
+                        },
+                        {
+                            "text": "irritability",
+                            "value": "irritability"
+                        },
+                        {
+                            "text": "muscle pain",
+                            "value": "muscle_pain"
+                        },
+                        {
+                            "text": "altered sensorium",
+                            "value": "altered_sensorium"
+                        },
+                        {
+                            "text": "red spots over body",
+                            "value": "red_spots_over_body"
+                        },
+                        {
+                            "text": "belly pain",
+                            "value": "belly_pain"
+                        },
+                        {
+                            "text": "abnormal menstruation",
+                            "value": "abnormal_menstruation"
+                        },
+                        {
+                            "text": "dischromic patches",
+                            "value": "dischromic_patches"
+                        },
+                        {
+                            "text": "watering from eyes",
+                            "value": "watering_from_eyes"
+                        },
+                        {
+                            "text": "increased appetite",
+                            "value": "increased_appetite"
+                        },
+                        {
+                            "text": "polyuria",
+                            "value": "polyuria"
+                        },
+                        {
+                            "text": "family history",
+                            "value": "family_history"
+                        },
+                        {
+                            "text": "mucoid sputum",
+                            "value": "mucoid_sputum"
+                        },
+                        {
+                            "text": "rusty sputum",
+                            "value": "rusty_sputum"
+                        },
+                        {
+                            "text": "lack of concentration",
+                            "value": "lack_of_concentration"
+                        },
+                        {
+                            "text": "visual disturbances",
+                            "value": "visual_disturbances"
+                        },
+                        {
+                            "text": "receiving blood transfusion",
+                            "value": "receiving_blood_transfusion"
+                        },
+                        {
+                            "text": "receiving unsterile injections",
+                            "value": "receiving_unsterile_injections"
+                        },
+                        {
+                            "text": "coma",
+                            "value": "coma"
+                        },
+                        {
+                            "text": "stomach bleeding",
+                            "value": "stomach_bleeding"
+                        },
+                        {
+                            "text": "distention of abdomen",
+                            "value": "distention_of_abdomen"
+                        },
+                        {
+                            "text": "history of alcohol consumption",
+                            "value": "history_of_alcohol_consumption"
+                        },
+                        {
+                            "text": "blood in sputum",
+                            "value": "blood_in_sputum"
+                        },
+                        {
+                            "text": "prominent veins on calf",
+                            "value": "prominent_veins_on_calf"
+                        },
+                        {
+                            "text": "palpitations",
+                            "value": "palpitations"
+                        },
+                        {
+                            "text": "painful walking",
+                            "value": "painful_walking"
+                        },
+                        {
+                            "text": "pus filled pimples",
+                            "value": "pus_filled_pimples"
+                        },
+                        {
+                            "text": "blackheads",
+                            "value": "blackheads"
+                        },
+                        {
+                            "text": "scurring",
+                            "value": "scurring"
+                        },
+                        {
+                            "text": "skin peeling",
+                            "value": "skin_peeling"
+                        },
+                        {
+                            "text": "silver like dusting",
+                            "value": "silver_like_dusting"
+                        },
+                        {
+                            "text": "small dents in nails",
+                            "value": "small_dents_in_nails"
+                        },
+                        {
+                            "text": "inflammatory nails",
+                            "value": "inflammatory_nails"
+                        },
+                        {
+                            "text": "blister",
+                            "value": "blister"
+                        },
+                        {
+                            "text": "red sore around nose",
+                            "value": "red_sore_around_nose"
+                        },
+                        {
+                            "text": "yellow crust ooze",
+                            "value": "yellow_crust_ooze"
+                        }
+                    ]
+                },
+                {
+                    "name": "symptom4",
+                    "id": "symptom4",
+                    "options": [
+                        {
+                            "text": "Select a symptom",
+                            "value": ""
+                        },
+                        {
+                            "text": "itching",
+                            "value": "itching"
+                        },
+                        {
+                            "text": "skin rash",
+                            "value": "skin_rash"
+                        },
+                        {
+                            "text": "nodal skin eruptions",
+                            "value": "nodal_skin_eruptions"
+                        },
+                        {
+                            "text": "continuous sneezing",
+                            "value": "continuous_sneezing"
+                        },
+                        {
+                            "text": "shivering",
+                            "value": "shivering"
+                        },
+                        {
+                            "text": "chills",
+                            "value": "chills"
+                        },
+                        {
+                            "text": "joint pain",
+                            "value": "joint_pain"
+                        },
+                        {
+                            "text": "stomach pain",
+                            "value": "stomach_pain"
+                        },
+                        {
+                            "text": "acidity",
+                            "value": "acidity"
+                        },
+                        {
+                            "text": "ulcers on tongue",
+                            "value": "ulcers_on_tongue"
+                        },
+                        {
+                            "text": "muscle wasting",
+                            "value": "muscle_wasting"
+                        },
+                        {
+                            "text": "vomiting",
+                            "value": "vomiting"
+                        },
+                        {
+                            "text": "burning micturition",
+                            "value": "burning_micturition"
+                        },
+                        {
+                            "text": "spotting urination",
+                            "value": "spotting_urination"
+                        },
+                        {
+                            "text": "fatigue",
+                            "value": "fatigue"
+                        },
+                        {
+                            "text": "weight gain",
+                            "value": "weight_gain"
+                        },
+                        {
+                            "text": "anxiety",
+                            "value": "anxiety"
+                        },
+                        {
+                            "text": "cold hands and feets",
+                            "value": "cold_hands_and_feets"
+                        },
+                        {
+                            "text": "mood swings",
+                            "value": "mood_swings"
+                        },
+                        {
+                            "text": "weight loss",
+                            "value": "weight_loss"
+                        },
+                        {
+                            "text": "restlessness",
+                            "value": "restlessness"
+                        },
+                        {
+                            "text": "lethargy",
+                            "value": "lethargy"
+                        },
+                        {
+                            "text": "patches in throat",
+                            "value": "patches_in_throat"
+                        },
+                        {
+                            "text": "irregular sugar level",
+                            "value": "irregular_sugar_level"
+                        },
+                        {
+                            "text": "cough",
+                            "value": "cough"
+                        },
+                        {
+                            "text": "high fever",
+                            "value": "high_fever"
+                        },
+                        {
+                            "text": "sunken eyes",
+                            "value": "sunken_eyes"
+                        },
+                        {
+                            "text": "breathlessness",
+                            "value": "breathlessness"
+                        },
+                        {
+                            "text": "sweating",
+                            "value": "sweating"
+                        },
+                        {
+                            "text": "dehydration",
+                            "value": "dehydration"
+                        },
+                        {
+                            "text": "indigestion",
+                            "value": "indigestion"
+                        },
+                        {
+                            "text": "headache",
+                            "value": "headache"
+                        },
+                        {
+                            "text": "yellowish skin",
+                            "value": "yellowish_skin"
+                        },
+                        {
+                            "text": "dark urine",
+                            "value": "dark_urine"
+                        },
+                        {
+                            "text": "nausea",
+                            "value": "nausea"
+                        },
+                        {
+                            "text": "loss of appetite",
+                            "value": "loss_of_appetite"
+                        },
+                        {
+                            "text": "pain behind the eyes",
+                            "value": "pain_behind_the_eyes"
+                        },
+                        {
+                            "text": "back pain",
+                            "value": "back_pain"
+                        },
+                        {
+                            "text": "constipation",
+                            "value": "constipation"
+                        },
+                        {
+                            "text": "abdominal pain",
+                            "value": "abdominal_pain"
+                        },
+                        {
+                            "text": "diarrhoea",
+                            "value": "diarrhoea"
+                        },
+                        {
+                            "text": "mild fever",
+                            "value": "mild_fever"
+                        },
+                        {
+                            "text": "yellow urine",
+                            "value": "yellow_urine"
+                        },
+                        {
+                            "text": "yellowing of eyes",
+                            "value": "yellowing_of_eyes"
+                        },
+                        {
+                            "text": "acute liver failure",
+                            "value": "acute_liver_failure"
+                        },
+                        {
+                            "text": "fluid overload",
+                            "value": "fluid_overload"
+                        },
+                        {
+                            "text": "swelling of stomach",
+                            "value": "swelling_of_stomach"
+                        },
+                        {
+                            "text": "swelled lymph nodes",
+                            "value": "swelled_lymph_nodes"
+                        },
+                        {
+                            "text": "malaise",
+                            "value": "malaise"
+                        },
+                        {
+                            "text": "blurred and distorted vision",
+                            "value": "blurred_and_distorted_vision"
+                        },
+                        {
+                            "text": "phlegm",
+                            "value": "phlegm"
+                        },
+                        {
+                            "text": "throat irritation",
+                            "value": "throat_irritation"
+                        },
+                        {
+                            "text": "redness of eyes",
+                            "value": "redness_of_eyes"
+                        },
+                        {
+                            "text": "sinus pressure",
+                            "value": "sinus_pressure"
+                        },
+                        {
+                            "text": "runny nose",
+                            "value": "runny_nose"
+                        },
+                        {
+                            "text": "congestion",
+                            "value": "congestion"
+                        },
+                        {
+                            "text": "chest pain",
+                            "value": "chest_pain"
+                        },
+                        {
+                            "text": "weakness in limbs",
+                            "value": "weakness_in_limbs"
+                        },
+                        {
+                            "text": "fast heart rate",
+                            "value": "fast_heart_rate"
+                        },
+                        {
+                            "text": "pain during bowel movements",
+                            "value": "pain_during_bowel_movements"
+                        },
+                        {
+                            "text": "pain in anal region",
+                            "value": "pain_in_anal_region"
+                        },
+                        {
+                            "text": "bloody stool",
+                            "value": "bloody_stool"
+                        },
+                        {
+                            "text": "irritation in anus",
+                            "value": "irritation_in_anus"
+                        },
+                        {
+                            "text": "neck pain",
+                            "value": "neck_pain"
+                        },
+                        {
+                            "text": "dizziness",
+                            "value": "dizziness"
+                        },
+                        {
+                            "text": "cramps",
+                            "value": "cramps"
+                        },
+                        {
+                            "text": "bruising",
+                            "value": "bruising"
+                        },
+                        {
+                            "text": "obesity",
+                            "value": "obesity"
+                        },
+                        {
+                            "text": "swollen legs",
+                            "value": "swollen_legs"
+                        },
+                        {
+                            "text": "swollen blood vessels",
+                            "value": "swollen_blood_vessels"
+                        },
+                        {
+                            "text": "puffy face and eyes",
+                            "value": "puffy_face_and_eyes"
+                        },
+                        {
+                            "text": "enlarged thyroid",
+                            "value": "enlarged_thyroid"
+                        },
+                        {
+                            "text": "brittle nails",
+                            "value": "brittle_nails"
+                        },
+                        {
+                            "text": "swollen extremeties",
+                            "value": "swollen_extremeties"
+                        },
+                        {
+                            "text": "excessive hunger",
+                            "value": "excessive_hunger"
+                        },
+                        {
+                            "text": "extra marital contacts",
+                            "value": "extra_marital_contacts"
+                        },
+                        {
+                            "text": "drying and tingling lips",
+                            "value": "drying_and_tingling_lips"
+                        },
+                        {
+                            "text": "slurred speech",
+                            "value": "slurred_speech"
+                        },
+                        {
+                            "text": "knee pain",
+                            "value": "knee_pain"
+                        },
+                        {
+                            "text": "hip joint pain",
+                            "value": "hip_joint_pain"
+                        },
+                        {
+                            "text": "muscle weakness",
+                            "value": "muscle_weakness"
+                        },
+                        {
+                            "text": "stiff neck",
+                            "value": "stiff_neck"
+                        },
+                        {
+                            "text": "swelling joints",
+                            "value": "swelling_joints"
+                        },
+                        {
+                            "text": "movement stiffness",
+                            "value": "movement_stiffness"
+                        },
+                        {
+                            "text": "spinning movements",
+                            "value": "spinning_movements"
+                        },
+                        {
+                            "text": "loss of balance",
+                            "value": "loss_of_balance"
+                        },
+                        {
+                            "text": "unsteadiness",
+                            "value": "unsteadiness"
+                        },
+                        {
+                            "text": "weakness of one body side",
+                            "value": "weakness_of_one_body_side"
+                        },
+                        {
+                            "text": "loss of smell",
+                            "value": "loss_of_smell"
+                        },
+                        {
+                            "text": "bladder discomfort",
+                            "value": "bladder_discomfort"
+                        },
+                        {
+                            "text": "foul smell of urine",
+                            "value": "foul_smell_of_urine"
+                        },
+                        {
+                            "text": "continuous feel of urine",
+                            "value": "continuous_feel_of_urine"
+                        },
+                        {
+                            "text": "passage of gases",
+                            "value": "passage_of_gases"
+                        },
+                        {
+                            "text": "internal itching",
+                            "value": "internal_itching"
+                        },
+                        {
+                            "text": "toxic look (typhos)",
+                            "value": "toxic_look_(typhos)"
+                        },
+                        {
+                            "text": "depression",
+                            "value": "depression"
+                        },
+                        {
+                            "text": "irritability",
+                            "value": "irritability"
+                        },
+                        {
+                            "text": "muscle pain",
+                            "value": "muscle_pain"
+                        },
+                        {
+                            "text": "altered sensorium",
+                            "value": "altered_sensorium"
+                        },
+                        {
+                            "text": "red spots over body",
+                            "value": "red_spots_over_body"
+                        },
+                        {
+                            "text": "belly pain",
+                            "value": "belly_pain"
+                        },
+                        {
+                            "text": "abnormal menstruation",
+                            "value": "abnormal_menstruation"
+                        },
+                        {
+                            "text": "dischromic patches",
+                            "value": "dischromic_patches"
+                        },
+                        {
+                            "text": "watering from eyes",
+                            "value": "watering_from_eyes"
+                        },
+                        {
+                            "text": "increased appetite",
+                            "value": "increased_appetite"
+                        },
+                        {
+                            "text": "polyuria",
+                            "value": "polyuria"
+                        },
+                        {
+                            "text": "family history",
+                            "value": "family_history"
+                        },
+                        {
+                            "text": "mucoid sputum",
+                            "value": "mucoid_sputum"
+                        },
+                        {
+                            "text": "rusty sputum",
+                            "value": "rusty_sputum"
+                        },
+                        {
+                            "text": "lack of concentration",
+                            "value": "lack_of_concentration"
+                        },
+                        {
+                            "text": "visual disturbances",
+                            "value": "visual_disturbances"
+                        },
+                        {
+                            "text": "receiving blood transfusion",
+                            "value": "receiving_blood_transfusion"
+                        },
+                        {
+                            "text": "receiving unsterile injections",
+                            "value": "receiving_unsterile_injections"
+                        },
+                        {
+                            "text": "coma",
+                            "value": "coma"
+                        },
+                        {
+                            "text": "stomach bleeding",
+                            "value": "stomach_bleeding"
+                        },
+                        {
+                            "text": "distention of abdomen",
+                            "value": "distention_of_abdomen"
+                        },
+                        {
+                            "text": "history of alcohol consumption",
+                            "value": "history_of_alcohol_consumption"
+                        },
+                        {
+                            "text": "blood in sputum",
+                            "value": "blood_in_sputum"
+                        },
+                        {
+                            "text": "prominent veins on calf",
+                            "value": "prominent_veins_on_calf"
+                        },
+                        {
+                            "text": "palpitations",
+                            "value": "palpitations"
+                        },
+                        {
+                            "text": "painful walking",
+                            "value": "painful_walking"
+                        },
+                        {
+                            "text": "pus filled pimples",
+                            "value": "pus_filled_pimples"
+                        },
+                        {
+                            "text": "blackheads",
+                            "value": "blackheads"
+                        },
+                        {
+                            "text": "scurring",
+                            "value": "scurring"
+                        },
+                        {
+                            "text": "skin peeling",
+                            "value": "skin_peeling"
+                        },
+                        {
+                            "text": "silver like dusting",
+                            "value": "silver_like_dusting"
+                        },
+                        {
+                            "text": "small dents in nails",
+                            "value": "small_dents_in_nails"
+                        },
+                        {
+                            "text": "inflammatory nails",
+                            "value": "inflammatory_nails"
+                        },
+                        {
+                            "text": "blister",
+                            "value": "blister"
+                        },
+                        {
+                            "text": "red sore around nose",
+                            "value": "red_sore_around_nose"
+                        },
+                        {
+                            "text": "yellow crust ooze",
+                            "value": "yellow_crust_ooze"
+                        }
+                    ]
+                },
+                {
+                    "name": "symptom5",
+                    "id": "symptom5",
+                    "options": [
+                        {
+                            "text": "Select a symptom",
+                            "value": ""
+                        },
+                        {
+                            "text": "itching",
+                            "value": "itching"
+                        },
+                        {
+                            "text": "skin rash",
+                            "value": "skin_rash"
+                        },
+                        {
+                            "text": "nodal skin eruptions",
+                            "value": "nodal_skin_eruptions"
+                        },
+                        {
+                            "text": "continuous sneezing",
+                            "value": "continuous_sneezing"
+                        },
+                        {
+                            "text": "shivering",
+                            "value": "shivering"
+                        },
+                        {
+                            "text": "chills",
+                            "value": "chills"
+                        },
+                        {
+                            "text": "joint pain",
+                            "value": "joint_pain"
+                        },
+                        {
+                            "text": "stomach pain",
+                            "value": "stomach_pain"
+                        },
+                        {
+                            "text": "acidity",
+                            "value": "acidity"
+                        },
+                        {
+                            "text": "ulcers on tongue",
+                            "value": "ulcers_on_tongue"
+                        },
+                        {
+                            "text": "muscle wasting",
+                            "value": "muscle_wasting"
+                        },
+                        {
+                            "text": "vomiting",
+                            "value": "vomiting"
+                        },
+                        {
+                            "text": "burning micturition",
+                            "value": "burning_micturition"
+                        },
+                        {
+                            "text": "spotting urination",
+                            "value": "spotting_urination"
+                        },
+                        {
+                            "text": "fatigue",
+                            "value": "fatigue"
+                        },
+                        {
+                            "text": "weight gain",
+                            "value": "weight_gain"
+                        },
+                        {
+                            "text": "anxiety",
+                            "value": "anxiety"
+                        },
+                        {
+                            "text": "cold hands and feets",
+                            "value": "cold_hands_and_feets"
+                        },
+                        {
+                            "text": "mood swings",
+                            "value": "mood_swings"
+                        },
+                        {
+                            "text": "weight loss",
+                            "value": "weight_loss"
+                        },
+                        {
+                            "text": "restlessness",
+                            "value": "restlessness"
+                        },
+                        {
+                            "text": "lethargy",
+                            "value": "lethargy"
+                        },
+                        {
+                            "text": "patches in throat",
+                            "value": "patches_in_throat"
+                        },
+                        {
+                            "text": "irregular sugar level",
+                            "value": "irregular_sugar_level"
+                        },
+                        {
+                            "text": "cough",
+                            "value": "cough"
+                        },
+                        {
+                            "text": "high fever",
+                            "value": "high_fever"
+                        },
+                        {
+                            "text": "sunken eyes",
+                            "value": "sunken_eyes"
+                        },
+                        {
+                            "text": "breathlessness",
+                            "value": "breathlessness"
+                        },
+                        {
+                            "text": "sweating",
+                            "value": "sweating"
+                        },
+                        {
+                            "text": "dehydration",
+                            "value": "dehydration"
+                        },
+                        {
+                            "text": "indigestion",
+                            "value": "indigestion"
+                        },
+                        {
+                            "text": "headache",
+                            "value": "headache"
+                        },
+                        {
+                            "text": "yellowish skin",
+                            "value": "yellowish_skin"
+                        },
+                        {
+                            "text": "dark urine",
+                            "value": "dark_urine"
+                        },
+                        {
+                            "text": "nausea",
+                            "value": "nausea"
+                        },
+                        {
+                            "text": "loss of appetite",
+                            "value": "loss_of_appetite"
+                        },
+                        {
+                            "text": "pain behind the eyes",
+                            "value": "pain_behind_the_eyes"
+                        },
+                        {
+                            "text": "back pain",
+                            "value": "back_pain"
+                        },
+                        {
+                            "text": "constipation",
+                            "value": "constipation"
+                        },
+                        {
+                            "text": "abdominal pain",
+                            "value": "abdominal_pain"
+                        },
+                        {
+                            "text": "diarrhoea",
+                            "value": "diarrhoea"
+                        },
+                        {
+                            "text": "mild fever",
+                            "value": "mild_fever"
+                        },
+                        {
+                            "text": "yellow urine",
+                            "value": "yellow_urine"
+                        },
+                        {
+                            "text": "yellowing of eyes",
+                            "value": "yellowing_of_eyes"
+                        },
+                        {
+                            "text": "acute liver failure",
+                            "value": "acute_liver_failure"
+                        },
+                        {
+                            "text": "fluid overload",
+                            "value": "fluid_overload"
+                        },
+                        {
+                            "text": "swelling of stomach",
+                            "value": "swelling_of_stomach"
+                        },
+                        {
+                            "text": "swelled lymph nodes",
+                            "value": "swelled_lymph_nodes"
+                        },
+                        {
+                            "text": "malaise",
+                            "value": "malaise"
+                        },
+                        {
+                            "text": "blurred and distorted vision",
+                            "value": "blurred_and_distorted_vision"
+                        },
+                        {
+                            "text": "phlegm",
+                            "value": "phlegm"
+                        },
+                        {
+                            "text": "throat irritation",
+                            "value": "throat_irritation"
+                        },
+                        {
+                            "text": "redness of eyes",
+                            "value": "redness_of_eyes"
+                        },
+                        {
+                            "text": "sinus pressure",
+                            "value": "sinus_pressure"
+                        },
+                        {
+                            "text": "runny nose",
+                            "value": "runny_nose"
+                        },
+                        {
+                            "text": "congestion",
+                            "value": "congestion"
+                        },
+                        {
+                            "text": "chest pain",
+                            "value": "chest_pain"
+                        },
+                        {
+                            "text": "weakness in limbs",
+                            "value": "weakness_in_limbs"
+                        },
+                        {
+                            "text": "fast heart rate",
+                            "value": "fast_heart_rate"
+                        },
+                        {
+                            "text": "pain during bowel movements",
+                            "value": "pain_during_bowel_movements"
+                        },
+                        {
+                            "text": "pain in anal region",
+                            "value": "pain_in_anal_region"
+                        },
+                        {
+                            "text": "bloody stool",
+                            "value": "bloody_stool"
+                        },
+                        {
+                            "text": "irritation in anus",
+                            "value": "irritation_in_anus"
+                        },
+                        {
+                            "text": "neck pain",
+                            "value": "neck_pain"
+                        },
+                        {
+                            "text": "dizziness",
+                            "value": "dizziness"
+                        },
+                        {
+                            "text": "cramps",
+                            "value": "cramps"
+                        },
+                        {
+                            "text": "bruising",
+                            "value": "bruising"
+                        },
+                        {
+                            "text": "obesity",
+                            "value": "obesity"
+                        },
+                        {
+                            "text": "swollen legs",
+                            "value": "swollen_legs"
+                        },
+                        {
+                            "text": "swollen blood vessels",
+                            "value": "swollen_blood_vessels"
+                        },
+                        {
+                            "text": "puffy face and eyes",
+                            "value": "puffy_face_and_eyes"
+                        },
+                        {
+                            "text": "enlarged thyroid",
+                            "value": "enlarged_thyroid"
+                        },
+                        {
+                            "text": "brittle nails",
+                            "value": "brittle_nails"
+                        },
+                        {
+                            "text": "swollen extremeties",
+                            "value": "swollen_extremeties"
+                        },
+                        {
+                            "text": "excessive hunger",
+                            "value": "excessive_hunger"
+                        },
+                        {
+                            "text": "extra marital contacts",
+                            "value": "extra_marital_contacts"
+                        },
+                        {
+                            "text": "drying and tingling lips",
+                            "value": "drying_and_tingling_lips"
+                        },
+                        {
+                            "text": "slurred speech",
+                            "value": "slurred_speech"
+                        },
+                        {
+                            "text": "knee pain",
+                            "value": "knee_pain"
+                        },
+                        {
+                            "text": "hip joint pain",
+                            "value": "hip_joint_pain"
+                        },
+                        {
+                            "text": "muscle weakness",
+                            "value": "muscle_weakness"
+                        },
+                        {
+                            "text": "stiff neck",
+                            "value": "stiff_neck"
+                        },
+                        {
+                            "text": "swelling joints",
+                            "value": "swelling_joints"
+                        },
+                        {
+                            "text": "movement stiffness",
+                            "value": "movement_stiffness"
+                        },
+                        {
+                            "text": "spinning movements",
+                            "value": "spinning_movements"
+                        },
+                        {
+                            "text": "loss of balance",
+                            "value": "loss_of_balance"
+                        },
+                        {
+                            "text": "unsteadiness",
+                            "value": "unsteadiness"
+                        },
+                        {
+                            "text": "weakness of one body side",
+                            "value": "weakness_of_one_body_side"
+                        },
+                        {
+                            "text": "loss of smell",
+                            "value": "loss_of_smell"
+                        },
+                        {
+                            "text": "bladder discomfort",
+                            "value": "bladder_discomfort"
+                        },
+                        {
+                            "text": "foul smell of urine",
+                            "value": "foul_smell_of_urine"
+                        },
+                        {
+                            "text": "continuous feel of urine",
+                            "value": "continuous_feel_of_urine"
+                        },
+                        {
+                            "text": "passage of gases",
+                            "value": "passage_of_gases"
+                        },
+                        {
+                            "text": "internal itching",
+                            "value": "internal_itching"
+                        },
+                        {
+                            "text": "toxic look (typhos)",
+                            "value": "toxic_look_(typhos)"
+                        },
+                        {
+                            "text": "depression",
+                            "value": "depression"
+                        },
+                        {
+                            "text": "irritability",
+                            "value": "irritability"
+                        },
+                        {
+                            "text": "muscle pain",
+                            "value": "muscle_pain"
+                        },
+                        {
+                            "text": "altered sensorium",
+                            "value": "altered_sensorium"
+                        },
+                        {
+                            "text": "red spots over body",
+                            "value": "red_spots_over_body"
+                        },
+                        {
+                            "text": "belly pain",
+                            "value": "belly_pain"
+                        },
+                        {
+                            "text": "abnormal menstruation",
+                            "value": "abnormal_menstruation"
+                        },
+                        {
+                            "text": "dischromic patches",
+                            "value": "dischromic_patches"
+                        },
+                        {
+                            "text": "watering from eyes",
+                            "value": "watering_from_eyes"
+                        },
+                        {
+                            "text": "increased appetite",
+                            "value": "increased_appetite"
+                        },
+                        {
+                            "text": "polyuria",
+                            "value": "polyuria"
+                        },
+                        {
+                            "text": "family history",
+                            "value": "family_history"
+                        },
+                        {
+                            "text": "mucoid sputum",
+                            "value": "mucoid_sputum"
+                        },
+                        {
+                            "text": "rusty sputum",
+                            "value": "rusty_sputum"
+                        },
+                        {
+                            "text": "lack of concentration",
+                            "value": "lack_of_concentration"
+                        },
+                        {
+                            "text": "visual disturbances",
+                            "value": "visual_disturbances"
+                        },
+                        {
+                            "text": "receiving blood transfusion",
+                            "value": "receiving_blood_transfusion"
+                        },
+                        {
+                            "text": "receiving unsterile injections",
+                            "value": "receiving_unsterile_injections"
+                        },
+                        {
+                            "text": "coma",
+                            "value": "coma"
+                        },
+                        {
+                            "text": "stomach bleeding",
+                            "value": "stomach_bleeding"
+                        },
+                        {
+                            "text": "distention of abdomen",
+                            "value": "distention_of_abdomen"
+                        },
+                        {
+                            "text": "history of alcohol consumption",
+                            "value": "history_of_alcohol_consumption"
+                        },
+                        {
+                            "text": "blood in sputum",
+                            "value": "blood_in_sputum"
+                        },
+                        {
+                            "text": "prominent veins on calf",
+                            "value": "prominent_veins_on_calf"
+                        },
+                        {
+                            "text": "palpitations",
+                            "value": "palpitations"
+                        },
+                        {
+                            "text": "painful walking",
+                            "value": "painful_walking"
+                        },
+                        {
+                            "text": "pus filled pimples",
+                            "value": "pus_filled_pimples"
+                        },
+                        {
+                            "text": "blackheads",
+                            "value": "blackheads"
+                        },
+                        {
+                            "text": "scurring",
+                            "value": "scurring"
+                        },
+                        {
+                            "text": "skin peeling",
+                            "value": "skin_peeling"
+                        },
+                        {
+                            "text": "silver like dusting",
+                            "value": "silver_like_dusting"
+                        },
+                        {
+                            "text": "small dents in nails",
+                            "value": "small_dents_in_nails"
+                        },
+                        {
+                            "text": "inflammatory nails",
+                            "value": "inflammatory_nails"
+                        },
+                        {
+                            "text": "blister",
+                            "value": "blister"
+                        },
+                        {
+                            "text": "red sore around nose",
+                            "value": "red_sore_around_nose"
+                        },
+                        {
+                            "text": "yellow crust ooze",
+                            "value": "yellow_crust_ooze"
+                        }
+                    ]
+                }
+            ],
+            "textareas": [],
             "forms": [
                 {
                     "action": "/predict",
@@ -192,14 +2875,28 @@
             ],
             "buttons": [
                 {
-                    "text": "Submit"
+                    "text": "Submit",
+                    "type": "submit",
+                    "name": null,
+                    "id": null,
+                    "aria_label": null
                 }
             ],
             "inputs": [
                 {
                     "type": "text",
                     "name": "name",
-                    "placeholder": "Your Name"
+                    "placeholder": "Your Name",
+                    "id": "name",
+                    "aria_label": null
+                }
+            ],
+            "selects": [],
+            "textareas": [
+                {
+                    "name": "review-text",
+                    "id": "review-text",
+                    "placeholder": "Your Review"
                 }
             ],
             "forms": [
@@ -245,29 +2942,49 @@
             ],
             "buttons": [
                 {
-                    "text": "Send"
+                    "text": "Send",
+                    "type": "submit",
+                    "name": null,
+                    "id": null,
+                    "aria_label": null
                 }
             ],
             "inputs": [
                 {
                     "type": "text",
                     "name": "firstName",
-                    "placeholder": "First Name"
+                    "placeholder": "First Name",
+                    "id": "firstName",
+                    "aria_label": null
                 },
                 {
                     "type": "text",
                     "name": "lastName",
-                    "placeholder": "Last Name"
+                    "placeholder": "Last Name",
+                    "id": "lastName",
+                    "aria_label": null
                 },
                 {
                     "type": "email",
                     "name": "email",
-                    "placeholder": "Email"
+                    "placeholder": "Email",
+                    "id": "email",
+                    "aria_label": null
                 },
                 {
                     "type": "tel",
                     "name": "mobile",
-                    "placeholder": "Mobile"
+                    "placeholder": "Mobile",
+                    "id": "mobile",
+                    "aria_label": null
+                }
+            ],
+            "selects": [],
+            "textareas": [
+                {
+                    "name": "message",
+                    "id": "message",
+                    "placeholder": "Your Message"
                 }
             ],
             "forms": [

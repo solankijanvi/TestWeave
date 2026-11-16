@@ -22,5 +22,6 @@ for page in analysis["pages"]:
     print("\nURL:", page["url"])
     print("Title:", page["title"])
     print("Purpose:", page["purpose"])
-    print("Inputs:", page["inputs"])
-    print("Forms:", page["forms"])
+    print("Evidence:", page["purpose_evidence"])
+    print("Confidence:", page["purpose_confidence"])
+    print("Functionality:", page["functionality"])

@@ -1,47 +1,49 @@
+
 import asyncio
 import json
 from pathlib import Path
 
 from playwright.async_api import async_playwright
-from browser import create_browser
-from crawl_manager import crawl_application
 
-async def crawl(url: str):
+from app.crawler.browser import create_browser
+from app.crawler.crawl_manager import crawl_application
+
+
+async def crawl(url: str, output_file: str = "data/application.json") -> dict:
+    """Crawl a website, save the results, and return the application data."""
+
     async with async_playwright() as playwright:
-
         browser = await create_browser(playwright)
 
-        page = await browser.new_page()
+        try:
+            page = await browser.new_page()
 
-        pages = await crawl_application(
-            page=page,
-            start_url=url,
-            max_pages=10
-        )
-
-        await browser.close()
+            pages = await crawl_application(
+                page=page,
+                start_url=url,
+                max_pages=10,
+            )
+        finally:
+            await browser.close()
 
     application = {
         "start_url": url,
         "total_pages": len(pages),
-        "pages": pages
+        "pages": pages,
     }
 
-    data_folder = Path("data")
-    data_folder.mkdir(exist_ok=True)
+    output_path = Path(output_file)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
 
-    output_file = data_folder / "application.json"
+    with output_path.open("w", encoding="utf-8") as file:
+        json.dump(application, file, indent=4, ensure_ascii=False)
 
-    with open(output_file, "w", encoding="utf-8") as file:
-        json.dump(application, file, indent=4)
-
-    print()
-    print("Crawl completed.")
+    print("\nCrawl completed.")
     print(f"Pages discovered: {len(pages)}")
-    print(f"Application data saved to: {output_file}")
+    print(f"Application data saved to: {output_path}")
+
+    return application
 
 
 if __name__ == "__main__":
-    asyncio.run(
-        crawl("https://bovineguard.onrender.com/")
-    )
+    asyncio.run(crawl("https://bovineguard.onrender.com/"))

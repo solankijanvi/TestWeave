@@ -1,0 +1,901 @@
+{
+  "application_url": "https://bovineguard.onrender.com/",
+  "total_pages": 5,
+  "total_scenarios": 42,
+  "pages_with_gemini_generation": 0,
+  "pages_using_fallback": 5,
+  "scenarios": [
+    {
+      "scenario_id": "TS-001",
+      "title": "Verify page content: Welcome To BovineGuard!",
+      "objective": "Check that the page displays the title and headings observed by the crawler.",
+      "source_url": "https://bovineguard.onrender.com/",
+      "preconditions": [
+        "The application page is accessible."
+      ],
+      "steps": [
+        "Open https://bovineguard.onrender.com/.",
+        "Read the document title and inspect the visible page headings.",
+        "Compare the observed values with the values recorded in the evidence."
+      ],
+      "expected_result": "Verify that document title \"Cattle Disease Prediction\" and visible heading text: \"Welcome To BovineGuard!\" match the observed crawl evidence.",
+      "priority": "Medium",
+      "test_type": "UI",
+      "evidence": [
+        "Observed title: Cattle Disease Prediction",
+        "Observed headings: [\"Welcome To BovineGuard!\"]"
+      ]
+    },
+    {
+      "scenario_id": "TS-002",
+      "title": "Verify navigation link: BovineGuard",
+      "objective": "Verify that the observed link labelled 'BovineGuard' is present with its recorded destination.",
+      "source_url": "https://bovineguard.onrender.com/",
+      "preconditions": [
+        "The application page is accessible."
+      ],
+      "steps": [
+        "Open https://bovineguard.onrender.com/.",
+        "Locate the link labelled 'BovineGuard'.",
+        "Check that the link is visible and inspect its destination."
+      ],
+      "expected_result": "The link \"BovineGuard\" is visible and its destination matches one of the observed href values: #. This check verifies the recorded destination, not successful navigation.",
+      "priority": "Medium",
+      "test_type": "Navigation",
+      "evidence": [
+        "Observed link text: BovineGuard",
+        "Observed href values: #"
+      ]
+    },
+    {
+      "scenario_id": "TS-003",
+      "title": "Verify navigation link: Home",
+      "objective": "Verify that the observed link labelled 'Home' is present with its recorded destination.",
+      "source_url": "https://bovineguard.onrender.com/",
+      "preconditions": [
+        "The application page is accessible."
+      ],
+      "steps": [
+        "Open https://bovineguard.onrender.com/.",
+        "Locate the link labelled 'Home'.",
+        "Check that the link is visible and inspect its destination."
+      ],
+      "expected_result": "The link \"Home\" is visible and its destination matches one of the observed href values: /. This check verifies the recorded destination, not successful navigation.",
+      "priority": "Medium",
+      "test_type": "Navigation",
+      "evidence": [
+        "Observed link text: Home",
+        "Observed href values: /"
+      ]
+    },
+    {
+      "scenario_id": "TS-004",
+      "title": "Verify navigation link: About",
+      "objective": "Verify that the observed link labelled 'About' is present with its recorded destination.",
+      "source_url": "https://bovineguard.onrender.com/",
+      "preconditions": [
+        "The application page is accessible."
+      ],
+      "steps": [
+        "Open https://bovineguard.onrender.com/.",
+        "Locate the link labelled 'About'.",
+        "Check that the link is visible and inspect its destination."
+      ],
+      "expected_result": "The link \"About\" is visible and its destination matches one of the observed href values: /about. This check verifies the recorded destination, not successful navigation.",
+      "priority": "Medium",
+      "test_type": "Navigation",
+      "evidence": [
+        "Observed link text: About",
+        "Observed href values: /about"
+      ]
+    },
+    {
+      "scenario_id": "TS-005",
+      "title": "Verify navigation link: Predict",
+      "objective": "Verify that the observed link labelled 'Predict' is present with its recorded destination.",
+      "source_url": "https://bovineguard.onrender.com/",
+      "preconditions": [
+        "The application page is accessible."
+      ],
+      "steps": [
+        "Open https://bovineguard.onrender.com/.",
+        "Locate the link labelled 'Predict'.",
+        "Check that the link is visible and inspect its destination."
+      ],
+      "expected_result": "The link \"Predict\" is visible and its destination matches one of the observed href values: /predict. This check verifies the recorded destination, not successful navigation.",
+      "priority": "Medium",
+      "test_type": "Navigation",
+      "evidence": [
+        "Observed link text: Predict",
+        "Observed href values: /predict"
+      ]
+    },
+    {
+      "scenario_id": "TS-006",
+      "title": "Verify navigation link: Reviews",
+      "objective": "Verify that the observed link labelled 'Reviews' is present with its recorded destination.",
+      "source_url": "https://bovineguard.onrender.com/",
+      "preconditions": [
+        "The application page is accessible."
+      ],
+      "steps": [
+        "Open https://bovineguard.onrender.com/.",
+        "Locate the link labelled 'Reviews'.",
+        "Check that the link is visible and inspect its destination."
+      ],
+      "expected_result": "The link \"Reviews\" is visible and its destination matches one of the observed href values: /reviews. This check verifies the recorded destination, not successful navigation.",
+      "priority": "Medium",
+      "test_type": "Navigation",
+      "evidence": [
+        "Observed link text: Reviews",
+        "Observed href values: /reviews"
+      ]
+    },
+    {
+      "scenario_id": "TS-007",
+      "title": "Verify navigation link: Contact",
+      "objective": "Verify that the observed link labelled 'Contact' is present with its recorded destination.",
+      "source_url": "https://bovineguard.onrender.com/",
+      "preconditions": [
+        "The application page is accessible."
+      ],
+      "steps": [
+        "Open https://bovineguard.onrender.com/.",
+        "Locate the link labelled 'Contact'.",
+        "Check that the link is visible and inspect its destination."
+      ],
+      "expected_result": "The link \"Contact\" is visible and its destination matches one of the observed href values: /contact. This check verifies the recorded destination, not successful navigation.",
+      "priority": "Medium",
+      "test_type": "Navigation",
+      "evidence": [
+        "Observed link text: Contact",
+        "Observed href values: /contact"
+      ]
+    },
+    {
+      "scenario_id": "TS-008",
+      "title": "Verify navigation link: Contact Us",
+      "objective": "Verify that the observed link labelled 'Contact Us' is present with its recorded destination.",
+      "source_url": "https://bovineguard.onrender.com/",
+      "preconditions": [
+        "The application page is accessible."
+      ],
+      "steps": [
+        "Open https://bovineguard.onrender.com/.",
+        "Locate the link labelled 'Contact Us'.",
+        "Check that the link is visible and inspect its destination."
+      ],
+      "expected_result": "The link \"Contact Us\" is visible and its destination matches one of the observed href values: /contact. This check verifies the recorded destination, not successful navigation.",
+      "priority": "Medium",
+      "test_type": "Navigation",
+      "evidence": [
+        "Observed link text: Contact Us",
+        "Observed href values: /contact"
+      ]
+    },
+    {
+      "scenario_id": "TS-009",
+      "title": "Verify page content: About Us",
+      "objective": "Check that the page displays the title and headings observed by the crawler.",
+      "source_url": "https://bovineguard.onrender.com/about",
+      "preconditions": [
+        "The application page is accessible."
+      ],
+      "steps": [
+        "Open https://bovineguard.onrender.com/about.",
+        "Read the document title and inspect the visible page headings.",
+        "Compare the observed values with the values recorded in the evidence."
+      ],
+      "expected_result": "Verify that document title \"BovineGuard - Cattle Disease Prediction\" and visible heading text: \"About Us\" match the observed crawl evidence.",
+      "priority": "Medium",
+      "test_type": "UI",
+      "evidence": [
+        "Observed title: BovineGuard - Cattle Disease Prediction",
+        "Observed headings: [\"About Us\"]"
+      ]
+    },
+    {
+      "scenario_id": "TS-010",
+      "title": "Verify navigation link: BovineGuard",
+      "objective": "Verify that the observed link labelled 'BovineGuard' is present with its recorded destination.",
+      "source_url": "https://bovineguard.onrender.com/about",
+      "preconditions": [
+        "The application page is accessible."
+      ],
+      "steps": [
+        "Open https://bovineguard.onrender.com/about.",
+        "Locate the link labelled 'BovineGuard'.",
+        "Check that the link is visible and inspect its destination."
+      ],
+      "expected_result": "The link \"BovineGuard\" is visible and its destination matches one of the observed href values: #. This check verifies the recorded destination, not successful navigation.",
+      "priority": "Medium",
+      "test_type": "Navigation",
+      "evidence": [
+        "Observed link text: BovineGuard",
+        "Observed href values: #"
+      ]
+    },
+    {
+      "scenario_id": "TS-011",
+      "title": "Verify navigation link: Home",
+      "objective": "Verify that the observed link labelled 'Home' is present with its recorded destination.",
+      "source_url": "https://bovineguard.onrender.com/about",
+      "preconditions": [
+        "The application page is accessible."
+      ],
+      "steps": [
+        "Open https://bovineguard.onrender.com/about.",
+        "Locate the link labelled 'Home'.",
+        "Check that the link is visible and inspect its destination."
+      ],
+      "expected_result": "The link \"Home\" is visible and its destination matches one of the observed href values: /. This check verifies the recorded destination, not successful navigation.",
+      "priority": "Medium",
+      "test_type": "Navigation",
+      "evidence": [
+        "Observed link text: Home",
+        "Observed href values: /"
+      ]
+    },
+    {
+      "scenario_id": "TS-012",
+      "title": "Verify navigation link: About",
+      "objective": "Verify that the observed link labelled 'About' is present with its recorded destination.",
+      "source_url": "https://bovineguard.onrender.com/about",
+      "preconditions": [
+        "The application page is accessible."
+      ],
+      "steps": [
+        "Open https://bovineguard.onrender.com/about.",
+        "Locate the link labelled 'About'.",
+        "Check that the link is visible and inspect its destination."
+      ],
+      "expected_result": "The link \"About\" is visible and its destination matches one of the observed href values: /about. This check verifies the recorded destination, not successful navigation.",
+      "priority": "Medium",
+      "test_type": "Navigation",
+      "evidence": [
+        "Observed link text: About",
+        "Observed href values: /about"
+      ]
+    },
+    {
+      "scenario_id": "TS-013",
+      "title": "Verify navigation link: Predict",
+      "objective": "Verify that the observed link labelled 'Predict' is present with its recorded destination.",
+      "source_url": "https://bovineguard.onrender.com/about",
+      "preconditions": [
+        "The application page is accessible."
+      ],
+      "steps": [
+        "Open https://bovineguard.onrender.com/about.",
+        "Locate the link labelled 'Predict'.",
+        "Check that the link is visible and inspect its destination."
+      ],
+      "expected_result": "The link \"Predict\" is visible and its destination matches one of the observed href values: /predict. This check verifies the recorded destination, not successful navigation.",
+      "priority": "Medium",
+      "test_type": "Navigation",
+      "evidence": [
+        "Observed link text: Predict",
+        "Observed href values: /predict"
+      ]
+    },
+    {
+      "scenario_id": "TS-014",
+      "title": "Verify navigation link: Reviews",
+      "objective": "Verify that the observed link labelled 'Reviews' is present with its recorded destination.",
+      "source_url": "https://bovineguard.onrender.com/about",
+      "preconditions": [
+        "The application page is accessible."
+      ],
+      "steps": [
+        "Open https://bovineguard.onrender.com/about.",
+        "Locate the link labelled 'Reviews'.",
+        "Check that the link is visible and inspect its destination."
+      ],
+      "expected_result": "The link \"Reviews\" is visible and its destination matches one of the observed href values: /reviews. This check verifies the recorded destination, not successful navigation.",
+      "priority": "Medium",
+      "test_type": "Navigation",
+      "evidence": [
+        "Observed link text: Reviews",
+        "Observed href values: /reviews"
+      ]
+    },
+    {
+      "scenario_id": "TS-015",
+      "title": "Verify navigation link: Contact",
+      "objective": "Verify that the observed link labelled 'Contact' is present with its recorded destination.",
+      "source_url": "https://bovineguard.onrender.com/about",
+      "preconditions": [
+        "The application page is accessible."
+      ],
+      "steps": [
+        "Open https://bovineguard.onrender.com/about.",
+        "Locate the link labelled 'Contact'.",
+        "Check that the link is visible and inspect its destination."
+      ],
+      "expected_result": "The link \"Contact\" is visible and its destination matches one of the observed href values: /contact. This check verifies the recorded destination, not successful navigation.",
+      "priority": "Medium",
+      "test_type": "Navigation",
+      "evidence": [
+        "Observed link text: Contact",
+        "Observed href values: /contact"
+      ]
+    },
+    {
+      "scenario_id": "TS-016",
+      "title": "Verify navigation link: Predict Disease",
+      "objective": "Verify that the observed link labelled 'Predict Disease' is present with its recorded destination.",
+      "source_url": "https://bovineguard.onrender.com/about",
+      "preconditions": [
+        "The application page is accessible."
+      ],
+      "steps": [
+        "Open https://bovineguard.onrender.com/about.",
+        "Locate the link labelled 'Predict Disease'.",
+        "Check that the link is visible and inspect its destination."
+      ],
+      "expected_result": "The link \"Predict Disease\" is visible and its destination matches one of the observed href values: /predict. This check verifies the recorded destination, not successful navigation.",
+      "priority": "Medium",
+      "test_type": "Navigation",
+      "evidence": [
+        "Observed link text: Predict Disease",
+        "Observed href values: /predict"
+      ]
+    },
+    {
+      "scenario_id": "TS-017",
+      "title": "Verify page content: Predict Cattle Disease",
+      "objective": "Check that the page displays the title and headings observed by the crawler.",
+      "source_url": "https://bovineguard.onrender.com/predict",
+      "preconditions": [
+        "The application page is accessible."
+      ],
+      "steps": [
+        "Open https://bovineguard.onrender.com/predict.",
+        "Read the document title and inspect the visible page headings.",
+        "Compare the observed values with the values recorded in the evidence."
+      ],
+      "expected_result": "Verify that document title \"Cattle Disease Prediction\" and visible heading text: \"Predict Cattle Disease\", \"About The Prediction Tool\" match the observed crawl evidence.",
+      "priority": "Medium",
+      "test_type": "UI",
+      "evidence": [
+        "Observed title: Cattle Disease Prediction",
+        "Observed headings: [\"Predict Cattle Disease\", \"About The Prediction Tool\"]"
+      ]
+    },
+    {
+      "scenario_id": "TS-018",
+      "title": "Verify navigation link: BovineGuard",
+      "objective": "Verify that the observed link labelled 'BovineGuard' is present with its recorded destination.",
+      "source_url": "https://bovineguard.onrender.com/predict",
+      "preconditions": [
+        "The application page is accessible."
+      ],
+      "steps": [
+        "Open https://bovineguard.onrender.com/predict.",
+        "Locate the link labelled 'BovineGuard'.",
+        "Check that the link is visible and inspect its destination."
+      ],
+      "expected_result": "The link \"BovineGuard\" is visible and its destination matches one of the observed href values: #. This check verifies the recorded destination, not successful navigation.",
+      "priority": "Medium",
+      "test_type": "Navigation",
+      "evidence": [
+        "Observed link text: BovineGuard",
+        "Observed href values: #"
+      ]
+    },
+    {
+      "scenario_id": "TS-019",
+      "title": "Verify navigation link: Home",
+      "objective": "Verify that the observed link labelled 'Home' is present with its recorded destination.",
+      "source_url": "https://bovineguard.onrender.com/predict",
+      "preconditions": [
+        "The application page is accessible."
+      ],
+      "steps": [
+        "Open https://bovineguard.onrender.com/predict.",
+        "Locate the link labelled 'Home'.",
+        "Check that the link is visible and inspect its destination."
+      ],
+      "expected_result": "The link \"Home\" is visible and its destination matches one of the observed href values: /. This check verifies the recorded destination, not successful navigation.",
+      "priority": "Medium",
+      "test_type": "Navigation",
+      "evidence": [
+        "Observed link text: Home",
+        "Observed href values: /"
+      ]
+    },
+    {
+      "scenario_id": "TS-020",
+      "title": "Verify navigation link: About",
+      "objective": "Verify that the observed link labelled 'About' is present with its recorded destination.",
+      "source_url": "https://bovineguard.onrender.com/predict",
+      "preconditions": [
+        "The application page is accessible."
+      ],
+      "steps": [
+        "Open https://bovineguard.onrender.com/predict.",
+        "Locate the link labelled 'About'.",
+        "Check that the link is visible and inspect its destination."
+      ],
+      "expected_result": "The link \"About\" is visible and its destination matches one of the observed href values: /about. This check verifies the recorded destination, not successful navigation.",
+      "priority": "Medium",
+      "test_type": "Navigation",
+      "evidence": [
+        "Observed link text: About",
+        "Observed href values: /about"
+      ]
+    },
+    {
+      "scenario_id": "TS-021",
+      "title": "Verify navigation link: Predict",
+      "objective": "Verify that the observed link labelled 'Predict' is present with its recorded destination.",
+      "source_url": "https://bovineguard.onrender.com/predict",
+      "preconditions": [
+        "The application page is accessible."
+      ],
+      "steps": [
+        "Open https://bovineguard.onrender.com/predict.",
+        "Locate the link labelled 'Predict'.",
+        "Check that the link is visible and inspect its destination."
+      ],
+      "expected_result": "The link \"Predict\" is visible and its destination matches one of the observed href values: /predict. This check verifies the recorded destination, not successful navigation.",
+      "priority": "Medium",
+      "test_type": "Navigation",
+      "evidence": [
+        "Observed link text: Predict",
+        "Observed href values: /predict"
+      ]
+    },
+    {
+      "scenario_id": "TS-022",
+      "title": "Verify navigation link: Reviews",
+      "objective": "Verify that the observed link labelled 'Reviews' is present with its recorded destination.",
+      "source_url": "https://bovineguard.onrender.com/predict",
+      "preconditions": [
+        "The application page is accessible."
+      ],
+      "steps": [
+        "Open https://bovineguard.onrender.com/predict.",
+        "Locate the link labelled 'Reviews'.",
+        "Check that the link is visible and inspect its destination."
+      ],
+      "expected_result": "The link \"Reviews\" is visible and its destination matches one of the observed href values: /reviews. This check verifies the recorded destination, not successful navigation.",
+      "priority": "Medium",
+      "test_type": "Navigation",
+      "evidence": [
+        "Observed link text: Reviews",
+        "Observed href values: /reviews"
+      ]
+    },
+    {
+      "scenario_id": "TS-023",
+      "title": "Verify navigation link: Contact",
+      "objective": "Verify that the observed link labelled 'Contact' is present with its recorded destination.",
+      "source_url": "https://bovineguard.onrender.com/predict",
+      "preconditions": [
+        "The application page is accessible."
+      ],
+      "steps": [
+        "Open https://bovineguard.onrender.com/predict.",
+        "Locate the link labelled 'Contact'.",
+        "Check that the link is visible and inspect its destination."
+      ],
+      "expected_result": "The link \"Contact\" is visible and its destination matches one of the observed href values: /contact. This check verifies the recorded destination, not successful navigation.",
+      "priority": "Medium",
+      "test_type": "Navigation",
+      "evidence": [
+        "Observed link text: Contact",
+        "Observed href values: /contact"
+      ]
+    },
+    {
+      "scenario_id": "TS-024",
+      "title": "Verify form controls on predict",
+      "objective": "Check whether the form controls discovered by the crawler are visible and identifiable.",
+      "source_url": "https://bovineguard.onrender.com/predict",
+      "preconditions": [
+        "The application page is accessible."
+      ],
+      "steps": [
+        "Open https://bovineguard.onrender.com/predict.",
+        "Locate each control listed in the evidence.",
+        "Record whether each control is visible and can be focused or selected as appropriate."
+      ],
+      "expected_result": "Each observed control is present and available for its intended basic interaction. Record any missing, hidden, or unusable control. Business rules and required-field behavior are not inferred.",
+      "priority": "Medium",
+      "test_type": "Form",
+      "evidence": [
+        "Input: age",
+        "Input: breed",
+        "Input: unnamed input",
+        "Dropdown: symptom1",
+        "Dropdown: symptom2",
+        "Dropdown: symptom3",
+        "Dropdown: symptom4",
+        "Dropdown: symptom5",
+        "Observed forms: [{\"action\": \"/predict\", \"method\": \"POST\"}]"
+      ]
+    },
+    {
+      "scenario_id": "TS-025",
+      "title": "Verify page content: User's Review",
+      "objective": "Check that the page displays the title and headings observed by the crawler.",
+      "source_url": "https://bovineguard.onrender.com/reviews",
+      "preconditions": [
+        "The application page is accessible."
+      ],
+      "steps": [
+        "Open https://bovineguard.onrender.com/reviews.",
+        "Read the document title and inspect the visible page headings.",
+        "Compare the observed values with the values recorded in the evidence."
+      ],
+      "expected_result": "Verify that document title \"Cattle Disease Prediction\" and visible heading text: \"User's Review\", \"Add Your Review\" match the observed crawl evidence.",
+      "priority": "Medium",
+      "test_type": "UI",
+      "evidence": [
+        "Observed title: Cattle Disease Prediction",
+        "Observed headings: [\"User's Review\", \"Add Your Review\"]"
+      ]
+    },
+    {
+      "scenario_id": "TS-026",
+      "title": "Verify navigation link: BovineGuard",
+      "objective": "Verify that the observed link labelled 'BovineGuard' is present with its recorded destination.",
+      "source_url": "https://bovineguard.onrender.com/reviews",
+      "preconditions": [
+        "The application page is accessible."
+      ],
+      "steps": [
+        "Open https://bovineguard.onrender.com/reviews.",
+        "Locate the link labelled 'BovineGuard'.",
+        "Check that the link is visible and inspect its destination."
+      ],
+      "expected_result": "The link \"BovineGuard\" is visible and its destination matches one of the observed href values: #. This check verifies the recorded destination, not successful navigation.",
+      "priority": "Medium",
+      "test_type": "Navigation",
+      "evidence": [
+        "Observed link text: BovineGuard",
+        "Observed href values: #"
+      ]
+    },
+    {
+      "scenario_id": "TS-027",
+      "title": "Verify navigation link: Home",
+      "objective": "Verify that the observed link labelled 'Home' is present with its recorded destination.",
+      "source_url": "https://bovineguard.onrender.com/reviews",
+      "preconditions": [
+        "The application page is accessible."
+      ],
+      "steps": [
+        "Open https://bovineguard.onrender.com/reviews.",
+        "Locate the link labelled 'Home'.",
+        "Check that the link is visible and inspect its destination."
+      ],
+      "expected_result": "The link \"Home\" is visible and its destination matches one of the observed href values: /. This check verifies the recorded destination, not successful navigation.",
+      "priority": "Medium",
+      "test_type": "Navigation",
+      "evidence": [
+        "Observed link text: Home",
+        "Observed href values: /"
+      ]
+    },
+    {
+      "scenario_id": "TS-028",
+      "title": "Verify navigation link: About",
+      "objective": "Verify that the observed link labelled 'About' is present with its recorded destination.",
+      "source_url": "https://bovineguard.onrender.com/reviews",
+      "preconditions": [
+        "The application page is accessible."
+      ],
+      "steps": [
+        "Open https://bovineguard.onrender.com/reviews.",
+        "Locate the link labelled 'About'.",
+        "Check that the link is visible and inspect its destination."
+      ],
+      "expected_result": "The link \"About\" is visible and its destination matches one of the observed href values: /about. This check verifies the recorded destination, not successful navigation.",
+      "priority": "Medium",
+      "test_type": "Navigation",
+      "evidence": [
+        "Observed link text: About",
+        "Observed href values: /about"
+      ]
+    },
+    {
+      "scenario_id": "TS-029",
+      "title": "Verify navigation link: Predict",
+      "objective": "Verify that the observed link labelled 'Predict' is present with its recorded destination.",
+      "source_url": "https://bovineguard.onrender.com/reviews",
+      "preconditions": [
+        "The application page is accessible."
+      ],
+      "steps": [
+        "Open https://bovineguard.onrender.com/reviews.",
+        "Locate the link labelled 'Predict'.",
+        "Check that the link is visible and inspect its destination."
+      ],
+      "expected_result": "The link \"Predict\" is visible and its destination matches one of the observed href values: /predict. This check verifies the recorded destination, not successful navigation.",
+      "priority": "Medium",
+      "test_type": "Navigation",
+      "evidence": [
+        "Observed link text: Predict",
+        "Observed href values: /predict"
+      ]
+    },
+    {
+      "scenario_id": "TS-030",
+      "title": "Verify navigation link: Reviews",
+      "objective": "Verify that the observed link labelled 'Reviews' is present with its recorded destination.",
+      "source_url": "https://bovineguard.onrender.com/reviews",
+      "preconditions": [
+        "The application page is accessible."
+      ],
+      "steps": [
+        "Open https://bovineguard.onrender.com/reviews.",
+        "Locate the link labelled 'Reviews'.",
+        "Check that the link is visible and inspect its destination."
+      ],
+      "expected_result": "The link \"Reviews\" is visible and its destination matches one of the observed href values: /reviews. This check verifies the recorded destination, not successful navigation.",
+      "priority": "Medium",
+      "test_type": "Navigation",
+      "evidence": [
+        "Observed link text: Reviews",
+        "Observed href values: /reviews"
+      ]
+    },
+    {
+      "scenario_id": "TS-031",
+      "title": "Verify navigation link: Contact",
+      "objective": "Verify that the observed link labelled 'Contact' is present with its recorded destination.",
+      "source_url": "https://bovineguard.onrender.com/reviews",
+      "preconditions": [
+        "The application page is accessible."
+      ],
+      "steps": [
+        "Open https://bovineguard.onrender.com/reviews.",
+        "Locate the link labelled 'Contact'.",
+        "Check that the link is visible and inspect its destination."
+      ],
+      "expected_result": "The link \"Contact\" is visible and its destination matches one of the observed href values: /contact. This check verifies the recorded destination, not successful navigation.",
+      "priority": "Medium",
+      "test_type": "Navigation",
+      "evidence": [
+        "Observed link text: Contact",
+        "Observed href values: /contact"
+      ]
+    },
+    {
+      "scenario_id": "TS-032",
+      "title": "Verify form controls on reviews",
+      "objective": "Check whether the form controls discovered by the crawler are visible and identifiable.",
+      "source_url": "https://bovineguard.onrender.com/reviews",
+      "preconditions": [
+        "The application page is accessible."
+      ],
+      "steps": [
+        "Open https://bovineguard.onrender.com/reviews.",
+        "Locate each control listed in the evidence.",
+        "Record whether each control is visible and can be focused or selected as appropriate."
+      ],
+      "expected_result": "Each observed control is present and available for its intended basic interaction. Record any missing, hidden, or unusable control. Business rules and required-field behavior are not inferred.",
+      "priority": "Medium",
+      "test_type": "Form",
+      "evidence": [
+        "Input: name",
+        "Text area: review-text",
+        "Observed forms: [{\"action\": null, \"method\": null}]"
+      ]
+    },
+    {
+      "scenario_id": "TS-033",
+      "title": "Verify button is available: Submit",
+      "objective": "Check that the observed button 'Submit' is present and available for interaction.",
+      "source_url": "https://bovineguard.onrender.com/reviews",
+      "preconditions": [
+        "The application page is accessible."
+      ],
+      "steps": [
+        "Open https://bovineguard.onrender.com/reviews.",
+        "Locate the button 'Submit'.",
+        "Check visibility and enabled state. Activate it only when doing so is safe, then record the observed result."
+      ],
+      "expected_result": "The button \"Submit\" is visible and its enabled state can be determined. Any post-click behavior must be compared with an independently confirmed requirement.",
+      "priority": "Medium",
+      "test_type": "UI",
+      "evidence": [
+        "Observed button: {\"text\": \"Submit\", \"type\": \"submit\", \"name\": null, \"id\": null, \"aria_label\": null}"
+      ]
+    },
+    {
+      "scenario_id": "TS-034",
+      "title": "Verify page content: Get In Touch",
+      "objective": "Check that the page displays the title and headings observed by the crawler.",
+      "source_url": "https://bovineguard.onrender.com/contact",
+      "preconditions": [
+        "The application page is accessible."
+      ],
+      "steps": [
+        "Open https://bovineguard.onrender.com/contact.",
+        "Read the document title and inspect the visible page headings.",
+        "Compare the observed values with the values recorded in the evidence."
+      ],
+      "expected_result": "Verify that document title \"Cattle Disease Prediction\" and visible heading text: \"Get In Touch\" match the observed crawl evidence.",
+      "priority": "Medium",
+      "test_type": "UI",
+      "evidence": [
+        "Observed title: Cattle Disease Prediction",
+        "Observed headings: [\"Get In Touch\"]"
+      ]
+    },
+    {
+      "scenario_id": "TS-035",
+      "title": "Verify navigation link: BovineGuard",
+      "objective": "Verify that the observed link labelled 'BovineGuard' is present with its recorded destination.",
+      "source_url": "https://bovineguard.onrender.com/contact",
+      "preconditions": [
+        "The application page is accessible."
+      ],
+      "steps": [
+        "Open https://bovineguard.onrender.com/contact.",
+        "Locate the link labelled 'BovineGuard'.",
+        "Check that the link is visible and inspect its destination."
+      ],
+      "expected_result": "The link \"BovineGuard\" is visible and its destination matches one of the observed href values: #. This check verifies the recorded destination, not successful navigation.",
+      "priority": "Medium",
+      "test_type": "Navigation",
+      "evidence": [
+        "Observed link text: BovineGuard",
+        "Observed href values: #"
+      ]
+    },
+    {
+      "scenario_id": "TS-036",
+      "title": "Verify navigation link: Home",
+      "objective": "Verify that the observed link labelled 'Home' is present with its recorded destination.",
+      "source_url": "https://bovineguard.onrender.com/contact",
+      "preconditions": [
+        "The application page is accessible."
+      ],
+      "steps": [
+        "Open https://bovineguard.onrender.com/contact.",
+        "Locate the link labelled 'Home'.",
+        "Check that the link is visible and inspect its destination."
+      ],
+      "expected_result": "The link \"Home\" is visible and its destination matches one of the observed href values: /. This check verifies the recorded destination, not successful navigation.",
+      "priority": "Medium",
+      "test_type": "Navigation",
+      "evidence": [
+        "Observed link text: Home",
+        "Observed href values: /"
+      ]
+    },
+    {
+      "scenario_id": "TS-037",
+      "title": "Verify navigation link: About",
+      "objective": "Verify that the observed link labelled 'About' is present with its recorded destination.",
+      "source_url": "https://bovineguard.onrender.com/contact",
+      "preconditions": [
+        "The application page is accessible."
+      ],
+      "steps": [
+        "Open https://bovineguard.onrender.com/contact.",
+        "Locate the link labelled 'About'.",
+        "Check that the link is visible and inspect its destination."
+      ],
+      "expected_result": "The link \"About\" is visible and its destination matches one of the observed href values: /about. This check verifies the recorded destination, not successful navigation.",
+      "priority": "Medium",
+      "test_type": "Navigation",
+      "evidence": [
+        "Observed link text: About",
+        "Observed href values: /about"
+      ]
+    },
+    {
+      "scenario_id": "TS-038",
+      "title": "Verify navigation link: Predict",
+      "objective": "Verify that the observed link labelled 'Predict' is present with its recorded destination.",
+      "source_url": "https://bovineguard.onrender.com/contact",
+      "preconditions": [
+        "The application page is accessible."
+      ],
+      "steps": [
+        "Open https://bovineguard.onrender.com/contact.",
+        "Locate the link labelled 'Predict'.",
+        "Check that the link is visible and inspect its destination."
+      ],
+      "expected_result": "The link \"Predict\" is visible and its destination matches one of the observed href values: /predict. This check verifies the recorded destination, not successful navigation.",
+      "priority": "Medium",
+      "test_type": "Navigation",
+      "evidence": [
+        "Observed link text: Predict",
+        "Observed href values: /predict"
+      ]
+    },
+    {
+      "scenario_id": "TS-039",
+      "title": "Verify navigation link: Reviews",
+      "objective": "Verify that the observed link labelled 'Reviews' is present with its recorded destination.",
+      "source_url": "https://bovineguard.onrender.com/contact",
+      "preconditions": [
+        "The application page is accessible."
+      ],
+      "steps": [
+        "Open https://bovineguard.onrender.com/contact.",
+        "Locate the link labelled 'Reviews'.",
+        "Check that the link is visible and inspect its destination."
+      ],
+      "expected_result": "The link \"Reviews\" is visible and its destination matches one of the observed href values: /reviews. This check verifies the recorded destination, not successful navigation.",
+      "priority": "Medium",
+      "test_type": "Navigation",
+      "evidence": [
+        "Observed link text: Reviews",
+        "Observed href values: /reviews"
+      ]
+    },
+    {
+      "scenario_id": "TS-040",
+      "title": "Verify navigation link: Contact",
+      "objective": "Verify that the observed link labelled 'Contact' is present with its recorded destination.",
+      "source_url": "https://bovineguard.onrender.com/contact",
+      "preconditions": [
+        "The application page is accessible."
+      ],
+      "steps": [
+        "Open https://bovineguard.onrender.com/contact.",
+        "Locate the link labelled 'Contact'.",
+        "Check that the link is visible and inspect its destination."
+      ],
+      "expected_result": "The link \"Contact\" is visible and its destination matches one of the observed href values: /contact. This check verifies the recorded destination, not successful navigation.",
+      "priority": "Medium",
+      "test_type": "Navigation",
+      "evidence": [
+        "Observed link text: Contact",
+        "Observed href values: /contact"
+      ]
+    },
+    {
+      "scenario_id": "TS-041",
+      "title": "Verify form controls on contact",
+      "objective": "Check whether the form controls discovered by the crawler are visible and identifiable.",
+      "source_url": "https://bovineguard.onrender.com/contact",
+      "preconditions": [
+        "The application page is accessible."
+      ],
+      "steps": [
+        "Open https://bovineguard.onrender.com/contact.",
+        "Locate each control listed in the evidence.",
+        "Record whether each control is visible and can be focused or selected as appropriate."
+      ],
+      "expected_result": "Each observed control is present and available for its intended basic interaction. Record any missing, hidden, or unusable control. Business rules and required-field behavior are not inferred.",
+      "priority": "Medium",
+      "test_type": "Form",
+      "evidence": [
+        "Input: firstName",
+        "Input: lastName",
+        "Input: email",
+        "Input: mobile",
+        "Text area: message",
+        "Observed forms: [{\"action\": \"/contact\", \"method\": \"POST\"}]"
+      ]
+    },
+    {
+      "scenario_id": "TS-042",
+      "title": "Verify button is available: Send",
+      "objective": "Check that the observed button 'Send' is present and available for interaction.",
+      "source_url": "https://bovineguard.onrender.com/contact",
+      "preconditions": [
+        "The application page is accessible."
+      ],
+      "steps": [
+        "Open https://bovineguard.onrender.com/contact.",
+        "Locate the button 'Send'.",
+        "Check visibility and enabled state. Activate it only when doing so is safe, then record the observed result."
+      ],
+      "expected_result": "The button \"Send\" is visible and its enabled state can be determined. Any post-click behavior must be compared with an independently confirmed requirement.",
+      "priority": "Medium",
+      "test_type": "UI",
+      "evidence": [
+        "Observed button: {\"text\": \"Send\", \"type\": \"submit\", \"name\": null, \"id\": null, \"aria_label\": null}"
+      ]
+    }
+  ]
+}

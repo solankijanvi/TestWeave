@@ -1,0 +1,107 @@
+{
+  "start_url": "https://bovineguard.onrender.com/",
+  "total_pages": 5,
+  "ai_pages": 0,
+  "fallback_pages": 5,
+  "pages": [
+    {
+      "url": "https://bovineguard.onrender.com/",
+      "title": "Cattle Disease Prediction",
+      "analysis_source": "fallback",
+      "analysis": {
+        "page_purpose": "Home",
+        "functionality": "Fallback analysis based on crawled page evidence. Purpose inferred as Home. Observed 0 input fields, 0 dropdowns, and 0 forms. Backend behaviour has not been verified.",
+        "user_actions": [],
+        "evidence": [
+          "Page URL: https://bovineguard.onrender.com/",
+          "Page title: Cattle Disease Prediction",
+          "Observed headings: Welcome To BovineGuard!"
+        ],
+        "confidence": "low"
+      }
+    },
+    {
+      "url": "https://bovineguard.onrender.com/about",
+      "title": "BovineGuard - Cattle Disease Prediction",
+      "analysis_source": "fallback",
+      "analysis": {
+        "page_purpose": "About",
+        "functionality": "Fallback analysis based on crawled page evidence. Purpose inferred as About. Observed 0 input fields, 0 dropdowns, and 0 forms. Backend behaviour has not been verified.",
+        "user_actions": [],
+        "evidence": [
+          "Page URL: https://bovineguard.onrender.com/about",
+          "Page title: BovineGuard - Cattle Disease Prediction",
+          "Observed headings: About Us"
+        ],
+        "confidence": "low"
+      }
+    },
+    {
+      "url": "https://bovineguard.onrender.com/predict",
+      "title": "Cattle Disease Prediction",
+      "analysis_source": "fallback",
+      "analysis": {
+        "page_purpose": "Prediction",
+        "functionality": "Fallback analysis based on crawled page evidence. Purpose inferred as Prediction. Observed 3 input fields, 5 dropdowns, and 1 forms. Backend behaviour has not been verified.",
+        "user_actions": [
+          "Enter age",
+          "Enter breed",
+          "Select an option for symptom1",
+          "Select an option for symptom2",
+          "Select an option for symptom3",
+          "Select an option for symptom4",
+          "Select an option for symptom5"
+        ],
+        "evidence": [
+          "Page URL: https://bovineguard.onrender.com/predict",
+          "Page title: Cattle Disease Prediction",
+          "Observed headings: Predict Cattle Disease About The Prediction Tool"
+        ],
+        "confidence": "low"
+      }
+    },
+    {
+      "url": "https://bovineguard.onrender.com/reviews",
+      "title": "Cattle Disease Prediction",
+      "analysis_source": "fallback",
+      "analysis": {
+        "page_purpose": "Reviews",
+        "functionality": "Fallback analysis based on crawled page evidence. Purpose inferred as Reviews. Observed 1 input fields, 0 dropdowns, and 1 forms. Backend behaviour has not been verified.",
+        "user_actions": [
+          "Enter Your Name",
+          "Enter text in Your Review",
+          "Click Submit"
+        ],
+        "evidence": [
+          "Page URL: https://bovineguard.onrender.com/reviews",
+          "Page title: Cattle Disease Prediction",
+          "Observed headings: User's Review Add Your Review"
+        ],
+        "confidence": "low"
+      }
+    },
+    {
+      "url": "https://bovineguard.onrender.com/contact",
+      "title": "Cattle Disease Prediction",
+      "analysis_source": "fallback",
+      "analysis": {
+        "page_purpose": "Contact",
+        "functionality": "Fallback analysis based on crawled page evidence. Purpose inferred as Contact. Observed 4 input fields, 0 dropdowns, and 1 forms. Backend behaviour has not been verified.",
+        "user_actions": [
+          "Enter First Name",
+          "Enter Last Name",
+          "Enter Email",
+          "Enter Mobile",
+          "Enter text in Your Message",
+          "Click Send"
+        ],
+        "evidence": [
+          "Page URL: https://bovineguard.onrender.com/contact",
+          "Page title: Cattle Disease Prediction",
+          "Observed headings: Get In Touch"
+        ],
+        "confidence": "low"
+      }
+    }
+  ]
+}

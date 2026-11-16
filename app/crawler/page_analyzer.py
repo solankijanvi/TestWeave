@@ -7,6 +7,8 @@ async def analyze_page(page):
         "links": [],
         "buttons": [],
         "inputs": [],
+        "selects": [],
+        "textareas": [],
         "forms": [],
         "images": []
     }
@@ -45,7 +47,11 @@ async def analyze_page(page):
         text = (await button.inner_text()).strip()
 
         application["buttons"].append({
-            "text": text
+            "text": text,
+            "type": await button.get_attribute("type"),
+            "name": await button.get_attribute("name"),
+            "id": await button.get_attribute("id"),
+            "aria_label": await button.get_attribute("aria-label")
         })
 
     # Inputs
@@ -55,7 +61,39 @@ async def analyze_page(page):
         application["inputs"].append({
             "type": await input_field.get_attribute("type"),
             "name": await input_field.get_attribute("name"),
-            "placeholder": await input_field.get_attribute("placeholder")
+            "placeholder": await input_field.get_attribute("placeholder"),
+            "id": await input_field.get_attribute("id"),
+            "aria_label": await input_field.get_attribute("aria-label")
+        })
+
+    # Select elements
+    selects = await page.locator("select").all()
+
+    for select in selects:
+        options = await select.locator("option").all()
+
+        option_data = []
+
+        for option in options:
+            option_data.append({
+                "text": (await option.inner_text()).strip(),
+                "value": await option.get_attribute("value")
+            })
+
+        application["selects"].append({
+            "name": await select.get_attribute("name"),
+            "id": await select.get_attribute("id"),
+            "options": option_data
+        })
+
+    # Textareas
+    textareas = await page.locator("textarea").all()
+
+    for textarea in textareas:
+        application["textareas"].append({
+            "name": await textarea.get_attribute("name"),
+            "id": await textarea.get_attribute("id"),
+            "placeholder": await textarea.get_attribute("placeholder")
         })
 
     # Forms

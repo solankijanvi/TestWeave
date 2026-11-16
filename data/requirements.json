@@ -1,0 +1,602 @@
+{
+  "application_url": "https://bovineguard.onrender.com/",
+  "total_pages": 5,
+  "total_requirements": 51,
+  "pages_with_gemini_generation": 0,
+  "pages_using_fallback": 5,
+  "requirements": [
+    {
+      "requirement_id": "REQ-001",
+      "title": "Navigation link: BovineGuard",
+      "description": "The page displays a link labelled \"BovineGuard\" with destination \"#\".",
+      "source_url": "https://bovineguard.onrender.com/",
+      "evidence": [
+        "Observed link text: BovineGuard",
+        "Observed href: #"
+      ],
+      "requirement_type": "observed",
+      "confidence": "medium"
+    },
+    {
+      "requirement_id": "REQ-002",
+      "title": "Navigation link: Home",
+      "description": "The page displays a link labelled \"Home\" with destination \"/\".",
+      "source_url": "https://bovineguard.onrender.com/",
+      "evidence": [
+        "Observed link text: Home",
+        "Observed href: /"
+      ],
+      "requirement_type": "observed",
+      "confidence": "medium"
+    },
+    {
+      "requirement_id": "REQ-003",
+      "title": "Navigation link: About",
+      "description": "The page displays a link labelled \"About\" with destination \"/about\".",
+      "source_url": "https://bovineguard.onrender.com/",
+      "evidence": [
+        "Observed link text: About",
+        "Observed href: /about"
+      ],
+      "requirement_type": "observed",
+      "confidence": "medium"
+    },
+    {
+      "requirement_id": "REQ-004",
+      "title": "Navigation link: Predict",
+      "description": "The page displays a link labelled \"Predict\" with destination \"/predict\".",
+      "source_url": "https://bovineguard.onrender.com/",
+      "evidence": [
+        "Observed link text: Predict",
+        "Observed href: /predict"
+      ],
+      "requirement_type": "observed",
+      "confidence": "medium"
+    },
+    {
+      "requirement_id": "REQ-005",
+      "title": "Navigation link: Reviews",
+      "description": "The page displays a link labelled \"Reviews\" with destination \"/reviews\".",
+      "source_url": "https://bovineguard.onrender.com/",
+      "evidence": [
+        "Observed link text: Reviews",
+        "Observed href: /reviews"
+      ],
+      "requirement_type": "observed",
+      "confidence": "medium"
+    },
+    {
+      "requirement_id": "REQ-006",
+      "title": "Navigation link: Contact",
+      "description": "The page displays a link labelled \"Contact\" with destination \"/contact\".",
+      "source_url": "https://bovineguard.onrender.com/",
+      "evidence": [
+        "Observed link text: Contact",
+        "Observed href: /contact"
+      ],
+      "requirement_type": "observed",
+      "confidence": "medium"
+    },
+    {
+      "requirement_id": "REQ-007",
+      "title": "Navigation link: Contact Us",
+      "description": "The page displays a link labelled \"Contact Us\" with destination \"/contact\".",
+      "source_url": "https://bovineguard.onrender.com/",
+      "evidence": [
+        "Observed link text: Contact Us",
+        "Observed href: /contact"
+      ],
+      "requirement_type": "observed",
+      "confidence": "medium"
+    },
+    {
+      "requirement_id": "REQ-008",
+      "title": "Navigation link: BovineGuard",
+      "description": "The page displays a link labelled \"BovineGuard\" with destination \"#\".",
+      "source_url": "https://bovineguard.onrender.com/about",
+      "evidence": [
+        "Observed link text: BovineGuard",
+        "Observed href: #"
+      ],
+      "requirement_type": "observed",
+      "confidence": "medium"
+    },
+    {
+      "requirement_id": "REQ-009",
+      "title": "Navigation link: Home",
+      "description": "The page displays a link labelled \"Home\" with destination \"/\".",
+      "source_url": "https://bovineguard.onrender.com/about",
+      "evidence": [
+        "Observed link text: Home",
+        "Observed href: /"
+      ],
+      "requirement_type": "observed",
+      "confidence": "medium"
+    },
+    {
+      "requirement_id": "REQ-010",
+      "title": "Navigation link: About",
+      "description": "The page displays a link labelled \"About\" with destination \"/about\".",
+      "source_url": "https://bovineguard.onrender.com/about",
+      "evidence": [
+        "Observed link text: About",
+        "Observed href: /about"
+      ],
+      "requirement_type": "observed",
+      "confidence": "medium"
+    },
+    {
+      "requirement_id": "REQ-011",
+      "title": "Navigation link: Predict",
+      "description": "The page displays a link labelled \"Predict\" with destination \"/predict\".",
+      "source_url": "https://bovineguard.onrender.com/about",
+      "evidence": [
+        "Observed link text: Predict",
+        "Observed href: /predict"
+      ],
+      "requirement_type": "observed",
+      "confidence": "medium"
+    },
+    {
+      "requirement_id": "REQ-012",
+      "title": "Navigation link: Reviews",
+      "description": "The page displays a link labelled \"Reviews\" with destination \"/reviews\".",
+      "source_url": "https://bovineguard.onrender.com/about",
+      "evidence": [
+        "Observed link text: Reviews",
+        "Observed href: /reviews"
+      ],
+      "requirement_type": "observed",
+      "confidence": "medium"
+    },
+    {
+      "requirement_id": "REQ-013",
+      "title": "Navigation link: Contact",
+      "description": "The page displays a link labelled \"Contact\" with destination \"/contact\".",
+      "source_url": "https://bovineguard.onrender.com/about",
+      "evidence": [
+        "Observed link text: Contact",
+        "Observed href: /contact"
+      ],
+      "requirement_type": "observed",
+      "confidence": "medium"
+    },
+    {
+      "requirement_id": "REQ-014",
+      "title": "Navigation link: Predict Disease",
+      "description": "The page displays a link labelled \"Predict Disease\" with destination \"/predict\".",
+      "source_url": "https://bovineguard.onrender.com/about",
+      "evidence": [
+        "Observed link text: Predict Disease",
+        "Observed href: /predict"
+      ],
+      "requirement_type": "observed",
+      "confidence": "medium"
+    },
+    {
+      "requirement_id": "REQ-015",
+      "title": "Navigation link: BovineGuard",
+      "description": "The page displays a link labelled \"BovineGuard\" with destination \"#\".",
+      "source_url": "https://bovineguard.onrender.com/predict",
+      "evidence": [
+        "Observed link text: BovineGuard",
+        "Observed href: #"
+      ],
+      "requirement_type": "observed",
+      "confidence": "medium"
+    },
+    {
+      "requirement_id": "REQ-016",
+      "title": "Navigation link: Home",
+      "description": "The page displays a link labelled \"Home\" with destination \"/\".",
+      "source_url": "https://bovineguard.onrender.com/predict",
+      "evidence": [
+        "Observed link text: Home",
+        "Observed href: /"
+      ],
+      "requirement_type": "observed",
+      "confidence": "medium"
+    },
+    {
+      "requirement_id": "REQ-017",
+      "title": "Navigation link: About",
+      "description": "The page displays a link labelled \"About\" with destination \"/about\".",
+      "source_url": "https://bovineguard.onrender.com/predict",
+      "evidence": [
+        "Observed link text: About",
+        "Observed href: /about"
+      ],
+      "requirement_type": "observed",
+      "confidence": "medium"
+    },
+    {
+      "requirement_id": "REQ-018",
+      "title": "Navigation link: Predict",
+      "description": "The page displays a link labelled \"Predict\" with destination \"/predict\".",
+      "source_url": "https://bovineguard.onrender.com/predict",
+      "evidence": [
+        "Observed link text: Predict",
+        "Observed href: /predict"
+      ],
+      "requirement_type": "observed",
+      "confidence": "medium"
+    },
+    {
+      "requirement_id": "REQ-019",
+      "title": "Navigation link: Reviews",
+      "description": "The page displays a link labelled \"Reviews\" with destination \"/reviews\".",
+      "source_url": "https://bovineguard.onrender.com/predict",
+      "evidence": [
+        "Observed link text: Reviews",
+        "Observed href: /reviews"
+      ],
+      "requirement_type": "observed",
+      "confidence": "medium"
+    },
+    {
+      "requirement_id": "REQ-020",
+      "title": "Navigation link: Contact",
+      "description": "The page displays a link labelled \"Contact\" with destination \"/contact\".",
+      "source_url": "https://bovineguard.onrender.com/predict",
+      "evidence": [
+        "Observed link text: Contact",
+        "Observed href: /contact"
+      ],
+      "requirement_type": "observed",
+      "confidence": "medium"
+    },
+    {
+      "requirement_id": "REQ-021",
+      "title": "Input field: age",
+      "description": "The page contains an input field identified as \"age\". Required status and validation behavior have not been verified.",
+      "source_url": "https://bovineguard.onrender.com/predict",
+      "evidence": [
+        "Observed input attributes: {\"type\": \"text\", \"name\": \"age\", \"placeholder\": null, \"id\": \"age\", \"aria_label\": null}"
+      ],
+      "requirement_type": "observed",
+      "confidence": "medium"
+    },
+    {
+      "requirement_id": "REQ-022",
+      "title": "Input field: breed",
+      "description": "The page contains an input field identified as \"breed\". Required status and validation behavior have not been verified.",
+      "source_url": "https://bovineguard.onrender.com/predict",
+      "evidence": [
+        "Observed input attributes: {\"type\": \"text\", \"name\": \"breed\", \"placeholder\": null, \"id\": \"breed\", \"aria_label\": null}"
+      ],
+      "requirement_type": "observed",
+      "confidence": "medium"
+    },
+    {
+      "requirement_id": "REQ-023",
+      "title": "Dropdown: symptom1",
+      "description": "The page contains a dropdown identified as \"symptom1\".",
+      "source_url": "https://bovineguard.onrender.com/predict",
+      "evidence": [
+        "Observed dropdown: {\"name\": \"symptom1\", \"id\": \"symptom1\", \"options\": [{\"text\": \"Select a symptom\", \"value\": \"\"}, {\"text\": \"itching\", \"value\": \"itching\"}, {\"text\": \"skin rash\", \"value\": \"skin_rash\"}, {\"text\": \"nodal skin eruptions\", \"value\": \"nodal_skin_eruptions\"}, {\"text\": \"continuous sneezing\", \"value\": \"continuous_sneezing\"}, {\"text\": \"shivering\", \"value\": \"shivering\"}, {\"text\": \"chills\", \"value\": \"chills\"}, {\"text\": \"joint pain\", \"value\": \"joint_pain\"}, {\"text\": \"stomach pain\", \"value\": \"stomach_pain\"}, {\"text\": \"acidity\", \"value\": \"acidity\"}, {\"text\": \"ulcers on tongue\", \"value\": \"ulcers_on_tongue\"}, {\"text\": \"muscle wasting\", \"value\": \"muscle_wasting\"}, {\"text\": \"vomiting\", \"value\": \"vomiting\"}, {\"text\": \"burning micturition\", \"value\": \"burning_micturition\"}, {\"text\": \"spotting urination\", \"value\": \"spotting_urination\"}, {\"text\": \"fatigue\", \"value\": \"fatigue\"}, {\"text\": \"weight gain\", \"value\": \"weight_gain\"}, {\"text\": \"anxiety\", \"value\": \"anxiety\"}, {\"text\": \"cold hands and feets\", \"value\": \"cold_hands_and_feets\"}, {\"text\": \"mood swings\", \"value\": \"mood_swings\"}, {\"text\": \"weight loss\", \"value\": \"weight_loss\"}, {\"text\": \"restlessness\", \"value\": \"restlessness\"}, {\"text\": \"lethargy\", \"value\": \"lethargy\"}, {\"text\": \"patches in throat\", \"value\": \"patches_in_throat\"}, {\"text\": \"irregular sugar level\", \"value\": \"irregular_sugar_level\"}, {\"text\": \"cough\", \"value\": \"cough\"}, {\"text\": \"high fever\", \"value\": \"high_fever\"}, {\"text\": \"sunken eyes\", \"value\": \"sunken_eyes\"}, {\"text\": \"breathlessness\", \"value\": \"breathlessness\"}, {\"text\": \"sweating\", \"value\": \"sweating\"}, {\"text\": \"dehydration\", \"value\": \"dehydration\"}, {\"text\": \"indigestion\", \"value\": \"indigestion\"}, {\"text\": \"headache\", \"value\": \"headache\"}, {\"text\": \"yellowish skin\", \"value\": \"yellowish_skin\"}, {\"text\": \"dark urine\", \"value\": \"dark_urine\"}, {\"text\": \"nausea\", \"value\": \"nausea\"}, {\"text\": \"loss of appetite\", \"value\": \"loss_of_appetite\"}, {\"text\": \"pain behind the eyes\", \"value\": \"pain_behind_the_eyes\"}, {\"text\": \"back pain\", \"value\": \"back_pain\"}, {\"text\": \"constipation\", \"value\": \"constipation\"}, {\"text\": \"abdominal pain\", \"value\": \"abdominal_pain\"}, {\"text\": \"diarrhoea\", \"value\": \"diarrhoea\"}, {\"text\": \"mild fever\", \"value\": \"mild_fever\"}, {\"text\": \"yellow urine\", \"value\": \"yellow_urine\"}, {\"text\": \"yellowing of eyes\", \"value\": \"yellowing_of_eyes\"}, {\"text\": \"acute liver failure\", \"value\": \"acute_liver_failure\"}, {\"text\": \"fluid overload\", \"value\": \"fluid_overload\"}, {\"text\": \"swelling of stomach\", \"value\": \"swelling_of_stomach\"}, {\"text\": \"swelled lymph nodes\", \"value\": \"swelled_lymph_nodes\"}, {\"text\": \"malaise\", \"value\": \"malaise\"}, {\"text\": \"blurred and distorted vision\", \"value\": \"blurred_and_distorted_vision\"}, {\"text\": \"phlegm\", \"value\": \"phlegm\"}, {\"text\": \"throat irritation\", \"value\": \"throat_irritation\"}, {\"text\": \"redness of eyes\", \"value\": \"redness_of_eyes\"}, {\"text\": \"sinus pressure\", \"value\": \"sinus_pressure\"}, {\"text\": \"runny nose\", \"value\": \"runny_nose\"}, {\"text\": \"congestion\", \"value\": \"congestion\"}, {\"text\": \"chest pain\", \"value\": \"chest_pain\"}, {\"text\": \"weakness in limbs\", \"value\": \"weakness_in_limbs\"}, {\"text\": \"fast heart rate\", \"value\": \"fast_heart_rate\"}, {\"text\": \"pain during bowel movements\", \"value\": \"pain_during_bowel_movements\"}, {\"text\": \"pain in anal region\", \"value\": \"pain_in_anal_region\"}, {\"text\": \"bloody stool\", \"value\": \"bloody_stool\"}, {\"text\": \"irritation in anus\", \"value\": \"irritation_in_anus\"}, {\"text\": \"neck pain\", \"value\": \"neck_pain\"}, {\"text\": \"dizziness\", \"value\": \"dizziness\"}, {\"text\": \"cramps\", \"value\": \"cramps\"}, {\"text\": \"bruising\", \"value\": \"bruising\"}, {\"text\": \"obesity\", \"value\": \"obesity\"}, {\"text\": \"swollen legs\", \"value\": \"swollen_legs\"}, {\"text\": \"swollen blood vessels\", \"value\": \"swollen_blood_vessels\"}, {\"text\": \"puffy face and eyes\", \"value\": \"puffy_face_and_eyes\"}, {\"text\": \"enlarged thyroid\", \"value\": \"enlarged_thyroid\"}, {\"text\": \"brittle nails\", \"value\": \"brittle_nails\"}, {\"text\": \"swollen extremeties\", \"value\": \"swollen_extremeties\"}, {\"text\": \"excessive hunger\", \"value\": \"excessive_hunger\"}, {\"text\": \"extra marital contacts\", \"value\": \"extra_marital_contacts\"}, {\"text\": \"drying and tingling lips\", \"value\": \"drying_and_tingling_lips\"}, {\"text\": \"slurred speech\", \"value\": \"slurred_speech\"}, {\"text\": \"knee pain\", \"value\": \"knee_pain\"}, {\"text\": \"hip joint pain\", \"value\": \"hip_joint_pain\"}, {\"text\": \"muscle weakness\", \"value\": \"muscle_weakness\"}, {\"text\": \"stiff neck\", \"value\": \"stiff_neck\"}, {\"text\": \"swelling joints\", \"value\": \"swelling_joints\"}, {\"text\": \"movement stiffness\", \"value\": \"movement_stiffness\"}, {\"text\": \"spinning movements\", \"value\": \"spinning_movements\"}, {\"text\": \"loss of balance\", \"value\": \"loss_of_balance\"}, {\"text\": \"unsteadiness\", \"value\": \"unsteadiness\"}, {\"text\": \"weakness of one body side\", \"value\": \"weakness_of_one_body_side\"}, {\"text\": \"loss of smell\", \"value\": \"loss_of_smell\"}, {\"text\": \"bladder discomfort\", \"value\": \"bladder_discomfort\"}, {\"text\": \"foul smell of urine\", \"value\": \"foul_smell_of_urine\"}, {\"text\": \"continuous feel of urine\", \"value\": \"continuous_feel_of_urine\"}, {\"text\": \"passage of gases\", \"value\": \"passage_of_gases\"}, {\"text\": \"internal itching\", \"value\": \"internal_itching\"}, {\"text\": \"toxic look (typhos)\", \"value\": \"toxic_look_(typhos)\"}, {\"text\": \"depression\", \"value\": \"depression\"}, {\"text\": \"irritability\", \"value\": \"irritability\"}, {\"text\": \"muscle pain\", \"value\": \"muscle_pain\"}, {\"text\": \"altered sensorium\", \"value\": \"altered_sensorium\"}, {\"text\": \"red spots over body\", \"value\": \"red_spots_over_body\"}, {\"text\": \"belly pain\", \"value\": \"belly_pain\"}, {\"text\": \"abnormal menstruation\", \"value\": \"abnormal_menstruation\"}, {\"text\": \"dischromic patches\", \"value\": \"dischromic_patches\"}, {\"text\": \"watering from eyes\", \"value\": \"watering_from_eyes\"}, {\"text\": \"increased appetite\", \"value\": \"increased_appetite\"}, {\"text\": \"polyuria\", \"value\": \"polyuria\"}, {\"text\": \"family history\", \"value\": \"family_history\"}, {\"text\": \"mucoid sputum\", \"value\": \"mucoid_sputum\"}, {\"text\": \"rusty sputum\", \"value\": \"rusty_sputum\"}, {\"text\": \"lack of concentration\", \"value\": \"lack_of_concentration\"}, {\"text\": \"visual disturbances\", \"value\": \"visual_disturbances\"}, {\"text\": \"receiving blood transfusion\", \"value\": \"receiving_blood_transfusion\"}, {\"text\": \"receiving unsterile injections\", \"value\": \"receiving_unsterile_injections\"}, {\"text\": \"coma\", \"value\": \"coma\"}, {\"text\": \"stomach bleeding\", \"value\": \"stomach_bleeding\"}, {\"text\": \"distention of abdomen\", \"value\": \"distention_of_abdomen\"}, {\"text\": \"history of alcohol consumption\", \"value\": \"history_of_alcohol_consumption\"}, {\"text\": \"blood in sputum\", \"value\": \"blood_in_sputum\"}, {\"text\": \"prominent veins on calf\", \"value\": \"prominent_veins_on_calf\"}, {\"text\": \"palpitations\", \"value\": \"palpitations\"}, {\"text\": \"painful walking\", \"value\": \"painful_walking\"}, {\"text\": \"pus filled pimples\", \"value\": \"pus_filled_pimples\"}, {\"text\": \"blackheads\", \"value\": \"blackheads\"}, {\"text\": \"scurring\", \"value\": \"scurring\"}, {\"text\": \"skin peeling\", \"value\": \"skin_peeling\"}, {\"text\": \"silver like dusting\", \"value\": \"silver_like_dusting\"}, {\"text\": \"small dents in nails\", \"value\": \"small_dents_in_nails\"}, {\"text\": \"inflammatory nails\", \"value\": \"inflammatory_nails\"}, {\"text\": \"blister\", \"value\": \"blister\"}, {\"text\": \"red sore around nose\", \"value\": \"red_sore_around_nose\"}, {\"text\": \"yellow crust ooze\", \"value\": \"yellow_crust_ooze\"}]}"
+      ],
+      "requirement_type": "observed",
+      "confidence": "medium"
+    },
+    {
+      "requirement_id": "REQ-024",
+      "title": "Dropdown: symptom2",
+      "description": "The page contains a dropdown identified as \"symptom2\".",
+      "source_url": "https://bovineguard.onrender.com/predict",
+      "evidence": [
+        "Observed dropdown: {\"name\": \"symptom2\", \"id\": \"symptom2\", \"options\": [{\"text\": \"Select a symptom\", \"value\": \"\"}, {\"text\": \"itching\", \"value\": \"itching\"}, {\"text\": \"skin rash\", \"value\": \"skin_rash\"}, {\"text\": \"nodal skin eruptions\", \"value\": \"nodal_skin_eruptions\"}, {\"text\": \"continuous sneezing\", \"value\": \"continuous_sneezing\"}, {\"text\": \"shivering\", \"value\": \"shivering\"}, {\"text\": \"chills\", \"value\": \"chills\"}, {\"text\": \"joint pain\", \"value\": \"joint_pain\"}, {\"text\": \"stomach pain\", \"value\": \"stomach_pain\"}, {\"text\": \"acidity\", \"value\": \"acidity\"}, {\"text\": \"ulcers on tongue\", \"value\": \"ulcers_on_tongue\"}, {\"text\": \"muscle wasting\", \"value\": \"muscle_wasting\"}, {\"text\": \"vomiting\", \"value\": \"vomiting\"}, {\"text\": \"burning micturition\", \"value\": \"burning_micturition\"}, {\"text\": \"spotting urination\", \"value\": \"spotting_urination\"}, {\"text\": \"fatigue\", \"value\": \"fatigue\"}, {\"text\": \"weight gain\", \"value\": \"weight_gain\"}, {\"text\": \"anxiety\", \"value\": \"anxiety\"}, {\"text\": \"cold hands and feets\", \"value\": \"cold_hands_and_feets\"}, {\"text\": \"mood swings\", \"value\": \"mood_swings\"}, {\"text\": \"weight loss\", \"value\": \"weight_loss\"}, {\"text\": \"restlessness\", \"value\": \"restlessness\"}, {\"text\": \"lethargy\", \"value\": \"lethargy\"}, {\"text\": \"patches in throat\", \"value\": \"patches_in_throat\"}, {\"text\": \"irregular sugar level\", \"value\": \"irregular_sugar_level\"}, {\"text\": \"cough\", \"value\": \"cough\"}, {\"text\": \"high fever\", \"value\": \"high_fever\"}, {\"text\": \"sunken eyes\", \"value\": \"sunken_eyes\"}, {\"text\": \"breathlessness\", \"value\": \"breathlessness\"}, {\"text\": \"sweating\", \"value\": \"sweating\"}, {\"text\": \"dehydration\", \"value\": \"dehydration\"}, {\"text\": \"indigestion\", \"value\": \"indigestion\"}, {\"text\": \"headache\", \"value\": \"headache\"}, {\"text\": \"yellowish skin\", \"value\": \"yellowish_skin\"}, {\"text\": \"dark urine\", \"value\": \"dark_urine\"}, {\"text\": \"nausea\", \"value\": \"nausea\"}, {\"text\": \"loss of appetite\", \"value\": \"loss_of_appetite\"}, {\"text\": \"pain behind the eyes\", \"value\": \"pain_behind_the_eyes\"}, {\"text\": \"back pain\", \"value\": \"back_pain\"}, {\"text\": \"constipation\", \"value\": \"constipation\"}, {\"text\": \"abdominal pain\", \"value\": \"abdominal_pain\"}, {\"text\": \"diarrhoea\", \"value\": \"diarrhoea\"}, {\"text\": \"mild fever\", \"value\": \"mild_fever\"}, {\"text\": \"yellow urine\", \"value\": \"yellow_urine\"}, {\"text\": \"yellowing of eyes\", \"value\": \"yellowing_of_eyes\"}, {\"text\": \"acute liver failure\", \"value\": \"acute_liver_failure\"}, {\"text\": \"fluid overload\", \"value\": \"fluid_overload\"}, {\"text\": \"swelling of stomach\", \"value\": \"swelling_of_stomach\"}, {\"text\": \"swelled lymph nodes\", \"value\": \"swelled_lymph_nodes\"}, {\"text\": \"malaise\", \"value\": \"malaise\"}, {\"text\": \"blurred and distorted vision\", \"value\": \"blurred_and_distorted_vision\"}, {\"text\": \"phlegm\", \"value\": \"phlegm\"}, {\"text\": \"throat irritation\", \"value\": \"throat_irritation\"}, {\"text\": \"redness of eyes\", \"value\": \"redness_of_eyes\"}, {\"text\": \"sinus pressure\", \"value\": \"sinus_pressure\"}, {\"text\": \"runny nose\", \"value\": \"runny_nose\"}, {\"text\": \"congestion\", \"value\": \"congestion\"}, {\"text\": \"chest pain\", \"value\": \"chest_pain\"}, {\"text\": \"weakness in limbs\", \"value\": \"weakness_in_limbs\"}, {\"text\": \"fast heart rate\", \"value\": \"fast_heart_rate\"}, {\"text\": \"pain during bowel movements\", \"value\": \"pain_during_bowel_movements\"}, {\"text\": \"pain in anal region\", \"value\": \"pain_in_anal_region\"}, {\"text\": \"bloody stool\", \"value\": \"bloody_stool\"}, {\"text\": \"irritation in anus\", \"value\": \"irritation_in_anus\"}, {\"text\": \"neck pain\", \"value\": \"neck_pain\"}, {\"text\": \"dizziness\", \"value\": \"dizziness\"}, {\"text\": \"cramps\", \"value\": \"cramps\"}, {\"text\": \"bruising\", \"value\": \"bruising\"}, {\"text\": \"obesity\", \"value\": \"obesity\"}, {\"text\": \"swollen legs\", \"value\": \"swollen_legs\"}, {\"text\": \"swollen blood vessels\", \"value\": \"swollen_blood_vessels\"}, {\"text\": \"puffy face and eyes\", \"value\": \"puffy_face_and_eyes\"}, {\"text\": \"enlarged thyroid\", \"value\": \"enlarged_thyroid\"}, {\"text\": \"brittle nails\", \"value\": \"brittle_nails\"}, {\"text\": \"swollen extremeties\", \"value\": \"swollen_extremeties\"}, {\"text\": \"excessive hunger\", \"value\": \"excessive_hunger\"}, {\"text\": \"extra marital contacts\", \"value\": \"extra_marital_contacts\"}, {\"text\": \"drying and tingling lips\", \"value\": \"drying_and_tingling_lips\"}, {\"text\": \"slurred speech\", \"value\": \"slurred_speech\"}, {\"text\": \"knee pain\", \"value\": \"knee_pain\"}, {\"text\": \"hip joint pain\", \"value\": \"hip_joint_pain\"}, {\"text\": \"muscle weakness\", \"value\": \"muscle_weakness\"}, {\"text\": \"stiff neck\", \"value\": \"stiff_neck\"}, {\"text\": \"swelling joints\", \"value\": \"swelling_joints\"}, {\"text\": \"movement stiffness\", \"value\": \"movement_stiffness\"}, {\"text\": \"spinning movements\", \"value\": \"spinning_movements\"}, {\"text\": \"loss of balance\", \"value\": \"loss_of_balance\"}, {\"text\": \"unsteadiness\", \"value\": \"unsteadiness\"}, {\"text\": \"weakness of one body side\", \"value\": \"weakness_of_one_body_side\"}, {\"text\": \"loss of smell\", \"value\": \"loss_of_smell\"}, {\"text\": \"bladder discomfort\", \"value\": \"bladder_discomfort\"}, {\"text\": \"foul smell of urine\", \"value\": \"foul_smell_of_urine\"}, {\"text\": \"continuous feel of urine\", \"value\": \"continuous_feel_of_urine\"}, {\"text\": \"passage of gases\", \"value\": \"passage_of_gases\"}, {\"text\": \"internal itching\", \"value\": \"internal_itching\"}, {\"text\": \"toxic look (typhos)\", \"value\": \"toxic_look_(typhos)\"}, {\"text\": \"depression\", \"value\": \"depression\"}, {\"text\": \"irritability\", \"value\": \"irritability\"}, {\"text\": \"muscle pain\", \"value\": \"muscle_pain\"}, {\"text\": \"altered sensorium\", \"value\": \"altered_sensorium\"}, {\"text\": \"red spots over body\", \"value\": \"red_spots_over_body\"}, {\"text\": \"belly pain\", \"value\": \"belly_pain\"}, {\"text\": \"abnormal menstruation\", \"value\": \"abnormal_menstruation\"}, {\"text\": \"dischromic patches\", \"value\": \"dischromic_patches\"}, {\"text\": \"watering from eyes\", \"value\": \"watering_from_eyes\"}, {\"text\": \"increased appetite\", \"value\": \"increased_appetite\"}, {\"text\": \"polyuria\", \"value\": \"polyuria\"}, {\"text\": \"family history\", \"value\": \"family_history\"}, {\"text\": \"mucoid sputum\", \"value\": \"mucoid_sputum\"}, {\"text\": \"rusty sputum\", \"value\": \"rusty_sputum\"}, {\"text\": \"lack of concentration\", \"value\": \"lack_of_concentration\"}, {\"text\": \"visual disturbances\", \"value\": \"visual_disturbances\"}, {\"text\": \"receiving blood transfusion\", \"value\": \"receiving_blood_transfusion\"}, {\"text\": \"receiving unsterile injections\", \"value\": \"receiving_unsterile_injections\"}, {\"text\": \"coma\", \"value\": \"coma\"}, {\"text\": \"stomach bleeding\", \"value\": \"stomach_bleeding\"}, {\"text\": \"distention of abdomen\", \"value\": \"distention_of_abdomen\"}, {\"text\": \"history of alcohol consumption\", \"value\": \"history_of_alcohol_consumption\"}, {\"text\": \"blood in sputum\", \"value\": \"blood_in_sputum\"}, {\"text\": \"prominent veins on calf\", \"value\": \"prominent_veins_on_calf\"}, {\"text\": \"palpitations\", \"value\": \"palpitations\"}, {\"text\": \"painful walking\", \"value\": \"painful_walking\"}, {\"text\": \"pus filled pimples\", \"value\": \"pus_filled_pimples\"}, {\"text\": \"blackheads\", \"value\": \"blackheads\"}, {\"text\": \"scurring\", \"value\": \"scurring\"}, {\"text\": \"skin peeling\", \"value\": \"skin_peeling\"}, {\"text\": \"silver like dusting\", \"value\": \"silver_like_dusting\"}, {\"text\": \"small dents in nails\", \"value\": \"small_dents_in_nails\"}, {\"text\": \"inflammatory nails\", \"value\": \"inflammatory_nails\"}, {\"text\": \"blister\", \"value\": \"blister\"}, {\"text\": \"red sore around nose\", \"value\": \"red_sore_around_nose\"}, {\"text\": \"yellow crust ooze\", \"value\": \"yellow_crust_ooze\"}]}"
+      ],
+      "requirement_type": "observed",
+      "confidence": "medium"
+    },
+    {
+      "requirement_id": "REQ-025",
+      "title": "Dropdown: symptom3",
+      "description": "The page contains a dropdown identified as \"symptom3\".",
+      "source_url": "https://bovineguard.onrender.com/predict",
+      "evidence": [
+        "Observed dropdown: {\"name\": \"symptom3\", \"id\": \"symptom3\", \"options\": [{\"text\": \"Select a symptom\", \"value\": \"\"}, {\"text\": \"itching\", \"value\": \"itching\"}, {\"text\": \"skin rash\", \"value\": \"skin_rash\"}, {\"text\": \"nodal skin eruptions\", \"value\": \"nodal_skin_eruptions\"}, {\"text\": \"continuous sneezing\", \"value\": \"continuous_sneezing\"}, {\"text\": \"shivering\", \"value\": \"shivering\"}, {\"text\": \"chills\", \"value\": \"chills\"}, {\"text\": \"joint pain\", \"value\": \"joint_pain\"}, {\"text\": \"stomach pain\", \"value\": \"stomach_pain\"}, {\"text\": \"acidity\", \"value\": \"acidity\"}, {\"text\": \"ulcers on tongue\", \"value\": \"ulcers_on_tongue\"}, {\"text\": \"muscle wasting\", \"value\": \"muscle_wasting\"}, {\"text\": \"vomiting\", \"value\": \"vomiting\"}, {\"text\": \"burning micturition\", \"value\": \"burning_micturition\"}, {\"text\": \"spotting urination\", \"value\": \"spotting_urination\"}, {\"text\": \"fatigue\", \"value\": \"fatigue\"}, {\"text\": \"weight gain\", \"value\": \"weight_gain\"}, {\"text\": \"anxiety\", \"value\": \"anxiety\"}, {\"text\": \"cold hands and feets\", \"value\": \"cold_hands_and_feets\"}, {\"text\": \"mood swings\", \"value\": \"mood_swings\"}, {\"text\": \"weight loss\", \"value\": \"weight_loss\"}, {\"text\": \"restlessness\", \"value\": \"restlessness\"}, {\"text\": \"lethargy\", \"value\": \"lethargy\"}, {\"text\": \"patches in throat\", \"value\": \"patches_in_throat\"}, {\"text\": \"irregular sugar level\", \"value\": \"irregular_sugar_level\"}, {\"text\": \"cough\", \"value\": \"cough\"}, {\"text\": \"high fever\", \"value\": \"high_fever\"}, {\"text\": \"sunken eyes\", \"value\": \"sunken_eyes\"}, {\"text\": \"breathlessness\", \"value\": \"breathlessness\"}, {\"text\": \"sweating\", \"value\": \"sweating\"}, {\"text\": \"dehydration\", \"value\": \"dehydration\"}, {\"text\": \"indigestion\", \"value\": \"indigestion\"}, {\"text\": \"headache\", \"value\": \"headache\"}, {\"text\": \"yellowish skin\", \"value\": \"yellowish_skin\"}, {\"text\": \"dark urine\", \"value\": \"dark_urine\"}, {\"text\": \"nausea\", \"value\": \"nausea\"}, {\"text\": \"loss of appetite\", \"value\": \"loss_of_appetite\"}, {\"text\": \"pain behind the eyes\", \"value\": \"pain_behind_the_eyes\"}, {\"text\": \"back pain\", \"value\": \"back_pain\"}, {\"text\": \"constipation\", \"value\": \"constipation\"}, {\"text\": \"abdominal pain\", \"value\": \"abdominal_pain\"}, {\"text\": \"diarrhoea\", \"value\": \"diarrhoea\"}, {\"text\": \"mild fever\", \"value\": \"mild_fever\"}, {\"text\": \"yellow urine\", \"value\": \"yellow_urine\"}, {\"text\": \"yellowing of eyes\", \"value\": \"yellowing_of_eyes\"}, {\"text\": \"acute liver failure\", \"value\": \"acute_liver_failure\"}, {\"text\": \"fluid overload\", \"value\": \"fluid_overload\"}, {\"text\": \"swelling of stomach\", \"value\": \"swelling_of_stomach\"}, {\"text\": \"swelled lymph nodes\", \"value\": \"swelled_lymph_nodes\"}, {\"text\": \"malaise\", \"value\": \"malaise\"}, {\"text\": \"blurred and distorted vision\", \"value\": \"blurred_and_distorted_vision\"}, {\"text\": \"phlegm\", \"value\": \"phlegm\"}, {\"text\": \"throat irritation\", \"value\": \"throat_irritation\"}, {\"text\": \"redness of eyes\", \"value\": \"redness_of_eyes\"}, {\"text\": \"sinus pressure\", \"value\": \"sinus_pressure\"}, {\"text\": \"runny nose\", \"value\": \"runny_nose\"}, {\"text\": \"congestion\", \"value\": \"congestion\"}, {\"text\": \"chest pain\", \"value\": \"chest_pain\"}, {\"text\": \"weakness in limbs\", \"value\": \"weakness_in_limbs\"}, {\"text\": \"fast heart rate\", \"value\": \"fast_heart_rate\"}, {\"text\": \"pain during bowel movements\", \"value\": \"pain_during_bowel_movements\"}, {\"text\": \"pain in anal region\", \"value\": \"pain_in_anal_region\"}, {\"text\": \"bloody stool\", \"value\": \"bloody_stool\"}, {\"text\": \"irritation in anus\", \"value\": \"irritation_in_anus\"}, {\"text\": \"neck pain\", \"value\": \"neck_pain\"}, {\"text\": \"dizziness\", \"value\": \"dizziness\"}, {\"text\": \"cramps\", \"value\": \"cramps\"}, {\"text\": \"bruising\", \"value\": \"bruising\"}, {\"text\": \"obesity\", \"value\": \"obesity\"}, {\"text\": \"swollen legs\", \"value\": \"swollen_legs\"}, {\"text\": \"swollen blood vessels\", \"value\": \"swollen_blood_vessels\"}, {\"text\": \"puffy face and eyes\", \"value\": \"puffy_face_and_eyes\"}, {\"text\": \"enlarged thyroid\", \"value\": \"enlarged_thyroid\"}, {\"text\": \"brittle nails\", \"value\": \"brittle_nails\"}, {\"text\": \"swollen extremeties\", \"value\": \"swollen_extremeties\"}, {\"text\": \"excessive hunger\", \"value\": \"excessive_hunger\"}, {\"text\": \"extra marital contacts\", \"value\": \"extra_marital_contacts\"}, {\"text\": \"drying and tingling lips\", \"value\": \"drying_and_tingling_lips\"}, {\"text\": \"slurred speech\", \"value\": \"slurred_speech\"}, {\"text\": \"knee pain\", \"value\": \"knee_pain\"}, {\"text\": \"hip joint pain\", \"value\": \"hip_joint_pain\"}, {\"text\": \"muscle weakness\", \"value\": \"muscle_weakness\"}, {\"text\": \"stiff neck\", \"value\": \"stiff_neck\"}, {\"text\": \"swelling joints\", \"value\": \"swelling_joints\"}, {\"text\": \"movement stiffness\", \"value\": \"movement_stiffness\"}, {\"text\": \"spinning movements\", \"value\": \"spinning_movements\"}, {\"text\": \"loss of balance\", \"value\": \"loss_of_balance\"}, {\"text\": \"unsteadiness\", \"value\": \"unsteadiness\"}, {\"text\": \"weakness of one body side\", \"value\": \"weakness_of_one_body_side\"}, {\"text\": \"loss of smell\", \"value\": \"loss_of_smell\"}, {\"text\": \"bladder discomfort\", \"value\": \"bladder_discomfort\"}, {\"text\": \"foul smell of urine\", \"value\": \"foul_smell_of_urine\"}, {\"text\": \"continuous feel of urine\", \"value\": \"continuous_feel_of_urine\"}, {\"text\": \"passage of gases\", \"value\": \"passage_of_gases\"}, {\"text\": \"internal itching\", \"value\": \"internal_itching\"}, {\"text\": \"toxic look (typhos)\", \"value\": \"toxic_look_(typhos)\"}, {\"text\": \"depression\", \"value\": \"depression\"}, {\"text\": \"irritability\", \"value\": \"irritability\"}, {\"text\": \"muscle pain\", \"value\": \"muscle_pain\"}, {\"text\": \"altered sensorium\", \"value\": \"altered_sensorium\"}, {\"text\": \"red spots over body\", \"value\": \"red_spots_over_body\"}, {\"text\": \"belly pain\", \"value\": \"belly_pain\"}, {\"text\": \"abnormal menstruation\", \"value\": \"abnormal_menstruation\"}, {\"text\": \"dischromic patches\", \"value\": \"dischromic_patches\"}, {\"text\": \"watering from eyes\", \"value\": \"watering_from_eyes\"}, {\"text\": \"increased appetite\", \"value\": \"increased_appetite\"}, {\"text\": \"polyuria\", \"value\": \"polyuria\"}, {\"text\": \"family history\", \"value\": \"family_history\"}, {\"text\": \"mucoid sputum\", \"value\": \"mucoid_sputum\"}, {\"text\": \"rusty sputum\", \"value\": \"rusty_sputum\"}, {\"text\": \"lack of concentration\", \"value\": \"lack_of_concentration\"}, {\"text\": \"visual disturbances\", \"value\": \"visual_disturbances\"}, {\"text\": \"receiving blood transfusion\", \"value\": \"receiving_blood_transfusion\"}, {\"text\": \"receiving unsterile injections\", \"value\": \"receiving_unsterile_injections\"}, {\"text\": \"coma\", \"value\": \"coma\"}, {\"text\": \"stomach bleeding\", \"value\": \"stomach_bleeding\"}, {\"text\": \"distention of abdomen\", \"value\": \"distention_of_abdomen\"}, {\"text\": \"history of alcohol consumption\", \"value\": \"history_of_alcohol_consumption\"}, {\"text\": \"blood in sputum\", \"value\": \"blood_in_sputum\"}, {\"text\": \"prominent veins on calf\", \"value\": \"prominent_veins_on_calf\"}, {\"text\": \"palpitations\", \"value\": \"palpitations\"}, {\"text\": \"painful walking\", \"value\": \"painful_walking\"}, {\"text\": \"pus filled pimples\", \"value\": \"pus_filled_pimples\"}, {\"text\": \"blackheads\", \"value\": \"blackheads\"}, {\"text\": \"scurring\", \"value\": \"scurring\"}, {\"text\": \"skin peeling\", \"value\": \"skin_peeling\"}, {\"text\": \"silver like dusting\", \"value\": \"silver_like_dusting\"}, {\"text\": \"small dents in nails\", \"value\": \"small_dents_in_nails\"}, {\"text\": \"inflammatory nails\", \"value\": \"inflammatory_nails\"}, {\"text\": \"blister\", \"value\": \"blister\"}, {\"text\": \"red sore around nose\", \"value\": \"red_sore_around_nose\"}, {\"text\": \"yellow crust ooze\", \"value\": \"yellow_crust_ooze\"}]}"
+      ],
+      "requirement_type": "observed",
+      "confidence": "medium"
+    },
+    {
+      "requirement_id": "REQ-026",
+      "title": "Dropdown: symptom4",
+      "description": "The page contains a dropdown identified as \"symptom4\".",
+      "source_url": "https://bovineguard.onrender.com/predict",
+      "evidence": [
+        "Observed dropdown: {\"name\": \"symptom4\", \"id\": \"symptom4\", \"options\": [{\"text\": \"Select a symptom\", \"value\": \"\"}, {\"text\": \"itching\", \"value\": \"itching\"}, {\"text\": \"skin rash\", \"value\": \"skin_rash\"}, {\"text\": \"nodal skin eruptions\", \"value\": \"nodal_skin_eruptions\"}, {\"text\": \"continuous sneezing\", \"value\": \"continuous_sneezing\"}, {\"text\": \"shivering\", \"value\": \"shivering\"}, {\"text\": \"chills\", \"value\": \"chills\"}, {\"text\": \"joint pain\", \"value\": \"joint_pain\"}, {\"text\": \"stomach pain\", \"value\": \"stomach_pain\"}, {\"text\": \"acidity\", \"value\": \"acidity\"}, {\"text\": \"ulcers on tongue\", \"value\": \"ulcers_on_tongue\"}, {\"text\": \"muscle wasting\", \"value\": \"muscle_wasting\"}, {\"text\": \"vomiting\", \"value\": \"vomiting\"}, {\"text\": \"burning micturition\", \"value\": \"burning_micturition\"}, {\"text\": \"spotting urination\", \"value\": \"spotting_urination\"}, {\"text\": \"fatigue\", \"value\": \"fatigue\"}, {\"text\": \"weight gain\", \"value\": \"weight_gain\"}, {\"text\": \"anxiety\", \"value\": \"anxiety\"}, {\"text\": \"cold hands and feets\", \"value\": \"cold_hands_and_feets\"}, {\"text\": \"mood swings\", \"value\": \"mood_swings\"}, {\"text\": \"weight loss\", \"value\": \"weight_loss\"}, {\"text\": \"restlessness\", \"value\": \"restlessness\"}, {\"text\": \"lethargy\", \"value\": \"lethargy\"}, {\"text\": \"patches in throat\", \"value\": \"patches_in_throat\"}, {\"text\": \"irregular sugar level\", \"value\": \"irregular_sugar_level\"}, {\"text\": \"cough\", \"value\": \"cough\"}, {\"text\": \"high fever\", \"value\": \"high_fever\"}, {\"text\": \"sunken eyes\", \"value\": \"sunken_eyes\"}, {\"text\": \"breathlessness\", \"value\": \"breathlessness\"}, {\"text\": \"sweating\", \"value\": \"sweating\"}, {\"text\": \"dehydration\", \"value\": \"dehydration\"}, {\"text\": \"indigestion\", \"value\": \"indigestion\"}, {\"text\": \"headache\", \"value\": \"headache\"}, {\"text\": \"yellowish skin\", \"value\": \"yellowish_skin\"}, {\"text\": \"dark urine\", \"value\": \"dark_urine\"}, {\"text\": \"nausea\", \"value\": \"nausea\"}, {\"text\": \"loss of appetite\", \"value\": \"loss_of_appetite\"}, {\"text\": \"pain behind the eyes\", \"value\": \"pain_behind_the_eyes\"}, {\"text\": \"back pain\", \"value\": \"back_pain\"}, {\"text\": \"constipation\", \"value\": \"constipation\"}, {\"text\": \"abdominal pain\", \"value\": \"abdominal_pain\"}, {\"text\": \"diarrhoea\", \"value\": \"diarrhoea\"}, {\"text\": \"mild fever\", \"value\": \"mild_fever\"}, {\"text\": \"yellow urine\", \"value\": \"yellow_urine\"}, {\"text\": \"yellowing of eyes\", \"value\": \"yellowing_of_eyes\"}, {\"text\": \"acute liver failure\", \"value\": \"acute_liver_failure\"}, {\"text\": \"fluid overload\", \"value\": \"fluid_overload\"}, {\"text\": \"swelling of stomach\", \"value\": \"swelling_of_stomach\"}, {\"text\": \"swelled lymph nodes\", \"value\": \"swelled_lymph_nodes\"}, {\"text\": \"malaise\", \"value\": \"malaise\"}, {\"text\": \"blurred and distorted vision\", \"value\": \"blurred_and_distorted_vision\"}, {\"text\": \"phlegm\", \"value\": \"phlegm\"}, {\"text\": \"throat irritation\", \"value\": \"throat_irritation\"}, {\"text\": \"redness of eyes\", \"value\": \"redness_of_eyes\"}, {\"text\": \"sinus pressure\", \"value\": \"sinus_pressure\"}, {\"text\": \"runny nose\", \"value\": \"runny_nose\"}, {\"text\": \"congestion\", \"value\": \"congestion\"}, {\"text\": \"chest pain\", \"value\": \"chest_pain\"}, {\"text\": \"weakness in limbs\", \"value\": \"weakness_in_limbs\"}, {\"text\": \"fast heart rate\", \"value\": \"fast_heart_rate\"}, {\"text\": \"pain during bowel movements\", \"value\": \"pain_during_bowel_movements\"}, {\"text\": \"pain in anal region\", \"value\": \"pain_in_anal_region\"}, {\"text\": \"bloody stool\", \"value\": \"bloody_stool\"}, {\"text\": \"irritation in anus\", \"value\": \"irritation_in_anus\"}, {\"text\": \"neck pain\", \"value\": \"neck_pain\"}, {\"text\": \"dizziness\", \"value\": \"dizziness\"}, {\"text\": \"cramps\", \"value\": \"cramps\"}, {\"text\": \"bruising\", \"value\": \"bruising\"}, {\"text\": \"obesity\", \"value\": \"obesity\"}, {\"text\": \"swollen legs\", \"value\": \"swollen_legs\"}, {\"text\": \"swollen blood vessels\", \"value\": \"swollen_blood_vessels\"}, {\"text\": \"puffy face and eyes\", \"value\": \"puffy_face_and_eyes\"}, {\"text\": \"enlarged thyroid\", \"value\": \"enlarged_thyroid\"}, {\"text\": \"brittle nails\", \"value\": \"brittle_nails\"}, {\"text\": \"swollen extremeties\", \"value\": \"swollen_extremeties\"}, {\"text\": \"excessive hunger\", \"value\": \"excessive_hunger\"}, {\"text\": \"extra marital contacts\", \"value\": \"extra_marital_contacts\"}, {\"text\": \"drying and tingling lips\", \"value\": \"drying_and_tingling_lips\"}, {\"text\": \"slurred speech\", \"value\": \"slurred_speech\"}, {\"text\": \"knee pain\", \"value\": \"knee_pain\"}, {\"text\": \"hip joint pain\", \"value\": \"hip_joint_pain\"}, {\"text\": \"muscle weakness\", \"value\": \"muscle_weakness\"}, {\"text\": \"stiff neck\", \"value\": \"stiff_neck\"}, {\"text\": \"swelling joints\", \"value\": \"swelling_joints\"}, {\"text\": \"movement stiffness\", \"value\": \"movement_stiffness\"}, {\"text\": \"spinning movements\", \"value\": \"spinning_movements\"}, {\"text\": \"loss of balance\", \"value\": \"loss_of_balance\"}, {\"text\": \"unsteadiness\", \"value\": \"unsteadiness\"}, {\"text\": \"weakness of one body side\", \"value\": \"weakness_of_one_body_side\"}, {\"text\": \"loss of smell\", \"value\": \"loss_of_smell\"}, {\"text\": \"bladder discomfort\", \"value\": \"bladder_discomfort\"}, {\"text\": \"foul smell of urine\", \"value\": \"foul_smell_of_urine\"}, {\"text\": \"continuous feel of urine\", \"value\": \"continuous_feel_of_urine\"}, {\"text\": \"passage of gases\", \"value\": \"passage_of_gases\"}, {\"text\": \"internal itching\", \"value\": \"internal_itching\"}, {\"text\": \"toxic look (typhos)\", \"value\": \"toxic_look_(typhos)\"}, {\"text\": \"depression\", \"value\": \"depression\"}, {\"text\": \"irritability\", \"value\": \"irritability\"}, {\"text\": \"muscle pain\", \"value\": \"muscle_pain\"}, {\"text\": \"altered sensorium\", \"value\": \"altered_sensorium\"}, {\"text\": \"red spots over body\", \"value\": \"red_spots_over_body\"}, {\"text\": \"belly pain\", \"value\": \"belly_pain\"}, {\"text\": \"abnormal menstruation\", \"value\": \"abnormal_menstruation\"}, {\"text\": \"dischromic patches\", \"value\": \"dischromic_patches\"}, {\"text\": \"watering from eyes\", \"value\": \"watering_from_eyes\"}, {\"text\": \"increased appetite\", \"value\": \"increased_appetite\"}, {\"text\": \"polyuria\", \"value\": \"polyuria\"}, {\"text\": \"family history\", \"value\": \"family_history\"}, {\"text\": \"mucoid sputum\", \"value\": \"mucoid_sputum\"}, {\"text\": \"rusty sputum\", \"value\": \"rusty_sputum\"}, {\"text\": \"lack of concentration\", \"value\": \"lack_of_concentration\"}, {\"text\": \"visual disturbances\", \"value\": \"visual_disturbances\"}, {\"text\": \"receiving blood transfusion\", \"value\": \"receiving_blood_transfusion\"}, {\"text\": \"receiving unsterile injections\", \"value\": \"receiving_unsterile_injections\"}, {\"text\": \"coma\", \"value\": \"coma\"}, {\"text\": \"stomach bleeding\", \"value\": \"stomach_bleeding\"}, {\"text\": \"distention of abdomen\", \"value\": \"distention_of_abdomen\"}, {\"text\": \"history of alcohol consumption\", \"value\": \"history_of_alcohol_consumption\"}, {\"text\": \"blood in sputum\", \"value\": \"blood_in_sputum\"}, {\"text\": \"prominent veins on calf\", \"value\": \"prominent_veins_on_calf\"}, {\"text\": \"palpitations\", \"value\": \"palpitations\"}, {\"text\": \"painful walking\", \"value\": \"painful_walking\"}, {\"text\": \"pus filled pimples\", \"value\": \"pus_filled_pimples\"}, {\"text\": \"blackheads\", \"value\": \"blackheads\"}, {\"text\": \"scurring\", \"value\": \"scurring\"}, {\"text\": \"skin peeling\", \"value\": \"skin_peeling\"}, {\"text\": \"silver like dusting\", \"value\": \"silver_like_dusting\"}, {\"text\": \"small dents in nails\", \"value\": \"small_dents_in_nails\"}, {\"text\": \"inflammatory nails\", \"value\": \"inflammatory_nails\"}, {\"text\": \"blister\", \"value\": \"blister\"}, {\"text\": \"red sore around nose\", \"value\": \"red_sore_around_nose\"}, {\"text\": \"yellow crust ooze\", \"value\": \"yellow_crust_ooze\"}]}"
+      ],
+      "requirement_type": "observed",
+      "confidence": "medium"
+    },
+    {
+      "requirement_id": "REQ-027",
+      "title": "Dropdown: symptom5",
+      "description": "The page contains a dropdown identified as \"symptom5\".",
+      "source_url": "https://bovineguard.onrender.com/predict",
+      "evidence": [
+        "Observed dropdown: {\"name\": \"symptom5\", \"id\": \"symptom5\", \"options\": [{\"text\": \"Select a symptom\", \"value\": \"\"}, {\"text\": \"itching\", \"value\": \"itching\"}, {\"text\": \"skin rash\", \"value\": \"skin_rash\"}, {\"text\": \"nodal skin eruptions\", \"value\": \"nodal_skin_eruptions\"}, {\"text\": \"continuous sneezing\", \"value\": \"continuous_sneezing\"}, {\"text\": \"shivering\", \"value\": \"shivering\"}, {\"text\": \"chills\", \"value\": \"chills\"}, {\"text\": \"joint pain\", \"value\": \"joint_pain\"}, {\"text\": \"stomach pain\", \"value\": \"stomach_pain\"}, {\"text\": \"acidity\", \"value\": \"acidity\"}, {\"text\": \"ulcers on tongue\", \"value\": \"ulcers_on_tongue\"}, {\"text\": \"muscle wasting\", \"value\": \"muscle_wasting\"}, {\"text\": \"vomiting\", \"value\": \"vomiting\"}, {\"text\": \"burning micturition\", \"value\": \"burning_micturition\"}, {\"text\": \"spotting urination\", \"value\": \"spotting_urination\"}, {\"text\": \"fatigue\", \"value\": \"fatigue\"}, {\"text\": \"weight gain\", \"value\": \"weight_gain\"}, {\"text\": \"anxiety\", \"value\": \"anxiety\"}, {\"text\": \"cold hands and feets\", \"value\": \"cold_hands_and_feets\"}, {\"text\": \"mood swings\", \"value\": \"mood_swings\"}, {\"text\": \"weight loss\", \"value\": \"weight_loss\"}, {\"text\": \"restlessness\", \"value\": \"restlessness\"}, {\"text\": \"lethargy\", \"value\": \"lethargy\"}, {\"text\": \"patches in throat\", \"value\": \"patches_in_throat\"}, {\"text\": \"irregular sugar level\", \"value\": \"irregular_sugar_level\"}, {\"text\": \"cough\", \"value\": \"cough\"}, {\"text\": \"high fever\", \"value\": \"high_fever\"}, {\"text\": \"sunken eyes\", \"value\": \"sunken_eyes\"}, {\"text\": \"breathlessness\", \"value\": \"breathlessness\"}, {\"text\": \"sweating\", \"value\": \"sweating\"}, {\"text\": \"dehydration\", \"value\": \"dehydration\"}, {\"text\": \"indigestion\", \"value\": \"indigestion\"}, {\"text\": \"headache\", \"value\": \"headache\"}, {\"text\": \"yellowish skin\", \"value\": \"yellowish_skin\"}, {\"text\": \"dark urine\", \"value\": \"dark_urine\"}, {\"text\": \"nausea\", \"value\": \"nausea\"}, {\"text\": \"loss of appetite\", \"value\": \"loss_of_appetite\"}, {\"text\": \"pain behind the eyes\", \"value\": \"pain_behind_the_eyes\"}, {\"text\": \"back pain\", \"value\": \"back_pain\"}, {\"text\": \"constipation\", \"value\": \"constipation\"}, {\"text\": \"abdominal pain\", \"value\": \"abdominal_pain\"}, {\"text\": \"diarrhoea\", \"value\": \"diarrhoea\"}, {\"text\": \"mild fever\", \"value\": \"mild_fever\"}, {\"text\": \"yellow urine\", \"value\": \"yellow_urine\"}, {\"text\": \"yellowing of eyes\", \"value\": \"yellowing_of_eyes\"}, {\"text\": \"acute liver failure\", \"value\": \"acute_liver_failure\"}, {\"text\": \"fluid overload\", \"value\": \"fluid_overload\"}, {\"text\": \"swelling of stomach\", \"value\": \"swelling_of_stomach\"}, {\"text\": \"swelled lymph nodes\", \"value\": \"swelled_lymph_nodes\"}, {\"text\": \"malaise\", \"value\": \"malaise\"}, {\"text\": \"blurred and distorted vision\", \"value\": \"blurred_and_distorted_vision\"}, {\"text\": \"phlegm\", \"value\": \"phlegm\"}, {\"text\": \"throat irritation\", \"value\": \"throat_irritation\"}, {\"text\": \"redness of eyes\", \"value\": \"redness_of_eyes\"}, {\"text\": \"sinus pressure\", \"value\": \"sinus_pressure\"}, {\"text\": \"runny nose\", \"value\": \"runny_nose\"}, {\"text\": \"congestion\", \"value\": \"congestion\"}, {\"text\": \"chest pain\", \"value\": \"chest_pain\"}, {\"text\": \"weakness in limbs\", \"value\": \"weakness_in_limbs\"}, {\"text\": \"fast heart rate\", \"value\": \"fast_heart_rate\"}, {\"text\": \"pain during bowel movements\", \"value\": \"pain_during_bowel_movements\"}, {\"text\": \"pain in anal region\", \"value\": \"pain_in_anal_region\"}, {\"text\": \"bloody stool\", \"value\": \"bloody_stool\"}, {\"text\": \"irritation in anus\", \"value\": \"irritation_in_anus\"}, {\"text\": \"neck pain\", \"value\": \"neck_pain\"}, {\"text\": \"dizziness\", \"value\": \"dizziness\"}, {\"text\": \"cramps\", \"value\": \"cramps\"}, {\"text\": \"bruising\", \"value\": \"bruising\"}, {\"text\": \"obesity\", \"value\": \"obesity\"}, {\"text\": \"swollen legs\", \"value\": \"swollen_legs\"}, {\"text\": \"swollen blood vessels\", \"value\": \"swollen_blood_vessels\"}, {\"text\": \"puffy face and eyes\", \"value\": \"puffy_face_and_eyes\"}, {\"text\": \"enlarged thyroid\", \"value\": \"enlarged_thyroid\"}, {\"text\": \"brittle nails\", \"value\": \"brittle_nails\"}, {\"text\": \"swollen extremeties\", \"value\": \"swollen_extremeties\"}, {\"text\": \"excessive hunger\", \"value\": \"excessive_hunger\"}, {\"text\": \"extra marital contacts\", \"value\": \"extra_marital_contacts\"}, {\"text\": \"drying and tingling lips\", \"value\": \"drying_and_tingling_lips\"}, {\"text\": \"slurred speech\", \"value\": \"slurred_speech\"}, {\"text\": \"knee pain\", \"value\": \"knee_pain\"}, {\"text\": \"hip joint pain\", \"value\": \"hip_joint_pain\"}, {\"text\": \"muscle weakness\", \"value\": \"muscle_weakness\"}, {\"text\": \"stiff neck\", \"value\": \"stiff_neck\"}, {\"text\": \"swelling joints\", \"value\": \"swelling_joints\"}, {\"text\": \"movement stiffness\", \"value\": \"movement_stiffness\"}, {\"text\": \"spinning movements\", \"value\": \"spinning_movements\"}, {\"text\": \"loss of balance\", \"value\": \"loss_of_balance\"}, {\"text\": \"unsteadiness\", \"value\": \"unsteadiness\"}, {\"text\": \"weakness of one body side\", \"value\": \"weakness_of_one_body_side\"}, {\"text\": \"loss of smell\", \"value\": \"loss_of_smell\"}, {\"text\": \"bladder discomfort\", \"value\": \"bladder_discomfort\"}, {\"text\": \"foul smell of urine\", \"value\": \"foul_smell_of_urine\"}, {\"text\": \"continuous feel of urine\", \"value\": \"continuous_feel_of_urine\"}, {\"text\": \"passage of gases\", \"value\": \"passage_of_gases\"}, {\"text\": \"internal itching\", \"value\": \"internal_itching\"}, {\"text\": \"toxic look (typhos)\", \"value\": \"toxic_look_(typhos)\"}, {\"text\": \"depression\", \"value\": \"depression\"}, {\"text\": \"irritability\", \"value\": \"irritability\"}, {\"text\": \"muscle pain\", \"value\": \"muscle_pain\"}, {\"text\": \"altered sensorium\", \"value\": \"altered_sensorium\"}, {\"text\": \"red spots over body\", \"value\": \"red_spots_over_body\"}, {\"text\": \"belly pain\", \"value\": \"belly_pain\"}, {\"text\": \"abnormal menstruation\", \"value\": \"abnormal_menstruation\"}, {\"text\": \"dischromic patches\", \"value\": \"dischromic_patches\"}, {\"text\": \"watering from eyes\", \"value\": \"watering_from_eyes\"}, {\"text\": \"increased appetite\", \"value\": \"increased_appetite\"}, {\"text\": \"polyuria\", \"value\": \"polyuria\"}, {\"text\": \"family history\", \"value\": \"family_history\"}, {\"text\": \"mucoid sputum\", \"value\": \"mucoid_sputum\"}, {\"text\": \"rusty sputum\", \"value\": \"rusty_sputum\"}, {\"text\": \"lack of concentration\", \"value\": \"lack_of_concentration\"}, {\"text\": \"visual disturbances\", \"value\": \"visual_disturbances\"}, {\"text\": \"receiving blood transfusion\", \"value\": \"receiving_blood_transfusion\"}, {\"text\": \"receiving unsterile injections\", \"value\": \"receiving_unsterile_injections\"}, {\"text\": \"coma\", \"value\": \"coma\"}, {\"text\": \"stomach bleeding\", \"value\": \"stomach_bleeding\"}, {\"text\": \"distention of abdomen\", \"value\": \"distention_of_abdomen\"}, {\"text\": \"history of alcohol consumption\", \"value\": \"history_of_alcohol_consumption\"}, {\"text\": \"blood in sputum\", \"value\": \"blood_in_sputum\"}, {\"text\": \"prominent veins on calf\", \"value\": \"prominent_veins_on_calf\"}, {\"text\": \"palpitations\", \"value\": \"palpitations\"}, {\"text\": \"painful walking\", \"value\": \"painful_walking\"}, {\"text\": \"pus filled pimples\", \"value\": \"pus_filled_pimples\"}, {\"text\": \"blackheads\", \"value\": \"blackheads\"}, {\"text\": \"scurring\", \"value\": \"scurring\"}, {\"text\": \"skin peeling\", \"value\": \"skin_peeling\"}, {\"text\": \"silver like dusting\", \"value\": \"silver_like_dusting\"}, {\"text\": \"small dents in nails\", \"value\": \"small_dents_in_nails\"}, {\"text\": \"inflammatory nails\", \"value\": \"inflammatory_nails\"}, {\"text\": \"blister\", \"value\": \"blister\"}, {\"text\": \"red sore around nose\", \"value\": \"red_sore_around_nose\"}, {\"text\": \"yellow crust ooze\", \"value\": \"yellow_crust_ooze\"}]}"
+      ],
+      "requirement_type": "observed",
+      "confidence": "medium"
+    },
+    {
+      "requirement_id": "REQ-028",
+      "title": "Form 1 is present",
+      "description": "The page contains a form. Successful submission and server-side processing have not been verified.",
+      "source_url": "https://bovineguard.onrender.com/predict",
+      "evidence": [
+        "Observed form: {\"action\": \"/predict\", \"method\": \"POST\"}"
+      ],
+      "requirement_type": "observed",
+      "confidence": "medium"
+    },
+    {
+      "requirement_id": "REQ-029",
+      "title": "Navigation link: BovineGuard",
+      "description": "The page displays a link labelled \"BovineGuard\" with destination \"#\".",
+      "source_url": "https://bovineguard.onrender.com/reviews",
+      "evidence": [
+        "Observed link text: BovineGuard",
+        "Observed href: #"
+      ],
+      "requirement_type": "observed",
+      "confidence": "medium"
+    },
+    {
+      "requirement_id": "REQ-030",
+      "title": "Navigation link: Home",
+      "description": "The page displays a link labelled \"Home\" with destination \"/\".",
+      "source_url": "https://bovineguard.onrender.com/reviews",
+      "evidence": [
+        "Observed link text: Home",
+        "Observed href: /"
+      ],
+      "requirement_type": "observed",
+      "confidence": "medium"
+    },
+    {
+      "requirement_id": "REQ-031",
+      "title": "Navigation link: About",
+      "description": "The page displays a link labelled \"About\" with destination \"/about\".",
+      "source_url": "https://bovineguard.onrender.com/reviews",
+      "evidence": [
+        "Observed link text: About",
+        "Observed href: /about"
+      ],
+      "requirement_type": "observed",
+      "confidence": "medium"
+    },
+    {
+      "requirement_id": "REQ-032",
+      "title": "Navigation link: Predict",
+      "description": "The page displays a link labelled \"Predict\" with destination \"/predict\".",
+      "source_url": "https://bovineguard.onrender.com/reviews",
+      "evidence": [
+        "Observed link text: Predict",
+        "Observed href: /predict"
+      ],
+      "requirement_type": "observed",
+      "confidence": "medium"
+    },
+    {
+      "requirement_id": "REQ-033",
+      "title": "Navigation link: Reviews",
+      "description": "The page displays a link labelled \"Reviews\" with destination \"/reviews\".",
+      "source_url": "https://bovineguard.onrender.com/reviews",
+      "evidence": [
+        "Observed link text: Reviews",
+        "Observed href: /reviews"
+      ],
+      "requirement_type": "observed",
+      "confidence": "medium"
+    },
+    {
+      "requirement_id": "REQ-034",
+      "title": "Navigation link: Contact",
+      "description": "The page displays a link labelled \"Contact\" with destination \"/contact\".",
+      "source_url": "https://bovineguard.onrender.com/reviews",
+      "evidence": [
+        "Observed link text: Contact",
+        "Observed href: /contact"
+      ],
+      "requirement_type": "observed",
+      "confidence": "medium"
+    },
+    {
+      "requirement_id": "REQ-035",
+      "title": "Input field: Your Name",
+      "description": "The page contains an input field identified as \"Your Name\". Required status and validation behavior have not been verified.",
+      "source_url": "https://bovineguard.onrender.com/reviews",
+      "evidence": [
+        "Observed input attributes: {\"type\": \"text\", \"name\": \"name\", \"placeholder\": \"Your Name\", \"id\": \"name\", \"aria_label\": null}"
+      ],
+      "requirement_type": "observed",
+      "confidence": "medium"
+    },
+    {
+      "requirement_id": "REQ-036",
+      "title": "Text area: Your Review",
+      "description": "The page contains a text area identified as \"Your Review\".",
+      "source_url": "https://bovineguard.onrender.com/reviews",
+      "evidence": [
+        "Observed text area: {\"name\": \"review-text\", \"id\": \"review-text\", \"placeholder\": \"Your Review\"}"
+      ],
+      "requirement_type": "observed",
+      "confidence": "medium"
+    },
+    {
+      "requirement_id": "REQ-037",
+      "title": "Button: Submit",
+      "description": "The page contains a button identified as \"Submit\". The outcome of clicking it has not been verified.",
+      "source_url": "https://bovineguard.onrender.com/reviews",
+      "evidence": [
+        "Observed button: {\"text\": \"Submit\", \"type\": \"submit\", \"name\": null, \"id\": null, \"aria_label\": null}"
+      ],
+      "requirement_type": "observed",
+      "confidence": "medium"
+    },
+    {
+      "requirement_id": "REQ-038",
+      "title": "Form 1 is present",
+      "description": "The page contains a form. Successful submission and server-side processing have not been verified.",
+      "source_url": "https://bovineguard.onrender.com/reviews",
+      "evidence": [
+        "Observed form: {\"action\": null, \"method\": null}"
+      ],
+      "requirement_type": "observed",
+      "confidence": "medium"
+    },
+    {
+      "requirement_id": "REQ-039",
+      "title": "Navigation link: BovineGuard",
+      "description": "The page displays a link labelled \"BovineGuard\" with destination \"#\".",
+      "source_url": "https://bovineguard.onrender.com/contact",
+      "evidence": [
+        "Observed link text: BovineGuard",
+        "Observed href: #"
+      ],
+      "requirement_type": "observed",
+      "confidence": "medium"
+    },
+    {
+      "requirement_id": "REQ-040",
+      "title": "Navigation link: Home",
+      "description": "The page displays a link labelled \"Home\" with destination \"/\".",
+      "source_url": "https://bovineguard.onrender.com/contact",
+      "evidence": [
+        "Observed link text: Home",
+        "Observed href: /"
+      ],
+      "requirement_type": "observed",
+      "confidence": "medium"
+    },
+    {
+      "requirement_id": "REQ-041",
+      "title": "Navigation link: About",
+      "description": "The page displays a link labelled \"About\" with destination \"/about\".",
+      "source_url": "https://bovineguard.onrender.com/contact",
+      "evidence": [
+        "Observed link text: About",
+        "Observed href: /about"
+      ],
+      "requirement_type": "observed",
+      "confidence": "medium"
+    },
+    {
+      "requirement_id": "REQ-042",
+      "title": "Navigation link: Predict",
+      "description": "The page displays a link labelled \"Predict\" with destination \"/predict\".",
+      "source_url": "https://bovineguard.onrender.com/contact",
+      "evidence": [
+        "Observed link text: Predict",
+        "Observed href: /predict"
+      ],
+      "requirement_type": "observed",
+      "confidence": "medium"
+    },
+    {
+      "requirement_id": "REQ-043",
+      "title": "Navigation link: Reviews",
+      "description": "The page displays a link labelled \"Reviews\" with destination \"/reviews\".",
+      "source_url": "https://bovineguard.onrender.com/contact",
+      "evidence": [
+        "Observed link text: Reviews",
+        "Observed href: /reviews"
+      ],
+      "requirement_type": "observed",
+      "confidence": "medium"
+    },
+    {
+      "requirement_id": "REQ-044",
+      "title": "Navigation link: Contact",
+      "description": "The page displays a link labelled \"Contact\" with destination \"/contact\".",
+      "source_url": "https://bovineguard.onrender.com/contact",
+      "evidence": [
+        "Observed link text: Contact",
+        "Observed href: /contact"
+      ],
+      "requirement_type": "observed",
+      "confidence": "medium"
+    },
+    {
+      "requirement_id": "REQ-045",
+      "title": "Input field: First Name",
+      "description": "The page contains an input field identified as \"First Name\". Required status and validation behavior have not been verified.",
+      "source_url": "https://bovineguard.onrender.com/contact",
+      "evidence": [
+        "Observed input attributes: {\"type\": \"text\", \"name\": \"firstName\", \"placeholder\": \"First Name\", \"id\": \"firstName\", \"aria_label\": null}"
+      ],
+      "requirement_type": "observed",
+      "confidence": "medium"
+    },
+    {
+      "requirement_id": "REQ-046",
+      "title": "Input field: Last Name",
+      "description": "The page contains an input field identified as \"Last Name\". Required status and validation behavior have not been verified.",
+      "source_url": "https://bovineguard.onrender.com/contact",
+      "evidence": [
+        "Observed input attributes: {\"type\": \"text\", \"name\": \"lastName\", \"placeholder\": \"Last Name\", \"id\": \"lastName\", \"aria_label\": null}"
+      ],
+      "requirement_type": "observed",
+      "confidence": "medium"
+    },
+    {
+      "requirement_id": "REQ-047",
+      "title": "Input field: Email",
+      "description": "The page contains an input field identified as \"Email\". Required status and validation behavior have not been verified.",
+      "source_url": "https://bovineguard.onrender.com/contact",
+      "evidence": [
+        "Observed input attributes: {\"type\": \"email\", \"name\": \"email\", \"placeholder\": \"Email\", \"id\": \"email\", \"aria_label\": null}"
+      ],
+      "requirement_type": "observed",
+      "confidence": "medium"
+    },
+    {
+      "requirement_id": "REQ-048",
+      "title": "Input field: Mobile",
+      "description": "The page contains an input field identified as \"Mobile\". Required status and validation behavior have not been verified.",
+      "source_url": "https://bovineguard.onrender.com/contact",
+      "evidence": [
+        "Observed input attributes: {\"type\": \"tel\", \"name\": \"mobile\", \"placeholder\": \"Mobile\", \"id\": \"mobile\", \"aria_label\": null}"
+      ],
+      "requirement_type": "observed",
+      "confidence": "medium"
+    },
+    {
+      "requirement_id": "REQ-049",
+      "title": "Text area: Your Message",
+      "description": "The page contains a text area identified as \"Your Message\".",
+      "source_url": "https://bovineguard.onrender.com/contact",
+      "evidence": [
+        "Observed text area: {\"name\": \"message\", \"id\": \"message\", \"placeholder\": \"Your Message\"}"
+      ],
+      "requirement_type": "observed",
+      "confidence": "medium"
+    },
+    {
+      "requirement_id": "REQ-050",
+      "title": "Button: Send",
+      "description": "The page contains a button identified as \"Send\". The outcome of clicking it has not been verified.",
+      "source_url": "https://bovineguard.onrender.com/contact",
+      "evidence": [
+        "Observed button: {\"text\": \"Send\", \"type\": \"submit\", \"name\": null, \"id\": null, \"aria_label\": null}"
+      ],
+      "requirement_type": "observed",
+      "confidence": "medium"
+    },
+    {
+      "requirement_id": "REQ-051",
+      "title": "Form 1 is present",
+      "description": "The page contains a form. Successful submission and server-side processing have not been verified.",
+      "source_url": "https://bovineguard.onrender.com/contact",
+      "evidence": [
+        "Observed form: {\"action\": \"/contact\", \"method\": \"POST\"}"
+      ],
+      "requirement_type": "observed",
+      "confidence": "medium"
+    }
+  ]
+}

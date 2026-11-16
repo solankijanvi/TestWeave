@@ -1,0 +1,20 @@
+{
+  "application_url": "https://bovineguard.onrender.com/",
+  "metrics": {
+    "pages_crawled": 5,
+    "requirements_generated": 51,
+    "scenarios_generated": 42,
+    "test_cases_generated": 42,
+    "scenario_mapping_coverage_percent": 100.0,
+    "page_scenario_coverage_percent": 100.0,
+    "page_test_case_coverage_percent": 100.0,
+    "cases_with_steps_percent": 100.0,
+    "cases_with_expected_results_percent": 100.0,
+    "potential_duplicate_titles": 0,
+    "potential_duplicate_objectives": 0,
+    "findings_count": 0
+  },
+  "unmapped_scenarios": [],
+  "orphan_test_case_scenario_ids": [],
+  "findings": []
+}
