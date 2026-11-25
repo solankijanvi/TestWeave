@@ -1,0 +1,932 @@
+{
+    "application": {
+        "name": "solankijanvi/BovineGuard",
+        "description": "BovineGuard is an advanced web application designed to predict diseases in cattle using state-of-the-art machine learning techniques. It assists farmers and veterinarians with early diagnosis, leading to improved livestock care and reduced losses.",
+        "default_branch": "main"
+    },
+    "repository": {
+        "total_files_discovered": 26,
+        "eligible_files_count": 18,
+        "downloaded_files_count": 18,
+        "failed_files_count": 0
+    },
+    "statistics": {
+        "downloaded_files": 18,
+        "total_routes": 5,
+        "total_functions": 17,
+        "total_classes": 1,
+        "total_forms": 3,
+        "mapped_forms": 2,
+        "unmapped_forms": 1,
+        "matched_data_flows": 3,
+        "form_mapping_status_counts": {
+            "matched": 2,
+            "client_side": 1,
+            "javascript_submission": 0,
+            "unmapped": 0,
+            "unverified": 0
+        },
+        "unmapped_data_flows": 0,
+        "total_detected_operations": 15,
+        "database_candidate_operations": 5,
+        "non_database_operations": 8,
+        "unknown_operations": 2,
+        "render_template_calls": 6
+    },
+    "files": [
+        {
+            "path": "README.md",
+            "size": 2616,
+            "encoding": null,
+            "content": "# BovineGuard\n \n**BovineGuard** is an advanced web application designed to predict diseases in cattle using state-of-the-art machine learning techniques. It assists farmers and veterinarians with early diagnosis, leading to improved livestock care and reduced losses.\n\n## 🌐 Live Demo\n \nExplore the live demo of BovineGuard here: [BovineGuard](https://bovineguard.onrender.com) \n\n<a href=\"https://bovineguard.onrender.com/\" target=\"_blank\">\n  <img src=\"https://img.shields.io/badge/-Live%20Demo-blue?style=flat-square&logo=google-chrome&logoColor=white\" alt=\"Live Demo\" />\n</a>\n \n## 🚀 Features\n\n- **Disease Prediction:** Accurate disease predictions using a Random Forest model.\n- **User-Friendly Interface:** Intuitive web interface designed for ease of use by farmers and veterinarians.\n- **Health Parameter Input:** Users can input various cattle health parameters for accurate predictions.\n- **Comprehensive Results:** Detailed results displaying predicted disease.\n- **Contact Form:** Integrated contact form for inquiries, feedback, and support.  \n\n## 🛠️ Tech Stack\n\n- **Frontend:** HTML, CSS, JavaScript\n- **Backend:** Flask (Python)\n- **Machine Learning:** \n- **Model:** Random Forest\n- **Libraries:** scikit-learn, pandas, numpy\n- **Data Preprocessing:** Feature scaling, data cleaning\n- **Evaluation Metrics:** Accuracy, Confusion Matrix\n- **Database:** SQLite\n\n\n## Home Page\n\n![Screenshot 2024-09-05 170937](https://github.com/user-attachments/assets/1b2fcb1d-2b25-4d3d-b41b-5269a855074d)\n\n\n## About Page\n\n![Screenshot 2024-09-07 201117](https://github.com/user-attachments/assets/9fda2837-2d64-42a9-ba5c-a781e3c91718)\n\n\n## Predict Page\n\n![Screenshot 2024-09-07 201200](https://github.com/user-attachments/assets/67a03ba9-8ab5-4944-941e-92180a3f374f)\n\n\n![Screenshot 2024-09-07 201225](https://github.com/user-attachments/assets/cc44cb88-910d-475e-be78-10287ed3c585)\n\n\n![Screenshot 2024-09-07 201502](https://github.com/user-attachments/assets/31c24249-2643-487a-8c2b-0cbc80017b97)\n\n## User Review Page\n\n![Screenshot 2024-09-07 201528](https://github.com/user-attachments/assets/66f18bce-9239-49c8-8750-36a4c988296d)\n\n\n![Screenshot 2024-09-07 201608](https://github.com/user-attachments/assets/1424c1d2-1df3-4770-876d-32ea69fd5aa8)\n\n## Contact Page\n\n![Screenshot 2024-09-07 201639](https://github.com/user-attachments/assets/e6dbf20c-3ddd-4473-a0bb-dd6ba7bda9a0)\n\n\n![Screenshot 2024-09-07 201946](https://github.com/user-attachments/assets/5b3c4fec-4848-446b-b05a-6b0016d05622)\n\n\n![Screenshot 2024-09-07 201729](https://github.com/user-attachments/assets/3ffa1243-fe34-495b-9e07-cd852eb860bd)\n\n\n\n"
+        },
+        {
+            "path": "app.py",
+            "size": 6200,
+            "encoding": null,
+            "content": "from flask import Flask, render_template,redirect, flash, url_for, request, jsonify\r\nfrom flask_sqlalchemy import SQLAlchemy\r\nfrom flask_migrate import Migrate\r\nimport joblib\r\nimport pandas as pd\r\nimport csv\r\nimport os \r\n\r\napp = Flask(__name__)\r\napp.secret_key = 'your_secret_key'\r\napp.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///cattle_diseases.db'\r\napp.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False\r\ndb = SQLAlchemy(app)\r\nmigrate = Migrate(app, db)\r\n\r\n# Load the trained model\r\nmodel = joblib.load('model.pkl')\r\n\r\nsymptoms = [\r\n    'itching', 'skin_rash', 'nodal_skin_eruptions', 'continuous_sneezing', 'shivering',\r\n    'chills', 'joint_pain', 'stomach_pain', 'acidity', 'ulcers_on_tongue', 'muscle_wasting',\r\n    'vomiting', 'burning_micturition', 'spotting_urination', 'fatigue', 'weight_gain',\r\n    'anxiety', 'cold_hands_and_feets', 'mood_swings', 'weight_loss', 'restlessness',\r\n    'lethargy', 'patches_in_throat', 'irregular_sugar_level', 'cough', 'high_fever',\r\n    'sunken_eyes', 'breathlessness', 'sweating', 'dehydration', 'indigestion', 'headache',\r\n    'yellowish_skin', 'dark_urine', 'nausea', 'loss_of_appetite', 'pain_behind_the_eyes',\r\n    'back_pain', 'constipation', 'abdominal_pain', 'diarrhoea', 'mild_fever', 'yellow_urine',\r\n    'yellowing_of_eyes', 'acute_liver_failure', 'fluid_overload', 'swelling_of_stomach',\r\n    'swelled_lymph_nodes', 'malaise', 'blurred_and_distorted_vision', 'phlegm', 'throat_irritation',\r\n    'redness_of_eyes', 'sinus_pressure', 'runny_nose', 'congestion', 'chest_pain',\r\n    'weakness_in_limbs', 'fast_heart_rate', 'pain_during_bowel_movements', 'pain_in_anal_region',\r\n    'bloody_stool', 'irritation_in_anus', 'neck_pain', 'dizziness', 'cramps', 'bruising',\r\n    'obesity', 'swollen_legs', 'swollen_blood_vessels', 'puffy_face_and_eyes', 'enlarged_thyroid',\r\n    'brittle_nails', 'swollen_extremeties', 'excessive_hunger', 'extra_marital_contacts',\r\n    'drying_and_tingling_lips', 'slurred_speech', 'knee_pain', 'hip_joint_pain', 'muscle_weakness',\r\n    'stiff_neck', 'swelling_joints', 'movement_stiffness', 'spinning_movements', 'loss_of_balance',\r\n    'unsteadiness', 'weakness_of_one_body_side', 'loss_of_smell', 'bladder_discomfort',\r\n    'foul_smell_of_urine', 'continuous_feel_of_urine', 'passage_of_gases', 'internal_itching',\r\n    'toxic_look_(typhos)', 'depression', 'irritability', 'muscle_pain', 'altered_sensorium',\r\n    'red_spots_over_body', 'belly_pain', 'abnormal_menstruation', 'dischromic_patches',\r\n    'watering_from_eyes', 'increased_appetite', 'polyuria', 'family_history', 'mucoid_sputum',\r\n    'rusty_sputum', 'lack_of_concentration', 'visual_disturbances', 'receiving_blood_transfusion',\r\n    'receiving_unsterile_injections', 'coma', 'stomach_bleeding', 'distention_of_abdomen',\r\n    'history_of_alcohol_consumption', 'blood_in_sputum', 'prominent_veins_on_calf', 'palpitations',\r\n    'painful_walking', 'pus_filled_pimples', 'blackheads', 'scurring', 'skin_peeling',\r\n    'silver_like_dusting', 'small_dents_in_nails', 'inflammatory_nails', 'blister',\r\n    'red_sore_around_nose', 'yellow_crust_ooze'\r\n]\r\n\r\nclass CattleDisease(db.Model):\r\n    id = db.Column(db.Integer, primary_key=True)\r\n    cattle_id = db.Column(db.String, nullable=False)\r\n    age = db.Column(db.Integer, nullable=False)\r\n    breed = db.Column(db.String, nullable=False)\r\n    weight = db.Column(db.Float, nullable=False)\r\n    symptoms = db.Column(db.String, nullable=False)\r\n    diagnosis = db.Column(db.String, nullable=False)\r\n    treatment = db.Column(db.String, nullable=False)\r\n    date_of_entry = db.Column(db.Date, nullable=False)\r\n\r\n@app.route('/')\r\ndef index():\r\n    return render_template('index.html')\r\n\r\n@app.route('/about')\r\ndef about():\r\n    return render_template('about.html')\r\n@app.route('/predict', methods=['GET', 'POST'])\r\ndef predict():\r\n    if request.method == 'POST':\r\n        try:\r\n            data = {\r\n                'age': request.form.get('age'),\r\n                'breed': request.form.get('breed'),\r\n                'weight': request.form.get('weight'),\r\n                'symptom1': request.form.get('symptom1'),\r\n                'symptom2': request.form.get('symptom2'),\r\n                'symptom3': request.form.get('symptom3'),\r\n                'symptom4': request.form.get('symptom4'),\r\n                'symptom5': request.form.get('symptom5'),\r\n            }\r\n\r\n            # Combine symptoms into one feature\r\n            symptoms_combined = [\r\n                data.get(f'symptom{i}', '') for i in range(1, 6)\r\n            ]\r\n\r\n            # Create a DataFrame for prediction\r\n            features = pd.DataFrame([{\r\n                symptom: (symptom in symptoms_combined) for symptom in symptoms\r\n            }])\r\n\r\n            # Print features for debugging\r\n            print(\"Features for model:\", features)\r\n\r\n            # Make prediction\r\n            prediction = model.predict(features)\r\n            print(\"Prediction:\", prediction)\r\n\r\n            return render_template('predict.html', prediction=prediction[0], symptoms=symptoms_combined)\r\n        \r\n        except Exception as e:\r\n            print(\"An error occurred during prediction:\", e)\r\n            return \"Internal Server Error\", 500\r\n\r\n    return render_template('predict.html', symptoms=symptoms)\r\n@app.route('/reviews')\r\ndef reviews():\r\n    return render_template('review.html')\r\n\r\n@app.route('/contact', methods=['GET', 'POST'])\r\ndef contact():\r\n    if request.method == 'POST':\r\n        first_name = request.form['firstName']\r\n        last_name = request.form['lastName']\r\n        email = request.form['email']\r\n        mobile = request.form['mobile']\r\n        message = request.form['message']\r\n\r\n        # Ensure the CSV file is in a writable directory\r\n        file_path = os.path.join(os.path.dirname(__file__), 'contact_data.csv')\r\n\r\n        with open(file_path, 'a', newline='') as file:\r\n            writer = csv.writer(file)\r\n            writer.writerow([first_name, last_name, email, mobile, message])\r\n\r\n        flash('Your information has been recorded successfully!')\r\n        return redirect(url_for('contact'))\r\n\r\n    return render_template('contact.html')\r\n\r\nif __name__ == '__main__':\r\n    app.run(debug=True)\r\n"
+        },
+        {
+            "path": "create_db.py",
+            "size": 578,
+            "encoding": null,
+            "content": "import sqlite3\r\n\r\ndef create_database():\r\n    conn = sqlite3.connect('cattle_diseases.db')\r\n    c = conn.cursor()\r\n\r\n    c.execute('''\r\n        CREATE TABLE IF NOT EXISTS cattle_diseases (\r\n            id INTEGER PRIMARY KEY AUTOINCREMENT,\r\n            cattle_id TEXT,\r\n            age INTEGER,\r\n            breed TEXT,\r\n            weight REAL,\r\n            symptoms TEXT,\r\n            diagnosis TEXT,\r\n            treatment TEXT,\r\n            date_of_entry DATE\r\n        )\r\n    ''')\r\n\r\n    conn.commit()\r\n    conn.close()\r\n\r\nif __name__ == '__main__':\r\n    create_database()\r\n"
+        },
+        {
+            "path": "import_data.py",
+            "size": 451,
+            "encoding": null,
+            "content": "import pandas as pd\r\nfrom sqlalchemy import create_engine\r\n\r\ndef import_csv_to_db(csv_file):\r\n    # Load CSV file into a DataFrame\r\n    df = pd.read_csv(csv_file)\r\n\r\n    # Create a database engine\r\n    engine = create_engine('sqlite:///cattle_diseases.db')\r\n\r\n    # Write DataFrame to SQL table\r\n    df.to_sql('cattle_diseases', engine, if_exists='replace', index=False)\r\n\r\nif __name__ == '__main__':\r\n    import_csv_to_db('cattle_disease_data.csv')\r\n"
+        },
+        {
+            "path": "migrations/alembic.ini",
+            "size": 857,
+            "encoding": null,
+            "content": "# A generic, single database configuration.\n\n[alembic]\n# template used to generate migration files\n# file_template = %%(rev)s_%%(slug)s\n\n# set to 'true' to run the environment during\n# the 'revision' command, regardless of autogenerate\n# revision_environment = false\n\n\n# Logging configuration\n[loggers]\nkeys = root,sqlalchemy,alembic,flask_migrate\n\n[handlers]\nkeys = console\n\n[formatters]\nkeys = generic\n\n[logger_root]\nlevel = WARN\nhandlers = console\nqualname =\n\n[logger_sqlalchemy]\nlevel = WARN\nhandlers =\nqualname = sqlalchemy.engine\n\n[logger_alembic]\nlevel = INFO\nhandlers =\nqualname = alembic\n\n[logger_flask_migrate]\nlevel = INFO\nhandlers =\nqualname = flask_migrate\n\n[handler_console]\nclass = StreamHandler\nargs = (sys.stderr,)\nlevel = NOTSET\nformatter = generic\n\n[formatter_generic]\nformat = %(levelname)-5.5s [%(name)s] %(message)s\ndatefmt = %H:%M:%S\n"
+        },
+        {
+            "path": "migrations/env.py",
+            "size": 3344,
+            "encoding": null,
+            "content": "import logging\nfrom logging.config import fileConfig\n\nfrom flask import current_app\n\nfrom alembic import context\n\n# this is the Alembic Config object, which provides\n# access to the values within the .ini file in use.\nconfig = context.config\n\n# Interpret the config file for Python logging.\n# This line sets up loggers basically.\nfileConfig(config.config_file_name)\nlogger = logging.getLogger('alembic.env')\n\n\ndef get_engine():\n    try:\n        # this works with Flask-SQLAlchemy<3 and Alchemical\n        return current_app.extensions['migrate'].db.get_engine()\n    except (TypeError, AttributeError):\n        # this works with Flask-SQLAlchemy>=3\n        return current_app.extensions['migrate'].db.engine\n\n\ndef get_engine_url():\n    try:\n        return get_engine().url.render_as_string(hide_password=False).replace(\n            '%', '%%')\n    except AttributeError:\n        return str(get_engine().url).replace('%', '%%')\n\n\n# add your model's MetaData object here\n# for 'autogenerate' support\n# from myapp import mymodel\n# target_metadata = mymodel.Base.metadata\nconfig.set_main_option('sqlalchemy.url', get_engine_url())\ntarget_db = current_app.extensions['migrate'].db\n\n# other values from the config, defined by the needs of env.py,\n# can be acquired:\n# my_important_option = config.get_main_option(\"my_important_option\")\n# ... etc.\n\n\ndef get_metadata():\n    if hasattr(target_db, 'metadatas'):\n        return target_db.metadatas[None]\n    return target_db.metadata\n\n\ndef run_migrations_offline():\n    \"\"\"Run migrations in 'offline' mode.\n\n    This configures the context with just a URL\n    and not an Engine, though an Engine is acceptable\n    here as well.  By skipping the Engine creation\n    we don't even need a DBAPI to be available.\n\n    Calls to context.execute() here emit the given string to the\n    script output.\n\n    \"\"\"\n    url = config.get_main_option(\"sqlalchemy.url\")\n    context.configure(\n        url=url, target_metadata=get_metadata(), literal_binds=True\n    )\n\n    with context.begin_transaction():\n        context.run_migrations()\n\n\ndef run_migrations_online():\n    \"\"\"Run migrations in 'online' mode.\n\n    In this scenario we need to create an Engine\n    and associate a connection with the context.\n\n    \"\"\"\n\n    # this callback is used to prevent an auto-migration from being generated\n    # when there are no changes to the schema\n    # reference: http://alembic.zzzcomputing.com/en/latest/cookbook.html\n    def process_revision_directives(context, revision, directives):\n        if getattr(config.cmd_opts, 'autogenerate', False):\n            script = directives[0]\n            if script.upgrade_ops.is_empty():\n                directives[:] = []\n                logger.info('No changes in schema detected.')\n\n    conf_args = current_app.extensions['migrate'].configure_args\n    if conf_args.get(\"process_revision_directives\") is None:\n        conf_args[\"process_revision_directives\"] = process_revision_directives\n\n    connectable = get_engine()\n\n    with connectable.connect() as connection:\n        context.configure(\n            connection=connection,\n            target_metadata=get_metadata(),\n            **conf_args\n        )\n\n        with context.begin_transaction():\n            context.run_migrations()\n\n\nif context.is_offline_mode():\n    run_migrations_offline()\nelse:\n    run_migrations_online()\n"
+        },
+        {
+            "path": "migrations/versions/4165a6f053ff_initial_migration.py",
+            "size": 1126,
+            "encoding": null,
+            "content": "\"\"\"Initial migration\n\nRevision ID: 4165a6f053ff\nRevises: \nCreate Date: 2024-08-22 21:32:46.188930\n\n\"\"\"\nfrom alembic import op\nimport sqlalchemy as sa\n\n\n# revision identifiers, used by Alembic.\nrevision = '4165a6f053ff'\ndown_revision = None\nbranch_labels = None\ndepends_on = None\n\n\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('cattle_disease',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('cattle_id', sa.String(), nullable=False),\n    sa.Column('age', sa.Integer(), nullable=False),\n    sa.Column('breed', sa.String(), nullable=False),\n    sa.Column('weight', sa.Float(), nullable=False),\n    sa.Column('symptoms', sa.String(), nullable=False),\n    sa.Column('diagnosis', sa.String(), nullable=False),\n    sa.Column('treatment', sa.String(), nullable=False),\n    sa.Column('date_of_entry', sa.Date(), nullable=False),\n    sa.PrimaryKeyConstraint('id')\n    )\n    # ### end Alembic commands ###\n\n\ndef downgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_table('cattle_disease')\n    # ### end Alembic commands ###\n"
+        },
+        {
+            "path": "migrations/versions/f66ad20d491b_initial_migration.py",
+            "size": 1126,
+            "encoding": null,
+            "content": "\"\"\"Initial migration\n\nRevision ID: f66ad20d491b\nRevises: \nCreate Date: 2024-08-22 21:16:47.734972\n\n\"\"\"\nfrom alembic import op\nimport sqlalchemy as sa\n\n\n# revision identifiers, used by Alembic.\nrevision = 'f66ad20d491b'\ndown_revision = None\nbranch_labels = None\ndepends_on = None\n\n\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('cattle_disease',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('cattle_id', sa.String(), nullable=False),\n    sa.Column('age', sa.Integer(), nullable=False),\n    sa.Column('breed', sa.String(), nullable=False),\n    sa.Column('weight', sa.Float(), nullable=False),\n    sa.Column('symptoms', sa.String(), nullable=False),\n    sa.Column('diagnosis', sa.String(), nullable=False),\n    sa.Column('treatment', sa.String(), nullable=False),\n    sa.Column('date_of_entry', sa.Date(), nullable=False),\n    sa.PrimaryKeyConstraint('id')\n    )\n    # ### end Alembic commands ###\n\n\ndef downgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_table('cattle_disease')\n    # ### end Alembic commands ###\n"
+        },
+        {
+            "path": "model.py",
+            "size": 1206,
+            "encoding": null,
+            "content": "import sqlite3\r\nimport pandas as pd\r\nfrom sqlalchemy import create_engine  \r\nfrom sklearn.ensemble import RandomForestClassifier\r\nimport pickle\r\n\r\n# Connect to the SQLite database (ensure the path is correct)\r\nconn = sqlite3.connect('D:/OneDrive/Desktop/BovineGuard/Bovine/cattle_disease.db')\r\n\r\n# Load the data from the SQLite database into a pandas DataFrame\r\nquery = \"SELECT * FROM disease_data\"\r\ndata = pd.read_sql_query(query, conn)\r\n\r\n# Close the database connection\r\nconn.close()\r\n\r\n# Assuming your dataset has a 'label' column for the target and the rest are features\r\nX = data.drop('label', axis=1) \r\ny = data['label']  \r\n\r\n# Split data into training and testing sets (optional, you can use the entire dataset for training if needed)\r\nfrom sklearn.model_selection import train_test_split\r\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)\r\n\r\n# Initialize the Random Forest Classifier\r\nmodel = RandomForestClassifier(n_estimators=100, random_state=42)\r\n\r\n\r\nmodel.fit(X_train, y_train)\r\n\r\n# Save the trained model to a .pkl file\r\nwith open('model.pkl', 'wb') as file:\r\n    pickle.dump(model, file)\r\n\r\nprint(\"Model training complete and saved to model.pkl.\")\r\n"
+        },
+        {
+            "path": "requirements.txt",
+            "size": 1220,
+            "encoding": null,
+            "content": "alembic==1.13.2\r\nblinker==1.8.2\r\nclick==8.1.7\r\ncolorama==0.4.6\r\ncontourpy==1.2.1\r\ncycler==0.12.1\r\nFlask==3.0.3\r\nFlask-Migrate==4.0.7\r\nFlask-SQLAlchemy==3.1.1\r\nfonttools==4.53.1\r\ngreenlet==3.0.3\r\nitsdangerous==2.2.0\r\nJinja2==3.1.4\r\njoblib==1.4.2\r\nkiwisolver==1.4.5\r\nMako==1.3.5\r\nMarkupSafe==2.1.5\r\nmatplotlib==3.9.2\r\nnumpy==2.1.0\r\npackaging==24.1\r\npandas==2.2.2\r\npillow==10.4.0\r\npyparsing==3.1.2\r\npython-dateutil==2.9.0.post0\r\npytz==2024.1\r\nscikit-learn==1.5.1\r\nscipy==1.14.1\r\nsix==1.16.0\r\nSQLAlchemy==2.0.32\r\nthreadpoolctl==3.5.0\r\ntyping_extensions==4.12.2\r\ntzdata==2024.1\r\nWerkzeug==3.0.3\r\ngunicorn==20.1.0\r\n"
+        },
+        {
+            "path": "static/scripts.js",
+            "size": 1126,
+            "encoding": null,
+            "content": "let menu = document.querySelector('#menu-btn');\r\nlet navbar = document.querySelector('.navbar');\r\n\r\nmenu.onclick = () => {\r\n    menu.classList.toggle('fa-times');\r\n    navbar.classList.toggle('active');\r\n};\r\n\r\nwindow.onscroll = () => {\r\n    menu.classList.remove('fa-times');\r\n    navbar.classList.remove('active');\r\n};\r\ndocument.addEventListener('DOMContentLoaded', () => {\r\n    const form = document.getElementById('review-form');\r\n    const reviewContainer = document.getElementById('review-container');\r\n\r\n    form.addEventListener('submit', (event) => {\r\n        event.preventDefault();\r\n\r\n        // Get form data\r\n        const name = document.getElementById('name').value;\r\n        const reviewText = document.getElementById('review-text').value;\r\n\r\n        // Create new review element\r\n        const reviewBox = document.createElement('div');\r\n        reviewBox.className = 'box';\r\n\r\n        reviewBox.innerHTML = `\r\n\r\n            <h3>${name}</h3>\r\n            <p class=\"text\">${reviewText}</p>\r\n        `;\r\n\r\n        \r\n        reviewContainer.prepend(reviewBox);\r\n\r\n        \r\n        form.reset();\r\n    });\r\n});\r\n\r\n"
+        },
+        {
+            "path": "static/style.css",
+            "size": 11601,
+            "encoding": null,
+            "content": "@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');\r\n\r\n:root {\r\n    --green: #16a085;\r\n    --black: #444;\r\n    --light-color: #777;\r\n    --box-shadow: .5rem .5rem 0 rgba(22, 160, 133, .2);\r\n    --box-shadow: .4rem .4rem 0 rgba(0, 0, 0, .2);\r\n    --border: .2rem solid var(--green);\r\n\r\n\r\n}\r\n\r\n* {\r\n    font-family: 'Poppins', sans-serif;\r\n    margin: 0;\r\n    padding: 0;\r\n    box-sizing: border-box;\r\n    outline: none;\r\n    border: none;\r\n    text-transform: capitalize;\r\n    transition: all .2s ease-out;\r\n    text-decoration: none;\r\n}\r\n\r\nhtml {\r\n    font-size: 62.5%;\r\n    overflow-x: hidden;\r\n    scroll-padding-top: 7rem;\r\n    scroll-behavior: smooth;\r\n\r\n}\r\n\r\n\r\n.home {\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    min-height: 100vh;\r\n    padding: 0 20px;\r\n    background-color: #fff;\r\n    text-align: center;\r\n    flex-direction: column;\r\n}\r\n\r\n.image {\r\n    flex: 1;\r\n    max-width: 100%;\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.image img {\r\n    width: 100%;\r\n    height: auto;\r\n\r\n}\r\n\r\n.content {\r\n    margin-top: 0;\r\n    flex: 1;\r\n}\r\n\r\n.content h1 {\r\n    font-size: 48px;\r\n    color: #00796b;\r\n    margin-bottom: 20px;\r\n    font-family: 'Dancing Script', cursive;\r\n}\r\n\r\n.content p {\r\n    font-size: 24px;\r\n    color: #555;\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.btn {\r\n    display: inline-block;\r\n    padding: 12px 20px;\r\n    background-color: #00796b;\r\n    color: #fff;\r\n    text-decoration: none;\r\n    font-size: 18px;\r\n    border-radius: 5px;\r\n    transition: background-color 0.3s;\r\n}\r\n\r\n.btn:hover {\r\n    background-color: #004d40;\r\n}\r\n\r\n.btn .fas {\r\n    margin-right: 8px;\r\n}\r\n\r\n.header {\r\n    display: flex;\r\n    justify-content: space-between;\r\n    align-items: center;\r\n    padding: 20px;\r\n    background-color: #fff;\r\n\r\n    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);\r\n\r\n    position: relative;\r\n}\r\n\r\n.header .logo {\r\n    font-family: 'Dancing Script', cursive;\r\n    font-size: 28px;\r\n    color: var(--black);\r\n\r\n\r\n}\r\n\r\n.header .logo i {\r\n    color: var(--green);\r\n}\r\n\r\n.header .navbar ul {\r\n    list-style: none;\r\n    display: flex;\r\n    margin-right: 20px;\r\n\r\n}\r\n\r\n.header .navbar li {\r\n    margin-left: 2rem;\r\n\r\n}\r\n\r\n.header .navbar a {\r\n    text-decoration: none;\r\n    font-size: 18px;\r\n    color: var(--light-color);\r\n    margin-left: 2rem;\r\n    transition: color 0.3s, box-shadow 0.3s;\r\n}\r\n\r\n\r\n.header .navbar a:hover {\r\n    color: var(--green);\r\n\r\n\r\n\r\n}\r\n\r\n\r\n\r\n.about-section {\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    flex-wrap: wrap;\r\n    padding: 60px 20px;\r\n    background-color: #fff;\r\n    text-align: center;\r\n    gap: 40px;\r\n}\r\n\r\n.about-content {\r\n    flex: 1;\r\n    max-width: 600px;\r\n    padding: 20px;\r\n    background-color: #ffffff;\r\n\r\n}\r\n\r\n.about-content h1 {\r\n    font-size: 36px;\r\n    color: #00796b;\r\n    margin-bottom: 20px;\r\n    font-family: 'Dancing Script', cursive;\r\n}\r\n\r\n.about-content p {\r\n    font-size: 18px;\r\n    line-height: 1.6;\r\n    color: #555;\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.about-content .btn {\r\n    display: inline-block;\r\n    padding: 12px 20px;\r\n    background-color: #00796b;\r\n    color: #fff;\r\n    text-decoration: none;\r\n    font-size: 18px;\r\n    border-radius: 5px;\r\n    transition: background-color 0.3s;\r\n}\r\n\r\n\r\n\r\n\r\n.about-content .btn:hover {\r\n    background-color: #004d40;\r\n}\r\n\r\n\r\n.about-image {\r\n    flex: 1;\r\n    max-width: 600px;\r\n}\r\n\r\n.about-image img {\r\n    width: 100%;\r\n    height: auto;\r\n\r\n}\r\n\r\n\r\n.predict {\r\n    background-color: #e2f5f3;\r\n\r\n}\r\n\r\n.predict-heading-container {\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n    width: 100%;\r\n    background-color: #00796b;\r\n    color: #fff;\r\n    text-align: center;\r\n    padding: 20px;\r\n    font-family: 'Dancing Script', cursive;\r\n    font-size: 36px;\r\n    z-index: 900;\r\n    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);\r\n}\r\n\r\n.predict-container .predict-heading h1 {\r\n    font-size: 30px;\r\n    margin-bottom: 10px;\r\n    margin-top: 0px;\r\n    color: #00796b;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n}\r\n\r\n\r\n.predict-container {\r\n    max-width: 1200px;\r\n    margin: 150px auto 50px auto;\r\n\r\n    padding: 40px;\r\n    background-color: #ffffff;\r\n    border-radius: 50px;\r\n    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);\r\n    margin-top: 50px;\r\n}\r\n\r\n\r\n.predict-layout {\r\n    display: flex;\r\n    justify-content: space-between;\r\n    gap: 30px;\r\n}\r\n\r\n\r\n.predict-form-container {\r\n    flex: 1;\r\n}\r\n\r\n.predict-form .input-group {\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.predict-form label {\r\n    font-weight: 500;\r\n    color: #00796b;\r\n    display: block;\r\n    margin-bottom: 5px;\r\n}\r\n\r\n.predict-form input[type=\"text\"],\r\n.predict-form select {\r\n    width: 100%;\r\n    padding: 10px;\r\n    border: 1px solid #ddd;\r\n    border-radius: 5px;\r\n    font-size: 16px;\r\n    color: #333;\r\n    box-sizing: border-box;\r\n    transition: border-color 0.3s;\r\n}\r\n\r\n.predict-form input[type=\"text\"]:focus,\r\n.predict-form select:focus {\r\n    border-color: #00796b;\r\n    outline: none;\r\n}\r\n\r\n.btn-submit {\r\n    width: 100%;\r\n    padding: 12px;\r\n    background-color: #00796b;\r\n    color: #fff;\r\n    border: none;\r\n    border-radius: 5px;\r\n    font-size: 18px;\r\n    cursor: pointer;\r\n    transition: background-color 0.3s ease;\r\n}\r\n\r\n.btn-submit:hover {\r\n    background-color: #004d40;\r\n}\r\n\r\n\r\n.page-content {\r\n    flex: 1;\r\n    padding: 20px;\r\n    background-color: #f9f9f9;\r\n    border-radius: 10px;\r\n    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);\r\n    text-align: center;\r\n}\r\n\r\n.page-content h2 {\r\n    font-size: 28px;\r\n    color: #00796b;\r\n    margin-bottom: 15px;\r\n    font-family: 'Dancing Script', cursive;\r\n    text-shadow: 1px 1px 2px #555;\r\n}\r\n\r\n.page-content p {\r\n    font-size: 16px;\r\n    line-height: 1.6;\r\n    color: #555;\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.page-content .about-icon {\r\n    font-size: 40px;\r\n    color: #00796b;\r\n    margin-bottom: 10px;\r\n}\r\n\r\n\r\n.prediction-result {\r\n    margin-top: 30px;\r\n    padding: 20px;\r\n    background-color: #00796b;\r\n    color: #fff;\r\n    border-radius: 10px;\r\n    text-align: center;\r\n    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);\r\n}\r\n\r\n.prediction-result h2 {\r\n    font-size: 24px;\r\n    margin: 0;\r\n    font-weight: 700;\r\n    color: #fff;\r\n}\r\n\r\n\r\n@media (max-width: 768px) {\r\n    .predict-layout {\r\n        flex-direction: column;\r\n    }\r\n\r\n    .predict-container {\r\n        padding: 30px;\r\n    }\r\n\r\n    .predict-heading h1 {\r\n        font-size: 28px;\r\n    }\r\n}\r\n\r\n.review {\r\n    padding: 60px 20px;\r\n    background-color: #e0f2f1;\r\n    text-align: center;\r\n}\r\n\r\n.review .heading {\r\n    font-size: 36px;\r\n    color: #00796b;\r\n    margin-bottom: 20px;\r\n    font-family: 'Dancing Script', cursive;\r\n}\r\n\r\n.review .heading span {\r\n    color: #004d40;\r\n}\r\n\r\n.box-container {\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    justify-content: center;\r\n    gap: 20px;\r\n}\r\n\r\n.box {\r\n    background: #ffffff;\r\n    border-radius: 10px;\r\n    padding: 20px;\r\n    width: 300px;\r\n    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);\r\n    text-align: center;\r\n}\r\n\r\n.box img {\r\n    width: 80px;\r\n    height: 80px;\r\n    border-radius: 50%;\r\n    margin-bottom: 15px;\r\n}\r\n\r\n.box h3 {\r\n    margin: 10px 0;\r\n    color: #00796b;\r\n}\r\n\r\n.box .text {\r\n    font-size: 16px;\r\n    color: #555;\r\n}\r\n\r\n\r\n#review-form {\r\n    max-width: 600px;\r\n    margin: 40px auto;\r\n    padding: 20px;\r\n    background: #ffffff;\r\n    border-radius: 10px;\r\n    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);\r\n}\r\n\r\n#review-form h2 {\r\n    font-size: 28px;\r\n    color: #00796b;\r\n    margin-bottom: 20px;\r\n    font-family: 'Dancing Script', cursive;\r\n}\r\n\r\n.form-group {\r\n    margin-bottom: 15px;\r\n}\r\n\r\n.form-group label {\r\n    display: block;\r\n    margin-bottom: 5px;\r\n    font-weight: bold;\r\n}\r\n\r\n.form-group input,\r\n.form-group textarea {\r\n    width: 100%;\r\n    padding: 10px;\r\n    border: 1px solid #ddd;\r\n    border-radius: 5px;\r\n    box-sizing: border-box;\r\n}\r\n\r\n.form-group textarea {\r\n    resize: vertical;\r\n}\r\n\r\n.btn {\r\n    display: inline-block;\r\n    padding: 12px 20px;\r\n    background-color: #00796b;\r\n    color: #fff;\r\n    text-decoration: none;\r\n    font-size: 18px;\r\n    border-radius: 5px;\r\n    transition: background-color 0.3s;\r\n    border: none;\r\n    cursor: pointer;\r\n}\r\n\r\n.btn:hover {\r\n    background-color: #004d40;\r\n}\r\n\r\n\r\n.form-container {\r\n    margin-top: 10px;\r\n    max-width: 800px;\r\n    margin: 100px auto 50px auto;\r\n    margin-top: 50px;\r\n    padding: 40px;\r\n    background-color: #fff;\r\n    border-radius: 8px;\r\n    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);\r\n}\r\n\r\n.form-heading {\r\n    font-size: 36px;\r\n    color: #00796b;\r\n    text-align: center;\r\n    margin-bottom: 30px;\r\n    font-family: 'Dancing Script', cursive;\r\n}\r\n\r\n.form-group {\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.form-group label {\r\n    display: block;\r\n    font-weight: 500;\r\n    color: #00796b;\r\n    margin-bottom: 8px;\r\n}\r\n\r\n.form-group input,\r\n.form-group textarea {\r\n    width: 100%;\r\n    padding: 12px;\r\n    border: 1px solid #ddd;\r\n    border-radius: 5px;\r\n    font-size: 16px;\r\n    color: #333;\r\n    box-sizing: border-box;\r\n    transition: border-color 0.3s;\r\n}\r\n\r\n.form-group input:focus,\r\n.form-group textarea:focus {\r\n    border-color: #00796b;\r\n    outline: none;\r\n}\r\n\r\n.btn {\r\n    width: 100%;\r\n    padding: 12px;\r\n    background-color: #00796b;\r\n    color: #fff;\r\n    border: none;\r\n    border-radius: 5px;\r\n    font-size: 18px;\r\n    cursor: pointer;\r\n    transition: background-color 0.3s ease;\r\n}\r\n\r\n.btn:hover {\r\n    background-color: #004d40;\r\n}\r\n\r\n\r\n.form-container p {\r\n    font-size: 16px;\r\n    color: #555;\r\n    text-align: center;\r\n    margin: 10px 0;\r\n}\r\n\r\n.contact {\r\n    background-color: #e2f5f3;\r\n}\r\n\r\n.success-message {\r\n    background-color: #d4edda;\r\n    color: #155724;\r\n    padding: 10px;\r\n    margin-bottom: 20px;\r\n    border-radius: 5px;\r\n    border: 1px solid #c3e6cb;\r\n}\r\n\r\n\r\n#menu-btn {\r\n    font-size: 2.5rem;\r\n    border-radius: .5rem;\r\n    background: #eee;\r\n    color: var(--green);\r\n    padding: 1rem 1.5rem;\r\n    cursor: pointer;\r\n    display: none;\r\n\r\n}\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n@media(max-width:991px) {\r\n\r\n    html {\r\n        font-size: 55%;\r\n    }\r\n\r\n    .header {\r\n        padding: 2rem;\r\n    }\r\n\r\n    section {\r\n        padding: 2rem;\r\n    }\r\n\r\n}\r\n\r\n@media(max-width:768px) {\r\n    #menu-btn {\r\n        display: block;\r\n    }\r\n\r\n    .header .navbar {\r\n        display: none;\r\n        position: absolute;\r\n        top: 60px;\r\n        right: 0;\r\n        width: 100%;\r\n        background-color: #fff;\r\n        flex-direction: column;\r\n        box-shadow: var(--box-shadow);\r\n    }\r\n\r\n    .header .navbar.active {\r\n        display: flex;\r\n\r\n    }\r\n\r\n\r\n    .header .navbar ul {\r\n        flex-direction: column;\r\n        padding: 0;\r\n    }\r\n\r\n    .header .navbar ul {\r\n        flex-direction: column;\r\n\r\n    }\r\n\r\n    .header .navbar li {\r\n        margin: 10px 0;\r\n\r\n    }\r\n\r\n    #menu-btn {\r\n        font-size: 30px;\r\n        cursor: pointer;\r\n        display: block;\r\n\r\n    }\r\n\r\n    .about-section {\r\n        flex-direction: column;\r\n        align-items: flex-start;\r\n        text-align: center;\r\n    }\r\n\r\n    .about-content {\r\n        margin-right: 0;\r\n        margin-bottom: 20px;\r\n    }\r\n\r\n    .about-content h1 {\r\n        font-size: 30px;\r\n    }\r\n\r\n    .about-content p {\r\n        font-size: 20px;\r\n    }\r\n\r\n    .about-image img {\r\n        width: 100%;\r\n        height: auto;\r\n    }\r\n\r\n    .btn {\r\n        font-size: 0.9rem;\r\n        padding: 8px 16px;\r\n    }\r\n\r\n\r\n\r\n}\r\n\r\n@media(max-width:450px) {\r\n\r\n    html {\r\n        font-size: 50%;\r\n    }\r\n\r\n\r\n}"
+        },
+        {
+            "path": "templates/about.html",
+            "size": 2177,
+            "encoding": null,
+            "content": "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n  <head>\r\n    <meta charset=\"UTF-8\" />\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\r\n    <title>BovineGuard - Cattle Disease Prediction</title>\r\n    <link\r\n      rel=\"stylesheet\"\r\n      href=\"{{ url_for('static', filename='style.css') }}\"\r\n    />\r\n    <link\r\n      rel=\"stylesheet\"\r\n      href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css\"\r\n    />\r\n    <link\r\n      href=\"https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@400;700&display=swap\"\r\n      rel=\"stylesheet\"\r\n    />\r\n  </head>\r\n  <body>\r\n    <header class=\"header\">\r\n      <a href=\"#\" class=\"logo\"><i class=\"fas fa-heartbeat\"></i> BovineGuard</a>\r\n      <nav class=\"navbar\">\r\n        <ul>\r\n          <li><a href=\"{{ url_for('index') }}\">Home</a></li>\r\n          <li><a href=\"{{ url_for('about') }}\">About</a></li>\r\n          <li><a href=\"{{ url_for('predict') }}\">Predict</a></li>\r\n          <li><a href=\"{{ url_for('reviews') }}\">Reviews</a></li>\r\n          <li><a href=\"{{ url_for('contact') }}\">Contact</a></li>\r\n        </ul>\r\n      </nav>\r\n      <div id=\"menu-btn\" class=\"fas fa-bars\"></div>\r\n    </header>\r\n    <main>\r\n      <section class=\"about-section\">\r\n        <div class=\"about-content\">\r\n          <h1>About Us</h1>\r\n          <p>\r\n            At BovineGuard, our mission is to enhance the health and well-being of cattle through innovative technology. \r\n          </br>\r\n            Cattle health is a critical aspect of livestock management. Early disease detection can significantly reduce treatment costs, prevent widespread outbreaks, and improve overall herd productivity. \r\n          </p>\r\n          <a href=\"{{ url_for('predict') }}\" class=\"btn\">\r\n            <span class=\"fas fa-chevron-right\"></span> Predict Disease\r\n          </a>\r\n        </div>\r\n        <div class=\"about-image\">\r\n          <img\r\n            src=\"{{ url_for('static', filename='images/about.jpg') }}\"\r\n            alt=\"About Image\"\r\n          />\r\n        </div>\r\n      </section>\r\n    </main>\r\n    <script src=\"{{ url_for('static', filename='scripts.js') }}\"></script>\r\n  </body>\r\n</html>\r\n"
+        },
+        {
+            "path": "templates/contact.html",
+            "size": 3456,
+            "encoding": null,
+            "content": "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n  <head>\r\n    <meta charset=\"UTF-8\" />\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\r\n    <title>Cattle Disease Prediction</title>\r\n    <link\r\n      rel=\"stylesheet\"\r\n      href=\"{{ url_for('static', filename='style.css') }}\"\r\n    />\r\n    <link\r\n      rel=\"stylesheet\"\r\n      href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css\"\r\n    />\r\n    <link\r\n      href=\"https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap\"\r\n      rel=\"stylesheet\"\r\n    />\r\n  </head>\r\n  <body>\r\n    <section class=\"contact\" id=\"contact\">\r\n      <header class=\"header\">\r\n        <a href=\"#\" class=\"logo\"\r\n          ><i class=\"fas fa-heartbeat\"></i> BovineGuard\r\n        </a>\r\n        <nav class=\"navbar\">\r\n          <ul>\r\n            <li><a href=\"{{ url_for('index') }}\">Home</a></li>\r\n            <li><a href=\"{{ url_for('about') }}\">About</a></li>\r\n            <li><a href=\"{{ url_for('predict') }}\">Predict</a></li>\r\n            <li><a href=\"{{ url_for('reviews') }}\">Reviews</a></li>\r\n            <li><a href=\"{{ url_for('contact') }}\">Contact</a></li>\r\n          </ul>\r\n        </nav>\r\n        <div id=\"menu-btn\" class=\"fas fa-bars\"></div>\r\n      </header>\r\n      <div class=\"form-container\">\r\n        <h2 class=\"form-heading\">Get in Touch</h2>\r\n\r\n        <!-- Display success message -->\r\n        {% with messages = get_flashed_messages() %} {% if messages %}\r\n        <div class=\"success-message\">\r\n          {% for message in messages %}\r\n          <p>{{ message }}</p>\r\n          {% endfor %}\r\n        </div>\r\n        {% endif %} {% endwith %}\r\n\r\n        <form action=\"{{ url_for('contact') }}\" method=\"POST\">\r\n          <div class=\"form-group\">\r\n            <label for=\"firstName\">First Name:</label>\r\n            <input\r\n              type=\"text\"\r\n              id=\"firstName\"\r\n              name=\"firstName\"\r\n              placeholder=\"First Name\"\r\n              required\r\n            />\r\n          </div>\r\n          <div class=\"form-group\">\r\n            <label for=\"lastName\">Last Name:</label>\r\n            <input\r\n              type=\"text\"\r\n              id=\"lastName\"\r\n              name=\"lastName\"\r\n              placeholder=\"Last Name\"\r\n              required\r\n            />\r\n          </div>\r\n          <div class=\"form-group\">\r\n            <label for=\"email\">Email:</label>\r\n            <input\r\n              type=\"email\"\r\n              id=\"email\"\r\n              name=\"email\"\r\n              placeholder=\"Email\"\r\n              required\r\n            />\r\n          </div>\r\n          <div class=\"form-group\">\r\n            <label for=\"mobile\">Mobile:</label>\r\n            <input\r\n              type=\"tel\"\r\n              id=\"mobile\"\r\n              name=\"mobile\"\r\n              placeholder=\"Mobile\"\r\n              required\r\n            />\r\n          </div>\r\n          <div class=\"form-group\">\r\n            <label for=\"message\">Message:</label>\r\n            <textarea\r\n              id=\"message\"\r\n              name=\"message\"\r\n              rows=\"5\"\r\n              placeholder=\"Your Message\"\r\n              required\r\n            ></textarea>\r\n          </div>\r\n          <button type=\"submit\" class=\"btn\">Send</button>\r\n        </form>\r\n        <p>Email: contact@bovineguard.com</p>\r\n        <p>Phone: +1-800-123-4567</p>\r\n      </div>\r\n    </section>\r\n    <script src=\"{{ url_for('static', filename='scripts.js') }}\"></script>\r\n  </body>\r\n</html>\r\n"
+        },
+        {
+            "path": "templates/index.html",
+            "size": 1820,
+            "encoding": null,
+            "content": "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n  <head>\r\n    <meta charset=\"UTF-8\" />\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\r\n    <title>Cattle Disease Prediction</title>\r\n    <link\r\n      rel=\"stylesheet\"\r\n      href=\"{{ url_for('static', filename='style.css') }}\"\r\n    />\r\n    <link\r\n      rel=\"stylesheet\"\r\n      href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css\"\r\n    />\r\n    <link\r\n      href=\"https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap\"\r\n      rel=\"stylesheet\"\r\n    />\r\n  </head>\r\n  <body>\r\n    <header class=\"header\">\r\n      <a href=\"#\" class=\"logo\"><i class=\"fas fa-heartbeat\"></i> BovineGuard</a>\r\n      <nav class=\"navbar\">\r\n        <ul>\r\n          <li><a href=\"{{ url_for('index') }}\">Home</a></li>\r\n          <li><a href=\"{{ url_for('about') }}\">About</a></li>\r\n          <li><a href=\"{{ url_for('predict') }}\">Predict</a></li>\r\n          <li><a href=\"{{ url_for('reviews') }}\">Reviews</a></li>\r\n          <li><a href=\"{{ url_for('contact') }}\">Contact</a></li>\r\n        </ul>\r\n      </nav>\r\n      <div id=\"menu-btn\" class=\"fas fa-bars\"></div>\r\n    </header>\r\n    <main>\r\n      <section class=\"home\" id=\"home\">\r\n        <div class=\"image\">\r\n          <img\r\n            src=\"{{ url_for('static', filename='images/home.jpg') }}\"\r\n            alt=\"Home Image\"\r\n          />\r\n        </div>\r\n        <div class=\"content\">\r\n          <h1>Welcome to BovineGuard!</h1>\r\n          <p>Cattle Disease Prediction Using Machine Learning</p>\r\n          <a href=\"{{ url_for('contact') }}\" class=\"btn\">\r\n            <span class=\"fas fa-chevron-right\"></span> Contact Us\r\n          </a>\r\n        </div>\r\n      </section>\r\n    </main>\r\n    <script src=\"{{ url_for('static', filename='scripts.js') }}\"></script>\r\n  </body>\r\n</html>\r\n"
+        },
+        {
+            "path": "templates/predict.html",
+            "size": 4254,
+            "encoding": null,
+            "content": "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\" />\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\r\n    <title>Cattle Disease Prediction</title>\r\n    <link rel=\"stylesheet\" href=\"{{ url_for('static', filename='style.css') }}\" />\r\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css\" />\r\n    <link href=\"https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@400;700&display=swap\" rel=\"stylesheet\" />\r\n</head>\r\n<body>\r\n    <section class = \"predict\" id = \"predict\">\r\n    <header class=\"header\">\r\n        <a href=\"#\" class=\"logo\"><i class=\"fas fa-heartbeat\"></i> BovineGuard </a>\r\n        <nav class=\"navbar\">\r\n            <ul>\r\n                <li><a href=\"{{ url_for('index') }}\">Home</a></li>\r\n                <li><a href=\"{{ url_for('about') }}\">About</a></li>\r\n                <li><a href=\"{{ url_for('predict') }}\">Predict</a></li>\r\n                <li><a href=\"{{ url_for('reviews') }}\">Reviews</a></li>\r\n                <li><a href=\"{{ url_for('contact') }}\">Contact</a></li>\r\n            </ul>\r\n        </nav>\r\n        <div id=\"menu-btn\" class=\"fas fa-bars\"></div>\r\n    </header>\r\n    <main>\r\n        <section class=\"predict-container\">\r\n            <div class=\"predict-heading\">\r\n                <h1>Predict Cattle Disease</h1>\r\n            </div>\r\n            \r\n            <div class=\"predict-layout\">\r\n                <!-- Form Section -->\r\n                <div class=\"predict-form-container\">\r\n                    <form action=\"{{ url_for('predict') }}\" method=\"POST\" class=\"predict-form\">\r\n                        <div class=\"input-group\">\r\n                            <label for=\"age\">Age:</label>\r\n                            <input type=\"text\" id=\"age\" name=\"age\" required />\r\n                        </div>\r\n\r\n                        <div class=\"input-group\">\r\n                            <label for=\"breed\">Breed:</label>\r\n                            <input type=\"text\" id=\"breed\" name=\"breed\" required />\r\n                        </div>\r\n\r\n                        \r\n\r\n                        {% for i in range(1, 6) %}\r\n                        <div class=\"input-group\">\r\n                            <label for=\"symptom{{ i }}\">Symptom {{ i }} {% if i == 1 %}(Mandatory){% endif %}:</label>\r\n                            <select id=\"symptom{{ i }}\" name=\"symptom{{ i }}\" {% if i == 1 %}required{% endif %}>\r\n                                <option value=\"\">Select a symptom</option>\r\n                                {% for symptom in symptoms %}\r\n                                <option value=\"{{ symptom }}\">{{ symptom.replace('_', ' ') }}</option>\r\n                                {% endfor %}\r\n                            </select>\r\n                        </div>\r\n                        {% endfor %}\r\n\r\n                        <div class=\"input-group\">\r\n                            <input type=\"submit\" value=\"Predict\" class=\"btn-submit\" />\r\n                        </div>\r\n                    </form>\r\n                </div>\r\n\r\n                <!-- About Section -->\r\n                <div class=\"page-content\">\r\n                    <div class=\"about-icon\"><i class=\"fas fa-info-circle\"></i></div>\r\n                    <h2>About the Prediction Tool</h2>\r\n                    <p>This tool helps farmers and veterinarians predict potential diseases in cattle based on symptoms, age, breed, and weight. Early detection of diseases in cattle is crucial for ensuring the health and productivity of livestock.</p>\r\n                    <p>Simply enter the relevant information about your cattle and select the symptoms observed. The system will analyze the data and provide a prediction based on the trained machine learning model.</p>\r\n                    \r\n                    <!-- Prediction Result -->\r\n                    {% if prediction %}\r\n                    <div class=\"prediction-result\">\r\n                        <h2>Prediction Result: {{ prediction }}</h2>\r\n                    </div>\r\n                    {% endif %}\r\n                </div>\r\n            </div>\r\n        </section>\r\n    </main>\r\n    <script src=\"{{ url_for('static', filename='scripts.js') }}\"></script>\r\n</body>\r\n</html>\r\n"
+        },
+        {
+            "path": "templates/review.html",
+            "size": 2280,
+            "encoding": null,
+            "content": "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n  <head>\r\n    <meta charset=\"UTF-8\" />\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\r\n    <title>Cattle Disease Prediction</title>\r\n    <link\r\n      rel=\"stylesheet\"\r\n      href=\"{{ url_for('static', filename='style.css') }}\"\r\n    />\r\n    <link\r\n      rel=\"stylesheet\"\r\n      href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css\"\r\n    />\r\n    <link\r\n      href=\"https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap\"\r\n      rel=\"stylesheet\"\r\n    />\r\n  </head>\r\n  <body>\r\n    <header class=\"header\">\r\n      <a href=\"#\" class=\"logo\"><i class=\"fas fa-heartbeat\"></i> BovineGuard</a>\r\n      <nav class=\"navbar\">\r\n        <ul>\r\n          <li><a href=\"{{ url_for('index') }}\">Home</a></li>\r\n          <li><a href=\"{{ url_for('about') }}\">About</a></li>\r\n          <li><a href=\"{{ url_for('predict') }}\">Predict</a></li>\r\n          <li><a href=\"{{ url_for('reviews') }}\">Reviews</a></li>\r\n          <li><a href=\"{{ url_for('contact') }}\">Contact</a></li>\r\n        </ul>\r\n      </nav>\r\n      <div id=\"menu-btn\" class=\"fas fa-bars\"></div>\r\n    </header>\r\n    <main>\r\n      <section class=\"review\" id=\"review\">\r\n        <h1 class=\"heading\">User's<span> Review</span></h1>\r\n        <div class=\"box-container\" id=\"review-container\">\r\n          <!-- Existing reviews will be displayed here -->\r\n        </div>\r\n        <form id=\"review-form\">\r\n          <h2>Add Your Review</h2>\r\n          <div class=\"form-group\">\r\n            <label for=\"name\">Name:</label>\r\n            <input\r\n              type=\"text\"\r\n              id=\"name\"\r\n              name=\"name\"\r\n              placeholder=\"Your Name\"\r\n              required\r\n            />\r\n          </div>\r\n          <div class=\"form-group\">\r\n            <label for=\"review-text\">Review:</label>\r\n            <textarea\r\n              id=\"review-text\"\r\n              name=\"review-text\"\r\n              rows=\"5\"\r\n              placeholder=\"Your Review\"\r\n              required\r\n            ></textarea>\r\n          </div>\r\n          <button type=\"submit\" class=\"btn\">Submit</button>\r\n        </form>\r\n      </section>\r\n    </main>\r\n    <script src=\"{{ url_for('static', filename='scripts.js') }}\"></script>\r\n  </body>\r\n</html>\r\n"
+        },
+        {
+            "path": "train_model.py",
+            "size": 3816,
+            "encoding": null,
+            "content": "import pandas as pd\r\nfrom sklearn.model_selection import train_test_split\r\nfrom sklearn.ensemble import RandomForestClassifier\r\nfrom sklearn.metrics import accuracy_score\r\nimport joblib\r\n\r\n# Load data\r\ndf = pd.read_csv('D:/OneDrive/Desktop/BovineGuard/Bovine/cattle_disease_data.csv')\r\n\r\n\r\n\r\n\r\nprint(\"Columns in CSV file:\", df.columns)\r\n\r\n\r\nsymptoms = [\r\n    'itching', 'skin_rash', 'nodal_skin_eruptions', 'continuous_sneezing', 'shivering',\r\n    'chills', 'joint_pain', 'stomach_pain', 'acidity', 'ulcers_on_tongue', 'muscle_wasting',\r\n    'vomiting', 'burning_micturition', 'spotting_urination', 'fatigue', 'weight_gain',\r\n    'anxiety', 'cold_hands_and_feets', 'mood_swings', 'weight_loss', 'restlessness',\r\n    'lethargy', 'patches_in_throat', 'irregular_sugar_level', 'cough', 'high_fever',\r\n    'sunken_eyes', 'breathlessness', 'sweating', 'dehydration', 'indigestion', 'headache',\r\n    'yellowish_skin', 'dark_urine', 'nausea', 'loss_of_appetite', 'pain_behind_the_eyes',\r\n    'back_pain', 'constipation', 'abdominal_pain', 'diarrhoea', 'mild_fever', 'yellow_urine',\r\n    'yellowing_of_eyes', 'acute_liver_failure', 'fluid_overload', 'swelling_of_stomach',\r\n    'swelled_lymph_nodes', 'malaise', 'blurred_and_distorted_vision', 'phlegm', 'throat_irritation',\r\n    'redness_of_eyes', 'sinus_pressure', 'runny_nose', 'congestion', 'chest_pain',\r\n    'weakness_in_limbs', 'fast_heart_rate', 'pain_during_bowel_movements', 'pain_in_anal_region',\r\n    'bloody_stool', 'irritation_in_anus', 'neck_pain', 'dizziness', 'cramps', 'bruising',\r\n    'obesity', 'swollen_legs', 'swollen_blood_vessels', 'puffy_face_and_eyes', 'enlarged_thyroid',\r\n    'brittle_nails', 'swollen_extremeties', 'excessive_hunger', 'extra_marital_contacts',\r\n    'drying_and_tingling_lips', 'slurred_speech', 'knee_pain', 'hip_joint_pain', 'muscle_weakness',\r\n    'stiff_neck', 'swelling_joints', 'movement_stiffness', 'spinning_movements', 'loss_of_balance',\r\n    'unsteadiness', 'weakness_of_one_body_side', 'loss_of_smell', 'bladder_discomfort',\r\n    'foul_smell_of_urine', 'continuous_feel_of_urine', 'passage_of_gases', 'internal_itching',\r\n    'toxic_look_(typhos)', 'depression', 'irritability', 'muscle_pain', 'altered_sensorium',\r\n    'red_spots_over_body', 'belly_pain', 'abnormal_menstruation', 'dischromic_patches',\r\n    'watering_from_eyes', 'increased_appetite', 'polyuria', 'family_history', 'mucoid_sputum',\r\n    'rusty_sputum', 'lack_of_concentration', 'visual_disturbances', 'receiving_blood_transfusion',\r\n    'receiving_unsterile_injections', 'coma', 'stomach_bleeding', 'distention_of_abdomen',\r\n    'history_of_alcohol_consumption', 'blood_in_sputum', 'prominent_veins_on_calf', 'palpitations',\r\n    'painful_walking', 'pus_filled_pimples', 'blackheads', 'scurring', 'skin_peeling',\r\n    'silver_like_dusting', 'small_dents_in_nails', 'inflammatory_nails', 'blister',\r\n    'red_sore_around_nose', 'yellow_crust_ooze'\r\n]\r\n\r\ntarget = 'prognosis'  \r\nmissing_symptoms = [col for col in symptoms if col not in df.columns]\r\nif missing_symptoms:\r\n    raise KeyError(f\"Symptoms {missing_symptoms} are missing from the dataset\")\r\n\r\n# Prepare feature and target variables\r\nX = df[symptoms]\r\ny = df[target]\r\n\r\n# Handle missing values (if any) and encode categorical variables if needed\r\nX = X.fillna(0)  # Replace missing values with 0, or use an appropriate imputation method\r\nX = pd.get_dummies(X)  # One-hot encode categorical variables if any\r\n\r\n# Split data\r\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)\r\n\r\n# Train model\r\nmodel = RandomForestClassifier(n_estimators=100, random_state=42)\r\nmodel.fit(X_train, y_train)\r\n\r\n# Evaluate model\r\ny_pred = model.predict(X_test)\r\nprint(f\"Accuracy: {accuracy_score(y_test, y_pred)}\")\r\n\r\n\r\n\r\n# Save the model\r\njoblib.dump(model, 'model.pkl')\r\n"
+        }
+    ],
+    "routes": [
+        {
+            "path": "/",
+            "methods": [
+                "GET"
+            ],
+            "function": "index",
+            "line": 61,
+            "decorator": "route"
+        },
+        {
+            "path": "/about",
+            "methods": [
+                "GET"
+            ],
+            "function": "about",
+            "line": 65,
+            "decorator": "route"
+        },
+        {
+            "path": "/predict",
+            "methods": [
+                "GET",
+                "POST"
+            ],
+            "function": "predict",
+            "line": 68,
+            "decorator": "route"
+        },
+        {
+            "path": "/reviews",
+            "methods": [
+                "GET"
+            ],
+            "function": "reviews",
+            "line": 107,
+            "decorator": "route"
+        },
+        {
+            "path": "/contact",
+            "methods": [
+                "GET",
+                "POST"
+            ],
+            "function": "contact",
+            "line": 111,
+            "decorator": "route"
+        }
+    ],
+    "functions": [
+        {
+            "file_path": "app.py",
+            "name": "index",
+            "parameters": [],
+            "line": 62,
+            "end_line": 63,
+            "is_async": false,
+            "decorators": [
+                "app.route"
+            ],
+            "source_code": "def index():\r\n    return render_template('index.html')"
+        },
+        {
+            "file_path": "app.py",
+            "name": "about",
+            "parameters": [],
+            "line": 66,
+            "end_line": 67,
+            "is_async": false,
+            "decorators": [
+                "app.route"
+            ],
+            "source_code": "def about():\r\n    return render_template('about.html')"
+        },
+        {
+            "file_path": "app.py",
+            "name": "predict",
+            "parameters": [],
+            "line": 69,
+            "end_line": 106,
+            "is_async": false,
+            "decorators": [
+                "app.route"
+            ],
+            "source_code": "def predict():\r\n    if request.method == 'POST':\r\n        try:\r\n            data = {\r\n                'age': request.form.get('age'),\r\n                'breed': request.form.get('breed'),\r\n                'weight': request.form.get('weight'),\r\n                'symptom1': request.form.get('symptom1'),\r\n                'symptom2': request.form.get('symptom2'),\r\n                'symptom3': request.form.get('symptom3'),\r\n                'symptom4': request.form.get('symptom4'),\r\n                'symptom5': request.form.get('symptom5'),\r\n            }\r\n\r\n            # Combine symptoms into one feature\r\n            symptoms_combined = [\r\n                data.get(f'symptom{i}', '') for i in range(1, 6)\r\n            ]\r\n\r\n            # Create a DataFrame for prediction\r\n            features = pd.DataFrame([{\r\n                symptom: (symptom in symptoms_combined) for symptom in symptoms\r\n            }])\r\n\r\n            # Print features for debugging\r\n            print(\"Features for model:\", features)\r\n\r\n            # Make prediction\r\n            prediction = model.predict(features)\r\n            print(\"Prediction:\", prediction)\r\n\r\n            return render_template('predict.html', prediction=prediction[0], symptoms=symptoms_combined)\r\n        \r\n        except Exception as e:\r\n            print(\"An error occurred during prediction:\", e)\r\n            return \"Internal Server Error\", 500\r\n\r\n    return render_template('predict.html', symptoms=symptoms)"
+        },
+        {
+            "file_path": "app.py",
+            "name": "reviews",
+            "parameters": [],
+            "line": 108,
+            "end_line": 109,
+            "is_async": false,
+            "decorators": [
+                "app.route"
+            ],
+            "source_code": "def reviews():\r\n    return render_template('review.html')"
+        },
+        {
+            "file_path": "app.py",
+            "name": "contact",
+            "parameters": [],
+            "line": 112,
+            "end_line": 130,
+            "is_async": false,
+            "decorators": [
+                "app.route"
+            ],
+            "source_code": "def contact():\r\n    if request.method == 'POST':\r\n        first_name = request.form['firstName']\r\n        last_name = request.form['lastName']\r\n        email = request.form['email']\r\n        mobile = request.form['mobile']\r\n        message = request.form['message']\r\n\r\n        # Ensure the CSV file is in a writable directory\r\n        file_path = os.path.join(os.path.dirname(__file__), 'contact_data.csv')\r\n\r\n        with open(file_path, 'a', newline='') as file:\r\n            writer = csv.writer(file)\r\n            writer.writerow([first_name, last_name, email, mobile, message])\r\n\r\n        flash('Your information has been recorded successfully!')\r\n        return redirect(url_for('contact'))\r\n\r\n    return render_template('contact.html')"
+        },
+        {
+            "file_path": "create_db.py",
+            "name": "create_database",
+            "parameters": [],
+            "line": 3,
+            "end_line": 22,
+            "is_async": false,
+            "decorators": [],
+            "source_code": "def create_database():\r\n    conn = sqlite3.connect('cattle_diseases.db')\r\n    c = conn.cursor()\r\n\r\n    c.execute('''\r\n        CREATE TABLE IF NOT EXISTS cattle_diseases (\r\n            id INTEGER PRIMARY KEY AUTOINCREMENT,\r\n            cattle_id TEXT,\r\n            age INTEGER,\r\n            breed TEXT,\r\n            weight REAL,\r\n            symptoms TEXT,\r\n            diagnosis TEXT,\r\n            treatment TEXT,\r\n            date_of_entry DATE\r\n        )\r\n    ''')\r\n\r\n    conn.commit()\r\n    conn.close()"
+        },
+        {
+            "file_path": "import_data.py",
+            "name": "import_csv_to_db",
+            "parameters": [
+                "csv_file"
+            ],
+            "line": 4,
+            "end_line": 12,
+            "is_async": false,
+            "decorators": [],
+            "source_code": "def import_csv_to_db(csv_file):\r\n    # Load CSV file into a DataFrame\r\n    df = pd.read_csv(csv_file)\r\n\r\n    # Create a database engine\r\n    engine = create_engine('sqlite:///cattle_diseases.db')\r\n\r\n    # Write DataFrame to SQL table\r\n    df.to_sql('cattle_diseases', engine, if_exists='replace', index=False)"
+        },
+        {
+            "file_path": "migrations/env.py",
+            "name": "get_engine",
+            "parameters": [],
+            "line": 18,
+            "end_line": 24,
+            "is_async": false,
+            "decorators": [],
+            "source_code": "def get_engine():\n    try:\n        # this works with Flask-SQLAlchemy<3 and Alchemical\n        return current_app.extensions['migrate'].db.get_engine()\n    except (TypeError, AttributeError):\n        # this works with Flask-SQLAlchemy>=3\n        return current_app.extensions['migrate'].db.engine"
+        },
+        {
+            "file_path": "migrations/env.py",
+            "name": "get_engine_url",
+            "parameters": [],
+            "line": 27,
+            "end_line": 32,
+            "is_async": false,
+            "decorators": [],
+            "source_code": "def get_engine_url():\n    try:\n        return get_engine().url.render_as_string(hide_password=False).replace(\n            '%', '%%')\n    except AttributeError:\n        return str(get_engine().url).replace('%', '%%')"
+        },
+        {
+            "file_path": "migrations/env.py",
+            "name": "get_metadata",
+            "parameters": [],
+            "line": 48,
+            "end_line": 51,
+            "is_async": false,
+            "decorators": [],
+            "source_code": "def get_metadata():\n    if hasattr(target_db, 'metadatas'):\n        return target_db.metadatas[None]\n    return target_db.metadata"
+        },
+        {
+            "file_path": "migrations/env.py",
+            "name": "run_migrations_offline",
+            "parameters": [],
+            "line": 54,
+            "end_line": 72,
+            "is_async": false,
+            "decorators": [],
+            "source_code": "def run_migrations_offline():\n    \"\"\"Run migrations in 'offline' mode.\n\n    This configures the context with just a URL\n    and not an Engine, though an Engine is acceptable\n    here as well.  By skipping the Engine creation\n    we don't even need a DBAPI to be available.\n\n    Calls to context.execute() here emit the given string to the\n    script output.\n\n    \"\"\"\n    url = config.get_main_option(\"sqlalchemy.url\")\n    context.configure(\n        url=url, target_metadata=get_metadata(), literal_binds=True\n    )\n\n    with context.begin_transaction():\n        context.run_migrations()"
+        },
+        {
+            "file_path": "migrations/env.py",
+            "name": "run_migrations_online",
+            "parameters": [],
+            "line": 75,
+            "end_line": 107,
+            "is_async": false,
+            "decorators": [],
+            "source_code": "def run_migrations_online():\n    \"\"\"Run migrations in 'online' mode.\n\n    In this scenario we need to create an Engine\n    and associate a connection with the context.\n\n    \"\"\"\n\n    # this callback is used to prevent an auto-migration from being generated\n    # when there are no changes to the schema\n    # reference: http://alembic.zzzcomputing.com/en/latest/cookbook.html\n    def process_revision_directives(context, revision, directives):\n        if getattr(config.cmd_opts, 'autogenerate', False):\n            script = directives[0]\n            if script.upgrade_ops.is_empty():\n                directives[:] = []\n                logger.info('No changes in schema detected.')\n\n    conf_args = current_app.extensions['migrate'].configure_args\n    if conf_args.get(\"process_revision_directives\") is None:\n        conf_args[\"process_revision_directives\"] = process_revision_directives\n\n    connectable = get_engine()\n\n    with connectable.connect() as connection:\n        context.configure(\n            connection=connection,\n            target_metadata=get_metadata(),\n            **conf_args\n        )\n\n        with context.begin_transaction():\n            context.run_migrations()"
+        },
+        {
+            "file_path": "migrations/env.py",
+            "name": "process_revision_directives",
+            "parameters": [
+                "context",
+                "revision",
+                "directives"
+            ],
+            "line": 86,
+            "end_line": 91,
+            "is_async": false,
+            "decorators": [],
+            "source_code": "def process_revision_directives(context, revision, directives):\n        if getattr(config.cmd_opts, 'autogenerate', False):\n            script = directives[0]\n            if script.upgrade_ops.is_empty():\n                directives[:] = []\n                logger.info('No changes in schema detected.')"
+        },
+        {
+            "file_path": "migrations/versions/4165a6f053ff_initial_migration.py",
+            "name": "upgrade",
+            "parameters": [],
+            "line": 19,
+            "end_line": 32,
+            "is_async": false,
+            "decorators": [],
+            "source_code": "def upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('cattle_disease',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('cattle_id', sa.String(), nullable=False),\n    sa.Column('age', sa.Integer(), nullable=False),\n    sa.Column('breed', sa.String(), nullable=False),\n    sa.Column('weight', sa.Float(), nullable=False),\n    sa.Column('symptoms', sa.String(), nullable=False),\n    sa.Column('diagnosis', sa.String(), nullable=False),\n    sa.Column('treatment', sa.String(), nullable=False),\n    sa.Column('date_of_entry', sa.Date(), nullable=False),\n    sa.PrimaryKeyConstraint('id')\n    )"
+        },
+        {
+            "file_path": "migrations/versions/4165a6f053ff_initial_migration.py",
+            "name": "downgrade",
+            "parameters": [],
+            "line": 36,
+            "end_line": 38,
+            "is_async": false,
+            "decorators": [],
+            "source_code": "def downgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_table('cattle_disease')"
+        },
+        {
+            "file_path": "migrations/versions/f66ad20d491b_initial_migration.py",
+            "name": "upgrade",
+            "parameters": [],
+            "line": 19,
+            "end_line": 32,
+            "is_async": false,
+            "decorators": [],
+            "source_code": "def upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('cattle_disease',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('cattle_id', sa.String(), nullable=False),\n    sa.Column('age', sa.Integer(), nullable=False),\n    sa.Column('breed', sa.String(), nullable=False),\n    sa.Column('weight', sa.Float(), nullable=False),\n    sa.Column('symptoms', sa.String(), nullable=False),\n    sa.Column('diagnosis', sa.String(), nullable=False),\n    sa.Column('treatment', sa.String(), nullable=False),\n    sa.Column('date_of_entry', sa.Date(), nullable=False),\n    sa.PrimaryKeyConstraint('id')\n    )"
+        },
+        {
+            "file_path": "migrations/versions/f66ad20d491b_initial_migration.py",
+            "name": "downgrade",
+            "parameters": [],
+            "line": 36,
+            "end_line": 38,
+            "is_async": false,
+            "decorators": [],
+            "source_code": "def downgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_table('cattle_disease')"
+        }
+    ],
+    "classes": [
+        {
+            "file_path": "app.py",
+            "name": "CattleDisease",
+            "bases": [
+                "db.Model"
+            ],
+            "line": 50,
+            "methods": []
+        }
+    ],
+    "forms": [
+        {
+            "template": "templates/contact.html",
+            "id": null,
+            "name": null,
+            "onsubmit": null,
+            "action": "{{ url_for('contact') }}",
+            "method": "POST",
+            "enctype": "application/x-www-form-urlencoded",
+            "target": "_self",
+            "fields": [
+                {
+                    "tag": "input",
+                    "name": "firstName",
+                    "id": "firstName",
+                    "type": "text",
+                    "required": true,
+                    "is_dynamic": false,
+                    "role": "data_field"
+                },
+                {
+                    "tag": "input",
+                    "name": "lastName",
+                    "id": "lastName",
+                    "type": "text",
+                    "required": true,
+                    "is_dynamic": false,
+                    "role": "data_field"
+                },
+                {
+                    "tag": "input",
+                    "name": "email",
+                    "id": "email",
+                    "type": "email",
+                    "required": true,
+                    "is_dynamic": false,
+                    "role": "data_field"
+                },
+                {
+                    "tag": "input",
+                    "name": "mobile",
+                    "id": "mobile",
+                    "type": "tel",
+                    "required": true,
+                    "is_dynamic": false,
+                    "role": "data_field"
+                },
+                {
+                    "tag": "textarea",
+                    "name": "message",
+                    "id": "message",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "template": "templates/predict.html",
+            "id": null,
+            "name": null,
+            "onsubmit": null,
+            "action": "{{ url_for('predict') }}",
+            "method": "POST",
+            "enctype": "application/x-www-form-urlencoded",
+            "target": "_self",
+            "fields": [
+                {
+                    "tag": "input",
+                    "name": "age",
+                    "id": "age",
+                    "type": "text",
+                    "required": true,
+                    "is_dynamic": false,
+                    "role": "data_field"
+                },
+                {
+                    "tag": "input",
+                    "name": "breed",
+                    "id": "breed",
+                    "type": "text",
+                    "required": true,
+                    "is_dynamic": false,
+                    "role": "data_field"
+                },
+                {
+                    "tag": "select",
+                    "name": "symptom{{ i }}",
+                    "id": "symptom{{ i }}",
+                    "required": false,
+                    "options": [
+                        {
+                            "value": "",
+                            "text": "Select a symptom",
+                            "is_dynamic": false
+                        },
+                        {
+                            "value": "{{ symptom }}",
+                            "text": "{{ symptom.replace('_', ' ') }}",
+                            "is_dynamic": true
+                        }
+                    ]
+                },
+                {
+                    "tag": "input",
+                    "name": null,
+                    "id": null,
+                    "type": "submit",
+                    "required": false,
+                    "is_dynamic": false,
+                    "role": "submit_control"
+                }
+            ]
+        },
+        {
+            "template": "templates/review.html",
+            "id": "review-form",
+            "name": null,
+            "onsubmit": null,
+            "action": "",
+            "method": "GET",
+            "enctype": "application/x-www-form-urlencoded",
+            "target": "_self",
+            "fields": [
+                {
+                    "tag": "input",
+                    "name": "name",
+                    "id": "name",
+                    "type": "text",
+                    "required": true,
+                    "is_dynamic": false,
+                    "role": "data_field"
+                },
+                {
+                    "tag": "textarea",
+                    "name": "review-text",
+                    "id": "review-text",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "form_route_mappings": [
+        {
+            "template": "templates/contact.html",
+            "form_id": null,
+            "action": "{{ url_for('contact') }}",
+            "form_action": "{{ url_for('contact') }}",
+            "method": "POST",
+            "fields": [
+                {
+                    "tag": "input",
+                    "name": "firstName",
+                    "id": "firstName",
+                    "type": "text",
+                    "required": true,
+                    "is_dynamic": false,
+                    "role": "data_field"
+                },
+                {
+                    "tag": "input",
+                    "name": "lastName",
+                    "id": "lastName",
+                    "type": "text",
+                    "required": true,
+                    "is_dynamic": false,
+                    "role": "data_field"
+                },
+                {
+                    "tag": "input",
+                    "name": "email",
+                    "id": "email",
+                    "type": "email",
+                    "required": true,
+                    "is_dynamic": false,
+                    "role": "data_field"
+                },
+                {
+                    "tag": "input",
+                    "name": "mobile",
+                    "id": "mobile",
+                    "type": "tel",
+                    "required": true,
+                    "is_dynamic": false,
+                    "role": "data_field"
+                },
+                {
+                    "tag": "textarea",
+                    "name": "message",
+                    "id": "message",
+                    "required": true
+                }
+            ],
+            "mapping_status": "matched",
+            "handling_type": "native",
+            "mapping_reason": "Explicit Flask url_for action matched a backend route and HTTP method.",
+            "backend_function": "contact",
+            "backend_path": "/contact",
+            "endpoint": "contact",
+            "candidate_routes": [
+                {
+                    "backend_function": "contact",
+                    "backend_path": "/contact"
+                }
+            ]
+        },
+        {
+            "template": "templates/predict.html",
+            "form_id": null,
+            "action": "{{ url_for('predict') }}",
+            "form_action": "{{ url_for('predict') }}",
+            "method": "POST",
+            "fields": [
+                {
+                    "tag": "input",
+                    "name": "age",
+                    "id": "age",
+                    "type": "text",
+                    "required": true,
+                    "is_dynamic": false,
+                    "role": "data_field"
+                },
+                {
+                    "tag": "input",
+                    "name": "breed",
+                    "id": "breed",
+                    "type": "text",
+                    "required": true,
+                    "is_dynamic": false,
+                    "role": "data_field"
+                },
+                {
+                    "tag": "select",
+                    "name": "symptom{{ i }}",
+                    "id": "symptom{{ i }}",
+                    "required": false,
+                    "options": [
+                        {
+                            "value": "",
+                            "text": "Select a symptom",
+                            "is_dynamic": false
+                        },
+                        {
+                            "value": "{{ symptom }}",
+                            "text": "{{ symptom.replace('_', ' ') }}",
+                            "is_dynamic": true
+                        }
+                    ]
+                },
+                {
+                    "tag": "input",
+                    "name": null,
+                    "id": null,
+                    "type": "submit",
+                    "required": false,
+                    "is_dynamic": false,
+                    "role": "submit_control"
+                }
+            ],
+            "mapping_status": "matched",
+            "handling_type": "native",
+            "mapping_reason": "Explicit Flask url_for action matched a backend route and HTTP method.",
+            "backend_function": "predict",
+            "backend_path": "/predict",
+            "endpoint": "predict",
+            "candidate_routes": [
+                {
+                    "backend_function": "predict",
+                    "backend_path": "/predict"
+                }
+            ]
+        },
+        {
+            "template": "templates/review.html",
+            "form_id": "review-form",
+            "action": "",
+            "form_action": "",
+            "method": "GET",
+            "fields": [
+                {
+                    "tag": "input",
+                    "name": "name",
+                    "id": "name",
+                    "type": "text",
+                    "required": true,
+                    "is_dynamic": false,
+                    "role": "data_field"
+                },
+                {
+                    "tag": "textarea",
+                    "name": "review-text",
+                    "id": "review-text",
+                    "required": true
+                }
+            ],
+            "mapping_status": "client_side",
+            "handling_type": "client_side",
+            "mapping_reason": "Referenced JavaScript handler prevents native form submission; no supported network request was detected.",
+            "backend_function": null,
+            "backend_path": null,
+            "reason": "Referenced JavaScript handler prevents native form submission; no supported network request was detected."
+        }
+    ],
+    "data_flows": [
+        {
+            "template": "predict.html",
+            "backend_function": "predict",
+            "backend_variable": "symptoms",
+            "backend_source": "symptoms",
+            "frontend_variable": "symptoms",
+            "usage_types": [
+                "loop"
+            ],
+            "loops": [
+                {
+                    "variable": "symptom",
+                    "iterable": "symptoms",
+                    "line": 53,
+                    "end_line": 55,
+                    "parent_loop": "i",
+                    "iteration_count": null
+                }
+            ],
+            "conditions": [],
+            "dynamic_expressions": [],
+            "frontend_iterable": "symptoms",
+            "loop_variable": "symptom",
+            "mapping_status": "matched"
+        },
+        {
+            "template": "predict.html",
+            "backend_function": "predict",
+            "backend_variable": "prediction",
+            "backend_source": "prediction[0]",
+            "frontend_variable": "prediction",
+            "usage_types": [
+                "condition",
+                "dynamic_expression"
+            ],
+            "loops": [],
+            "conditions": [
+                {
+                    "condition": "prediction",
+                    "line": 74,
+                    "type": "if"
+                }
+            ],
+            "dynamic_expressions": [
+                {
+                    "expression": "prediction",
+                    "line": 76
+                }
+            ],
+            "mapping_status": "matched"
+        },
+        {
+            "template": "predict.html",
+            "backend_function": "predict",
+            "backend_variable": "symptoms",
+            "backend_source": "symptoms_combined",
+            "frontend_variable": "symptoms",
+            "usage_types": [
+                "loop"
+            ],
+            "loops": [
+                {
+                    "variable": "symptom",
+                    "iterable": "symptoms",
+                    "line": 53,
+                    "end_line": 55,
+                    "parent_loop": "i",
+                    "iteration_count": null
+                }
+            ],
+            "conditions": [],
+            "dynamic_expressions": [],
+            "frontend_iterable": "symptoms",
+            "loop_variable": "symptom",
+            "mapping_status": "matched"
+        }
+    ],
+    "database_operations": [
+        {
+            "file_path": "app.py",
+            "operation": "get",
+            "object": "request.form",
+            "line": 73,
+            "classification": "non_database"
+        },
+        {
+            "file_path": "app.py",
+            "operation": "get",
+            "object": "request.form",
+            "line": 74,
+            "classification": "non_database"
+        },
+        {
+            "file_path": "app.py",
+            "operation": "get",
+            "object": "request.form",
+            "line": 75,
+            "classification": "non_database"
+        },
+        {
+            "file_path": "app.py",
+            "operation": "get",
+            "object": "request.form",
+            "line": 76,
+            "classification": "non_database"
+        },
+        {
+            "file_path": "app.py",
+            "operation": "get",
+            "object": "request.form",
+            "line": 77,
+            "classification": "non_database"
+        },
+        {
+            "file_path": "app.py",
+            "operation": "get",
+            "object": "request.form",
+            "line": 78,
+            "classification": "non_database"
+        },
+        {
+            "file_path": "app.py",
+            "operation": "get",
+            "object": "request.form",
+            "line": 79,
+            "classification": "non_database"
+        },
+        {
+            "file_path": "app.py",
+            "operation": "get",
+            "object": "request.form",
+            "line": 80,
+            "classification": "non_database"
+        },
+        {
+            "file_path": "app.py",
+            "operation": "get",
+            "object": "data",
+            "line": 85,
+            "classification": "unknown"
+        },
+        {
+            "file_path": "create_db.py",
+            "operation": "connect",
+            "object": "sqlite3",
+            "line": 4,
+            "classification": "database_candidate"
+        },
+        {
+            "file_path": "create_db.py",
+            "operation": "execute",
+            "object": "c",
+            "line": 7,
+            "classification": "database_candidate"
+        },
+        {
+            "file_path": "create_db.py",
+            "operation": "commit",
+            "object": "conn",
+            "line": 21,
+            "classification": "database_candidate"
+        },
+        {
+            "file_path": "migrations/env.py",
+            "operation": "get",
+            "object": "conf_args",
+            "line": 94,
+            "classification": "unknown"
+        },
+        {
+            "file_path": "migrations/env.py",
+            "operation": "connect",
+            "object": "connectable",
+            "line": 99,
+            "classification": "database_candidate"
+        },
+        {
+            "file_path": "model.py",
+            "operation": "connect",
+            "object": "sqlite3",
+            "line": 8,
+            "classification": "database_candidate"
+        }
+    ],
+    "rendered_templates": [
+        {
+            "function": "index",
+            "template": "index.html",
+            "line": 63,
+            "context_variables": []
+        },
+        {
+            "function": "about",
+            "template": "about.html",
+            "line": 67,
+            "context_variables": []
+        },
+        {
+            "function": "predict",
+            "template": "predict.html",
+            "line": 106,
+            "context_variables": [
+                {
+                    "name": "symptoms",
+                    "source": "symptoms"
+                }
+            ]
+        },
+        {
+            "function": "predict",
+            "template": "predict.html",
+            "line": 100,
+            "context_variables": [
+                {
+                    "name": "prediction",
+                    "source": "prediction[0]"
+                },
+                {
+                    "name": "symptoms",
+                    "source": "symptoms_combined"
+                }
+            ]
+        },
+        {
+            "function": "reviews",
+            "template": "review.html",
+            "line": 109,
+            "context_variables": []
+        },
+        {
+            "function": "contact",
+            "template": "contact.html",
+            "line": 130,
+            "context_variables": []
+        }
+    ]
+}

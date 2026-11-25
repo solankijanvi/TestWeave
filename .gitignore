@@ -231,3 +231,5 @@ venv/
 *.tmp
 .DS_Store
 Thumbs.db
+tests/fixtures/application_knowledge.refreshed.json
+data/application_knowledge.json
