@@ -233,3 +233,7 @@ venv/
 Thumbs.db
 tests/fixtures/application_knowledge.refreshed.json
 data/application_knowledge.json
+
+# IDE settings
+.vscode/
+.idea/
