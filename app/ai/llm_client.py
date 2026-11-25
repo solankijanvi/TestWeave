@@ -24,6 +24,9 @@ class LLMClient:
             contents=prompt
         )
 
+        if not response.text:
+            raise ValueError("Gemini returned an empty response.")
+
         return response.text
     
     def generate_structured(
